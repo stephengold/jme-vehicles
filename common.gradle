@@ -28,7 +28,7 @@ ext {
     heartVersion = '6.4.3+for33'
     jmeTtfVersion = '2.2.3'
     jmonkeyengineVersion = '3.3.2-stable'
-    maVehiclesVersion = '0.6.1-SNAPSHOT'
+    maVehiclesVersion = '0.6.1+for33'
     minieVersion = '4.1.0+big3+for33'
     pbrTerrainVersion = '1.0.3'
 }
