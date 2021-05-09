@@ -5,6 +5,7 @@
 description = 'a tech demo for jMonkeyEngine vehicles'
 
 dependencies {
+    implementation 'org.jmonkeyengine:jme3-desktop:' + jmonkeyengineVersion
     implementation 'com.github.stephengold:Minie:' + minieVersion
     implementation 'com.github.stephengold:SkyControl:0.9.31+for33'
 

@@ -24,7 +24,7 @@ dependencies {
     api 'org.jmonkeyengine:jme3-effects:' + jmonkeyengineVersion
 
     // non-JME dependencies:
-    api 'com.atr:jme-ttf:' + jmeTtfVersion
+    api 'com.github.stephengold:jme-ttf:' + jmeTtfVersion
     api 'com.github.stephengold:Heart:' + heartVersion
     compileOnly 'com.github.stephengold:Minie:' + minieVersion
 }
