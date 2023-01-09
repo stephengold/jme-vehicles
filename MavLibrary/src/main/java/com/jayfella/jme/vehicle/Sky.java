@@ -186,13 +186,13 @@ abstract public class Sky implements Loadable {
      */
     public static void setShadowsEnabled(boolean newSetting) {
         ViewPort mainViewPort = simpleApp.getViewPort();
-        boolean isAdded = areShadowsEnabled();
+        boolean oldSetting = areShadowsEnabled();
 
-        if (isAdded && !newSetting) {
+        if (oldSetting && !newSetting) {
             assert shadowRenderer != null;
             mainViewPort.removeProcessor(shadowRenderer);
 
-        } else if (newSetting && !isAdded) {
+        } else if (newSetting && !oldSetting) {
             if (shadowRenderer == null) { // Create the renderer.
                 AssetManager assetManager = simpleApp.getAssetManager();
                 shadowRenderer = new DirectionalLightShadowRenderer(
