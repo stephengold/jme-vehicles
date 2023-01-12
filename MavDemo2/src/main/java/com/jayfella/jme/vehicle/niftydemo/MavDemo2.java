@@ -434,7 +434,7 @@ public class MavDemo2 extends GuiApplication {
 
                 setShowDialog(showDialog);
                 settings.setGammaCorrection(true);
-                settings.setRenderer(AppSettings.LWJGL_OPENGL2);
+                settings.setRenderer(AppSettings.LWJGL_OPENGL2); // JME issue 1903
                 settings.setResolution(1280, 720);
                 settings.setSamples(8);
                 settings.setTitle(title);
