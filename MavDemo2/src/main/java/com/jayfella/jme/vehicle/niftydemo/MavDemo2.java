@@ -207,10 +207,6 @@ public class MavDemo2 extends GuiApplication {
     public void guiInitializeApplication() {
         logger.info("");
 
-        if (!Heart.areAssertionsEnabled()) {
-            logger.warning("Assertions are disabled!");
-        }
-
         // Log version strings.
         logger.log(Level.INFO, "jme3-core version is {0}",
                 MyString.quote(JmeVersion.FULL_NAME));
