@@ -14,6 +14,7 @@ import com.jme3.renderer.queue.RenderQueue;
 import com.jme3.scene.Node;
 import com.jme3.system.JmeSystem;
 import com.jme3.system.Platform;
+import com.jme3.util.mikktspace.MikktspaceTangentGenerator;
 import java.util.logging.Logger;
 
 /**
@@ -70,6 +71,7 @@ public class Playground extends World {
         assetPath = "/Materials/Vehicles/marble_01.j3m";
         Material material = assetManager.loadMaterial(assetPath);
         loadedCgm.setMaterial(material);
+        MikktspaceTangentGenerator.generate(loadedCgm);
 
         LightList lights = loadedCgm.getLocalLightList();
         Light light = lights.get(0);

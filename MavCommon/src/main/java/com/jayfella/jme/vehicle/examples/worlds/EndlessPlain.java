@@ -14,6 +14,7 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.Node;
 import com.jme3.scene.VertexBuffer;
 import com.jme3.util.BufferUtils;
+import com.jme3.util.mikktspace.MikktspaceTangentGenerator;
 import java.nio.FloatBuffer;
 import java.util.HashSet;
 import java.util.Set;
@@ -155,6 +156,7 @@ public class EndlessPlain extends World {
         cgm.setShadowMode(RenderQueue.ShadowMode.Receive);
 
         Geometry geometry = new Geometry("Plain Chunk", mesh);
+        MikktspaceTangentGenerator.generate(geometry);
         cgm.attachChild(geometry);
 
         String assetPath = "/Materials/Vehicles/marble_01.j3m";
