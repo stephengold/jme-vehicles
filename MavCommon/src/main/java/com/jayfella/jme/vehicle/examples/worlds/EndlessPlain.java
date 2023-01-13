@@ -15,6 +15,7 @@ import com.jme3.scene.Node;
 import com.jme3.scene.VertexBuffer;
 import com.jme3.util.BufferUtils;
 import com.jme3.util.mikktspace.MikktspaceTangentGenerator;
+import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.util.HashSet;
 import java.util.Set;
@@ -116,7 +117,7 @@ public class EndlessPlain extends World {
     public void load(AssetManager assetManager) {
         assert getCgm() == null : "The model is already loaded.";
         /*
-         * Generate normals, texture coordinates, and vertex positions
+         * Generate normals, indices, texture coordinates, and vertex positions
          * for a large square in the X-Z plane.
          */
         FloatBuffer normals = BufferUtils.createFloatBuffer(
@@ -126,6 +127,9 @@ public class EndlessPlain extends World {
                 0f, 1f, 0f,
                 0f, 1f, 0f,
                 0f, 1f, 0f
+        );
+        ByteBuffer indices = BufferUtils.createByteBuffer(
+                (byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5
         );
         float uvDiameter = 5f;
         FloatBuffer uvs = BufferUtils.createFloatBuffer(
@@ -147,6 +151,7 @@ public class EndlessPlain extends World {
         );
         Mesh mesh = new Mesh();
         mesh.setBuffer(VertexBuffer.Type.Normal, numAxes, normals);
+        mesh.setBuffer(VertexBuffer.Type.Index, 3, indices);
         mesh.setBuffer(VertexBuffer.Type.Position, numAxes, positions);
         mesh.setBuffer(VertexBuffer.Type.TexCoord, 2, uvs);
         mesh.updateBound();
