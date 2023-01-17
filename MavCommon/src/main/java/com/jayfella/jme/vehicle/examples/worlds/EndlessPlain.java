@@ -15,7 +15,6 @@ import com.jme3.scene.Node;
 import com.jme3.scene.VertexBuffer;
 import com.jme3.util.BufferUtils;
 import com.jme3.util.mikktspace.MikktspaceTangentGenerator;
-import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.util.HashSet;
 import java.util.Set;
