@@ -6,11 +6,9 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'com.jayfella.jme.vehicle.niftydemo.MavDemo2'
-if (!hasProperty('mainClass')) {
-    ext.mainClass = mainClassName
+application {
+    mainClass = 'com.jayfella.jme.vehicle.niftydemo.MavDemo2'
 }
-jar.manifest.attributes('Main-Class': mainClassName)
 
 dependencies {
     runtimeOnly 'org.jmonkeyengine:jme3-awt-dialogs:' + jme3Version
@@ -40,13 +38,13 @@ tasks.register('debugForceDialog', JavaExec) {
     args = ['--forceDialog']
     classpath sourceSets.main.runtimeClasspath
     debug true
-    mainClass = mainClassName
+    mainClass = 'com.jayfella.jme.vehicle.niftydemo.MavDemo2'
 }
 
 tasks.register('runForceDialog', JavaExec) {
     args = ['--forceDialog']
     classpath sourceSets.main.runtimeClasspath
-    mainClass = mainClassName
+    mainClass = 'com.jayfella.jme.vehicle.niftydemo.MavDemo2'
 }
 
 // cleanup tasks:
