@@ -13,7 +13,7 @@ ext {
     skyControlCoordinates = 'com.github.stephengold:SkyControl:1.0.3'
 
     // current versions of libraries:
-    jme3Version = '3.6.0-alpha3'
+    jme3Version = '3.6.0-beta1'
     maVehiclesVersion = '0.7.1-SNAPSHOT'
 }
 
