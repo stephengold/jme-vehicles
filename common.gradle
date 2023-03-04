@@ -6,14 +6,14 @@ apply plugin: 'java'
 ext {
     // module coordinates of dependencies:
     garrettCoordinates = 'com.github.stephengold:Garrett:0.5.2'
-    heartCoordinates = 'com.github.stephengold:Heart:8.3.0+for36'
+    heartCoordinates = 'com.github.stephengold:Heart:8.3.1+for36'
     jmePowerCoordinates = 'com.github.stephengold:JmePower:1.1.0'
     jmeTtfCoordinates = 'com.github.stephengold:jme-ttf:2.2.4'
-    minieCoordinates = 'com.github.stephengold:Minie:7.2.0'
+    minieCoordinates = 'com.github.stephengold:Minie:7.3.0+for36'
     skyControlCoordinates = 'com.github.stephengold:SkyControl:1.0.3'
 
     // current versions of libraries:
-    jme3Version = '3.6.0-beta2'
+    jme3Version = '3.6.0-beta3'
     maVehiclesVersion = '0.7.1-SNAPSHOT'
 }
 
