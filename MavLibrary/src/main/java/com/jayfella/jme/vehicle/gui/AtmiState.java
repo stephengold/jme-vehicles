@@ -1,6 +1,6 @@
 package com.jayfella.jme.vehicle.gui;
 
-import com.atr.jme.font.TrueTypeMesh;
+import com.atr.jme.font.TrueTypeFont;
 import com.atr.jme.font.asset.TrueTypeKeyMesh;
 import com.atr.jme.font.shape.TrueTypeNode;
 import com.atr.jme.font.util.Style;
@@ -67,7 +67,7 @@ public class AtmiState extends BaseAppState {
      */
     private Node node;
 
-    private TrueTypeMesh droidFont;
+    private TrueTypeFont droidFont;
     private Vehicle vehicle;
     // *************************************************************************
     // constructors
@@ -119,7 +119,7 @@ public class AtmiState extends BaseAppState {
 
         // pre-load the Droid font
         AssetManager manager = application.getAssetManager();
-        AssetKey<TrueTypeMesh> assetKey = new TrueTypeKeyMesh(
+        AssetKey<TrueTypeFont> assetKey = new TrueTypeKeyMesh(
                 "Interface/Fonts/DroidSerifBold-aMPE.ttf", Style.Plain, 18);
         this.droidFont = manager.loadAsset(assetKey);
 

@@ -8,7 +8,7 @@ ext {
     garrettCoordinates = 'com.github.stephengold:Garrett:0.5.2'
     heartCoordinates = 'com.github.stephengold:Heart:8.3.2'
     jmePowerCoordinates = 'com.github.stephengold:JmePower:1.1.1'
-    jmeTtfCoordinates = 'com.github.stephengold:jme-ttf:2.2.4'
+    jmeTtfCoordinates = 'com.github.stephengold:jme-ttf:3.0.0'
     minieCoordinates = 'com.github.stephengold:Minie:7.3.0+for36'
     skyControlCoordinates = 'com.github.stephengold:SkyControl:1.0.3'
 
