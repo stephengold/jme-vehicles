@@ -4,7 +4,7 @@ apply plugin: 'checkstyle'
 apply plugin: 'java'
 
 ext {
-    // module coordinates of dependencies:
+    // module coordinates of external dependencies:
     garrettCoordinates = 'com.github.stephengold:Garrett:0.5.2'
     heartCoordinates = 'com.github.stephengold:Heart:8.3.2'
     jmePowerCoordinates = 'com.github.stephengold:JmePower:1.1.1'

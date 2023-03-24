@@ -8,7 +8,7 @@ subprojects {
     apply from: rootProject.file('common.gradle')
 }
 
-// publishing tasks
+// publishing tasks:
 
 tasks.register('install') {
     dependsOn ':MavLibrary:install'
