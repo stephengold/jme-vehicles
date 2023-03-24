@@ -10,7 +10,7 @@ ext {
     jmePowerCoordinates = 'com.github.stephengold:JmePower:1.1.1'
     jmeTtfCoordinates = 'com.github.stephengold:jme-ttf:3.0.0'
     minieCoordinates = 'com.github.stephengold:Minie:7.3.0+for36'
-    skyControlCoordinates = 'com.github.stephengold:SkyControl:1.0.3'
+    skyControlCoordinates = 'com.github.stephengold:SkyControl:1.0.4'
 
     // current versions of libraries:
     jme3Version = '3.6.0-stable'
