@@ -44,7 +44,8 @@ tasks.withType(JavaExec) { // Java runtime options:
     }
     enableAssertions true
     //jvmArgs '-verbose:gc'
-    jvmArgs '-Xms512m', '-Xmx512m', '-XX:MaxDirectMemorySize=1200m'
+    jvmArgs '-Xms512m', '-Xmx512m' // to enlarge the Java heap
+    jvmArgs '-XX:MaxDirectMemorySize=1200m' // to limit memory consumption by direct buffers
     //jvmArgs '-XX:+UseG1GC', '-XX:MaxGCPauseMillis=10'
 }
 
