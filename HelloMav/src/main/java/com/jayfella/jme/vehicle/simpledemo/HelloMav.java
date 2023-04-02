@@ -101,10 +101,7 @@ public class HelloMav extends SimpleApplication {
 
         boolean loadDefaults = true;
         AppSettings appSettings = new AppSettings(loadDefaults);
-        appSettings.setGammaCorrection(true);
-        appSettings.setRenderer(AppSettings.LWJGL_OPENGL32);
         appSettings.setResolution(1280, 720);
-        appSettings.setVSync(true);
 
         HelloMav application = new HelloMav();
         application.setSettings(appSettings);
