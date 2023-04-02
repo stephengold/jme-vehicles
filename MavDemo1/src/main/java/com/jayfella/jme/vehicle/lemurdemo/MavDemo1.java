@@ -220,13 +220,10 @@ final public class MavDemo1 extends SimpleApplication {
 
         boolean loadDefaults = true;
         AppSettings appSettings = new AppSettings(loadDefaults);
-        appSettings.setGammaCorrection(true);
-        appSettings.setRenderer(AppSettings.LWJGL_OPENGL32);
         appSettings.setResolution(1280, 720);
         appSettings.setSamples(8);
         appSettings.setTitle("More Advanced Vehicles");
         appSettings.setUseJoysticks(true);
-        appSettings.setVSync(true);
 
         application = new MavDemo1();
         application.setDisplayFps(false);
