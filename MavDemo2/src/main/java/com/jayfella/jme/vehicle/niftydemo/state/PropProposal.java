@@ -296,11 +296,11 @@ public class PropProposal implements JmeCloneable {
             this.propType = type;
             this.initialOrientation.loadIdentity();
 
-            float scaleFactor = 1f;
-            float totalMass = 1f;
-            Prop tmpProp = create(type, scaleFactor, totalMass);
+            float scale = 1f;
+            float mass = 1f;
+            Prop tmpProp = create(type, scale, mass);
             float descaledMass = tmpProp.defaultDescaledMass();
-            this.totalMass = descaledMass * MyMath.cube(scaleFactor);
+            this.totalMass = descaledMass * MyMath.cube(scale);
         }
     }
 
