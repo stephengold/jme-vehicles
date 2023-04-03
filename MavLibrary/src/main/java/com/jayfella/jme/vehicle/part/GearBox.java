@@ -189,7 +189,7 @@ public class GearBox {
                 result = kph * Vehicle.KPH_TO_WUPS;
                 break;
             default:
-                throw new RuntimeException("speedUnit = " + speedUnit);
+                throw new IllegalArgumentException("speedUnit = " + speedUnit);
         }
 
         return result;
@@ -218,7 +218,7 @@ public class GearBox {
                 result = kph * Vehicle.KPH_TO_WUPS;
                 break;
             default:
-                throw new RuntimeException("speedUnit = " + speedUnit);
+                throw new IllegalArgumentException("speedUnit = " + speedUnit);
         }
 
         return result;

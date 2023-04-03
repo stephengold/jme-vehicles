@@ -133,7 +133,7 @@ final public class DashCamera
                         break;
 
                     default:
-                        throw new RuntimeException(function.toString());
+                        throw new IllegalStateException(function.toString());
                 }
             }
         }

@@ -201,7 +201,7 @@ final public class CreateShapes {
         Spatial cgmRoot = assetManager.loadModel(cgmAssetPath);
         Transform rootTransform = cgmRoot.getLocalTransform();
         if (!MyMath.isIdentity(rootTransform)) {
-            throw new RuntimeException(
+            throw new IllegalStateException(
                     cgmBaseFileName + " rootTransform = " + rootTransform);
         }
 
