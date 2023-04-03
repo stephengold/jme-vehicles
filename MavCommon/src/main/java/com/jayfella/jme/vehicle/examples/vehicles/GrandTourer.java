@@ -1,6 +1,7 @@
 package com.jayfella.jme.vehicle.examples.vehicles;
 
 import com.jayfella.jme.vehicle.Sound;
+import com.jayfella.jme.vehicle.Steering;
 import com.jayfella.jme.vehicle.Vehicle;
 import com.jayfella.jme.vehicle.WheelModel;
 import com.jayfella.jme.vehicle.examples.engines.PeakyEngine;
@@ -83,20 +84,17 @@ public class GrandTourer extends Vehicle {
         float rearY = 0.40f; // height of rear axle relative to vehicle's CoG
         float frontZ = 1.6f;
         float rearZ = -1.6f;
-        boolean front = true; // Front wheels are for steering.
-        boolean rear = false; // Rear wheels do not steer.
-        boolean steeringFlipped = false;
         float mainBrake = 6_000f; // in front only
         float parkingBrake = 25_000f; // in rear only
         float damping = 0.02f; // extra linear damping
-        addWheel(lFrontWheel, new Vector3f(+wheelX, frontY, frontZ), front,
-                steeringFlipped, mainBrake, 0f, damping);
-        addWheel(rFrontWheel, new Vector3f(-wheelX, frontY, frontZ), front,
-                steeringFlipped, mainBrake, 0f, damping);
-        addWheel(lRearWheel, new Vector3f(+wheelX, rearY, rearZ), rear,
-                steeringFlipped, 0f, parkingBrake, damping);
-        addWheel(rRearWheel, new Vector3f(-wheelX, rearY, rearZ), rear,
-                steeringFlipped, 0f, parkingBrake, damping);
+        addWheel(lFrontWheel, new Vector3f(+wheelX, frontY, frontZ),
+                Steering.DIRECT, mainBrake, 0f, damping);
+        addWheel(rFrontWheel, new Vector3f(-wheelX, frontY, frontZ),
+                Steering.DIRECT, mainBrake, 0f, damping);
+        addWheel(lRearWheel, new Vector3f(+wheelX, rearY, rearZ),
+                Steering.UNUSED, 0f, parkingBrake, damping);
+        addWheel(rRearWheel, new Vector3f(-wheelX, rearY, rearZ),
+                Steering.UNUSED, 0f, parkingBrake, damping);
         /*
          * Configure the suspension.
          *

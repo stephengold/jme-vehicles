@@ -2,6 +2,7 @@ package com.jayfella.jme.vehicle.examples.vehicles;
 
 import com.jayfella.jme.vehicle.Sound;
 import com.jayfella.jme.vehicle.SpeedUnit;
+import com.jayfella.jme.vehicle.Steering;
 import com.jayfella.jme.vehicle.Vehicle;
 import com.jayfella.jme.vehicle.WheelModel;
 import com.jayfella.jme.vehicle.examples.engines.FlexibleEngine;
@@ -92,19 +93,17 @@ public class HoverTank extends Vehicle {
         float axleY = 0f; // height of axles relative to vehicle's CoG
         float frontZ = 2.7f;
         float rearZ = -1.8f;
-        boolean steering = false; // Wheels do not steer.
-        boolean steeringFlipped = false;
         float mainBrake = 0f;
         float parkingBrake = 0f;
         float extraDamping = 0f;
-        addWheel(lFrontWheel, new Vector3f(+frontX, axleY, frontZ), steering,
-                steeringFlipped, mainBrake, parkingBrake, extraDamping);
-        addWheel(rFrontWheel, new Vector3f(-frontX, axleY, frontZ), steering,
-                steeringFlipped, mainBrake, parkingBrake, extraDamping);
-        addWheel(lRearWheel, new Vector3f(+rearX, axleY, rearZ), steering,
-                steeringFlipped, mainBrake, parkingBrake, extraDamping);
-        addWheel(rRearWheel, new Vector3f(-rearX, axleY, rearZ), steering,
-                steeringFlipped, mainBrake, parkingBrake, extraDamping);
+        addWheel(lFrontWheel, new Vector3f(+frontX, axleY, frontZ),
+                Steering.UNUSED, mainBrake, parkingBrake, extraDamping);
+        addWheel(rFrontWheel, new Vector3f(-frontX, axleY, frontZ),
+                Steering.UNUSED, mainBrake, parkingBrake, extraDamping);
+        addWheel(lRearWheel, new Vector3f(+rearX, axleY, rearZ),
+                Steering.UNUSED, mainBrake, parkingBrake, extraDamping);
+        addWheel(rRearWheel, new Vector3f(-rearX, axleY, rearZ),
+                Steering.UNUSED, mainBrake, parkingBrake, extraDamping);
         /*
          * Configure the suspension.
          *

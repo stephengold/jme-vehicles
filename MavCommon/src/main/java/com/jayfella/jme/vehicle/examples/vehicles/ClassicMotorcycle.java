@@ -2,6 +2,7 @@ package com.jayfella.jme.vehicle.examples.vehicles;
 
 import com.jayfella.jme.vehicle.Bike;
 import com.jayfella.jme.vehicle.Sound;
+import com.jayfella.jme.vehicle.Steering;
 import com.jayfella.jme.vehicle.WheelModel;
 import com.jayfella.jme.vehicle.examples.engines.PeakyEngine;
 import com.jayfella.jme.vehicle.examples.sounds.EngineSound5;
@@ -217,10 +218,8 @@ public class ClassicMotorcycle extends Bike {
 
         float rearAxleY = -0.1f; // height of rear axle relative to body's CoG
         float rearZ = -0.703f;
-        boolean isSteering = false; // Rear wheel does not steer.
-        boolean steeringFlipped = false;
-        addWheel(rearWheel, new Vector3f(0f, rearAxleY, rearZ), isSteering,
-                steeringFlipped, mainBrake, 0f, damping);
+        addWheel(rearWheel, new Vector3f(0f, rearAxleY, rearZ), Steering.UNUSED,
+                mainBrake, 0f, damping);
         /*
          * Configure the suspension.
          *

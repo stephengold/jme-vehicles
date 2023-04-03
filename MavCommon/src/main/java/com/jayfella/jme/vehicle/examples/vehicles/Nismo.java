@@ -1,6 +1,7 @@
 package com.jayfella.jme.vehicle.examples.vehicles;
 
 import com.jayfella.jme.vehicle.Sound;
+import com.jayfella.jme.vehicle.Steering;
 import com.jayfella.jme.vehicle.Vehicle;
 import com.jayfella.jme.vehicle.WheelModel;
 import com.jayfella.jme.vehicle.examples.engines.PeakyEngine;
@@ -82,19 +83,16 @@ public class Nismo extends Vehicle {
         float axleY = 0.32f; // height of the axles relative to vehicle's CoG
         float frontZ = 1.42f;
         float rearZ = -1.36f;
-        boolean front = true; // Front wheels are for steering.
-        boolean rear = false; // Rear wheels do not steer.
-        boolean steeringFlipped = false;
         float parkingBrake = 25_000f; // in rear only
         float damping = 0.009f; // extra linear damping
-        addWheel(lFrontWheel, new Vector3f(+wheelX, axleY, frontZ), front,
-                steeringFlipped, 6_750f, 0f, damping);
-        addWheel(rFrontWheel, new Vector3f(-wheelX, axleY, frontZ), front,
-                steeringFlipped, 6_750f, 0f, damping);
-        addWheel(lRearWheel, new Vector3f(+wheelX, axleY, rearZ), rear,
-                steeringFlipped, 3_000f, parkingBrake, damping);
-        addWheel(rRearWheel, new Vector3f(-wheelX, axleY, rearZ), rear,
-                steeringFlipped, 3_000f, parkingBrake, damping);
+        addWheel(lFrontWheel, new Vector3f(+wheelX, axleY, frontZ),
+                Steering.DIRECT, 6_750f, 0f, damping);
+        addWheel(rFrontWheel, new Vector3f(-wheelX, axleY, frontZ),
+                Steering.DIRECT, 6_750f, 0f, damping);
+        addWheel(lRearWheel, new Vector3f(+wheelX, axleY, rearZ),
+                Steering.UNUSED, 3_000f, parkingBrake, damping);
+        addWheel(rRearWheel, new Vector3f(-wheelX, axleY, rearZ),
+                Steering.UNUSED, 3_000f, parkingBrake, damping);
         /*
          * Configure the suspension.
          *

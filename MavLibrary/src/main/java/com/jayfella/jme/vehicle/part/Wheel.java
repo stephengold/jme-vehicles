@@ -1,5 +1,7 @@
 package com.jayfella.jme.vehicle.part;
 
+import com.jayfella.jme.vehicle.Steering;
+import static com.jayfella.jme.vehicle.Steering.DIRECT;
 import com.jayfella.jme.vehicle.Vehicle;
 import com.jayfella.jme.vehicle.VehicleWorld;
 import com.jayfella.jme.vehicle.tire.PacejkaTireModel;
@@ -30,14 +32,6 @@ public class Wheel {
     // *************************************************************************
     // fields
 
-    /**
-     * true if used for steering, otherwise false
-     */
-    private boolean isSteering;
-    /**
-     * steer with a rear wheel by flipping the direction
-     */
-    private boolean isSteeringFlipped;
     /**
      * main brake, which is typically hydraulic
      */
@@ -86,6 +80,10 @@ public class Wheel {
      */
     final private PhysicsVehicle body;
     /**
+     * relationship to the steering system (not null)
+     */
+    private Steering steering;
+    /**
      * parameters of the associated suspension spring
      */
     final private Suspension suspension;
@@ -107,19 +105,17 @@ public class Wheel {
      * @param vehicle the Vehicle to which this Wheel will be added (not null,
      * alias created)
      * @param wheelIndex the index among the engine body's wheels (&ge;0)
-     * @param isSteering true if used for steering, otherwise false
-     * @param steeringFlipped true for rear-wheel steering, otherwise false
+     * @param steering relationship to the steering system (not null)
      * @param suspension the suspension spring (not null, alias created)
      * @param mainBrake the main brake (not null, alias created)
      * @param parkingBrake the parking brake (not null, alias created)
      * @param extraDamping the additional linear damping (&ge;0, &lt;1)
      */
-    public Wheel(Vehicle vehicle, int wheelIndex,
-            boolean isSteering, boolean steeringFlipped, Suspension suspension,
-            Brake mainBrake, Brake parkingBrake, float extraDamping) {
+    public Wheel(Vehicle vehicle, int wheelIndex, Steering steering,
+            Suspension suspension, Brake mainBrake, Brake parkingBrake,
+            float extraDamping) {
         this(vehicle, vehicle.getVehicleControl(), wheelIndex,
-                isSteering, steeringFlipped, suspension,
-                mainBrake, parkingBrake, extraDamping);
+                steering, suspension, mainBrake, parkingBrake, extraDamping);
     }
 
     /**
@@ -130,18 +126,18 @@ public class Wheel {
      * @param body the physics body to which this Wheel will be added (not null,
      * alias created)
      * @param wheelIndex the index among the body's wheels (&ge;0)
-     * @param isSteering true if used for steering, otherwise false
-     * @param steeringFlipped true for rear-wheel steering, otherwise false
+     * @param steering relationship to the steering system (not null)
      * @param suspension the suspension spring (not null, alias created)
      * @param mainBrake the main brake (not null, alias created)
      * @param parkingBrake the parking brake (not null, alias created)
      * @param extraDamping the additional linear damping (&ge;0, &lt;1)
      */
     public Wheel(Vehicle vehicle, PhysicsVehicle body, int wheelIndex,
-            boolean isSteering, boolean steeringFlipped, Suspension suspension,
+            Steering steering, Suspension suspension,
             Brake mainBrake, Brake parkingBrake, float extraDamping) {
         Validate.nonNull(vehicle, "vehicle");
         Validate.nonNegative(wheelIndex, "wheel index");
+        Validate.nonNull(steering, "steering");
         Validate.nonNull(suspension, "suspension");
         Validate.nonNull(mainBrake, "main brake");
         Validate.nonNull(parkingBrake, "parking brake");
@@ -153,9 +149,7 @@ public class Wheel {
         vehicleWheel = body.getWheel(wheelIndex);
         assert vehicleWheel != null;
 
-        this.isSteering = isSteering;
-        this.isSteeringFlipped = steeringFlipped;
-
+        this.steering = steering;
         this.suspension = suspension;
         this.mainBrake = mainBrake;
         this.parkingBrake = parkingBrake;
@@ -386,7 +380,8 @@ public class Wheel {
      * @return true if used for steering, otherwise false
      */
     public boolean isSteering() {
-        return isSteering;
+        boolean result = (steering != Steering.UNUSED);
+        return result;
     }
 
     /**
@@ -396,7 +391,8 @@ public class Wheel {
      * @return true if opposite, otherwise false
      */
     public boolean isSteeringFlipped() {
-        return isSteeringFlipped;
+        boolean result = (steering == Steering.FLIPPED);
+        return result;
     }
 
     /**
@@ -453,8 +449,8 @@ public class Wheel {
     }
 
     /**
-     * Alter the fraction of the engine's output power that gets
-     * transmitted this wheel.
+     * Alter the fraction of the engine's output power that gets transmitted
+     * this wheel.
      *
      * @param fraction the desired power fraction (&ge;0, &le;1)
      */
@@ -474,39 +470,15 @@ public class Wheel {
     }
 
     /**
-     * Alter whether the wheel is used for steering.
+     * Alter how the wheel is steered, if at all.
      *
-     * @param steering true&rarr;used for steering, false&rarr;not used
+     * @param steering (not null)
      */
-    public void setSteering(boolean steering) {
-        this.isSteering = steering;
-        vehicleWheel.setFrontWheel(steering);
-    }
+    public void setSteering(Steering steering) {
+        Validate.nonNull(steering, "steering");
 
-    /**
-     * Convenience method to alter how the wheel is steered, if at all.
-     *
-     * @param steering true&rarr;used for steering, false&rarr;not used
-     * @param flipped false&rarr; same direction as the steering device,
-     * true&rarr;opposite direction
-     */
-    public void setSteering(boolean steering, boolean flipped) {
-        setSteering(steering);
-        setSteeringFlipped(flipped);
-    }
-
-    /**
-     * Alter the direction in which the wheel steers, if it is used for
-     * steering.
-     *
-     * Typically, a front wheel steers in the same direction as the steering
-     * control, and a rear wheel steers in the opposite direction, if at all.
-     *
-     * @param steeringFlipped false&rarr; same direction as the steering
-     * control, true&rarr;opposite direction
-     */
-    public void setSteeringFlipped(boolean steeringFlipped) {
-        this.isSteeringFlipped = steeringFlipped;
+        this.steering = steering;
+        vehicleWheel.setFrontWheel(steering != Steering.UNUSED);
     }
 
     /**
@@ -564,14 +536,22 @@ public class Wheel {
      * @param strength the control signal (in radians)
      */
     public void steer(float strength) {
-        if (isSteering()) {
-            if (isSteeringFlipped) {
-                steeringAngle = getMaxSteerAngle() * -strength;
-            } else {
-                steeringAngle = getMaxSteerAngle() * strength;
-            }
+        switch (steering) {
+            case DIRECT:
+                this.steeringAngle = getMaxSteerAngle() * strength;
+                body.steer(wheelIndex, steeringAngle);
+                break;
 
-            body.steer(wheelIndex, steeringAngle);
+            case FLIPPED:
+                this.steeringAngle = getMaxSteerAngle() * -strength;
+                body.steer(wheelIndex, steeringAngle);
+                break;
+
+            case UNUSED:
+                break;
+
+            default:
+                throw new IllegalStateException("steering = " + steering);
         }
     }
 

@@ -297,26 +297,25 @@ abstract public class Vehicle
      * @param wheelModel the desired WheelModel (not null)
      * @param connectionLocation the location where the suspension connects to
      * the chassis (in chassis coordinates, not null, unaffected)
-     * @param isSteering true if used for steering, otherwise false
-     * @param isSteeringFlipped true for rear-wheel steering, otherwise false
+     * @param steering relationship to the steering system (not null)
      * @param mainBrakePeakForce (in Newtons, &ge;0)
      * @param parkingBrakePeakForce (in Newtons, &ge;0)
      * @param extraDamping (&ge;0, &lt;1)
      * @return the new Wheel
      */
     public Wheel addWheel(WheelModel wheelModel, Vector3f connectionLocation,
-            boolean isSteering, boolean isSteeringFlipped,
-            float mainBrakePeakForce, float parkingBrakePeakForce,
-            float extraDamping) {
+            Steering steering, float mainBrakePeakForce,
+            float parkingBrakePeakForce, float extraDamping) {
         Validate.nonNull(wheelModel, "wheel model");
         Validate.finite(connectionLocation, "connection location");
+        Validate.nonNull(steering, "steering");
         Validate.nonNegative(mainBrakePeakForce, "main brake peak force");
         Validate.nonNegative(parkingBrakePeakForce, "parking brake peak force");
         Validate.fraction(extraDamping, "extra damping");
 
-        Wheel result = addWheel(wheelModel, engineBody, connectionLocation,
-                isSteering, isSteeringFlipped, mainBrakePeakForce,
-                parkingBrakePeakForce, extraDamping);
+        Wheel result = addWheel(
+                wheelModel, engineBody, connectionLocation, steering,
+                mainBrakePeakForce, parkingBrakePeakForce, extraDamping);
         return result;
     }
 
@@ -957,16 +956,14 @@ abstract public class Vehicle
      * alias created)
      * @param connectionLocation the location where the suspension connects to
      * the chassis (in chassis coordinates, not null, unaffected)
-     * @param isSteering true if used for steering, otherwise false
-     * @param isSteeringFlipped true for rear-wheel steering, otherwise false
+     * @param steering wheel's relationship to the steering system (not null)
      * @param mainBrakePeakForce (in Newtons, &ge;0)
      * @param parkingBrakePeakForce (in Newtons, &ge;0)
      * @param extraDamping (&ge;0, &lt;1)
      * @return the new Wheel
      */
     protected Wheel addWheel(WheelModel wheelModel, VehicleControl body,
-            Vector3f connectionLocation,
-            boolean isSteering, boolean isSteeringFlipped,
+            Vector3f connectionLocation, Steering steering,
             float mainBrakePeakForce, float parkingBrakePeakForce,
             float extraDamping) {
         Node wheelNode = wheelModel.getWheelNode();
@@ -977,14 +974,13 @@ abstract public class Vehicle
         int wheelIndex = body.getNumWheels();
         VehicleWheel vehicleWheel = body.addWheel(
                 wheelNode, connectionLocation, suspensionDirection,
-                axleDirection, restLength, radius, isSteering);
+                axleDirection, restLength, radius, steering != Steering.UNUSED);
 
         Suspension suspension = new Suspension(vehicleWheel);
         Brake mainBrake = new Brake(mainBrakePeakForce);
         Brake parkingBrake = new Brake(parkingBrakePeakForce);
-        Wheel result = new Wheel(
-                this, body, wheelIndex, isSteering, isSteeringFlipped,
-                suspension, mainBrake, parkingBrake, extraDamping);
+        Wheel result = new Wheel(this, body, wheelIndex, steering, suspension,
+                mainBrake, parkingBrake, extraDamping);
         wheels.add(result);
 
         getNode().attachChild(wheelNode);

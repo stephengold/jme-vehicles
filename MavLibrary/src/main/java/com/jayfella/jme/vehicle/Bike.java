@@ -71,7 +71,7 @@ abstract public class Bike extends Vehicle {
         Validate.fraction(extraDamping, "extra damping");
 
         Wheel result = addWheel(wheelModel, steeringBody, connectionLocation,
-                false, false, mainBrakePeakForce, parkingBrakePeakForce,
+                Steering.UNUSED, mainBrakePeakForce, parkingBrakePeakForce,
                 extraDamping);
         return result;
     }
