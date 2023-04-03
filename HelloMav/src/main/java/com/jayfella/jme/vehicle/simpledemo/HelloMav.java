@@ -259,7 +259,7 @@ public class HelloMav extends SimpleApplication {
      *
      * @param world where to add the props (not null)
      */
-    private void addProps(World world) {
+    private static void addProps(World world) {
         int numProps = 5;
 
         Vector3f location = new Vector3f();
