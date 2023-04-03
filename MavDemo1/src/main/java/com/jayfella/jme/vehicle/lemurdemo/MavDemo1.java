@@ -85,7 +85,7 @@ final public class MavDemo1 extends SimpleApplication {
     /**
      * enumerate preload tasks
      */
-    private static Loadable[] preloads = new Loadable[]{
+    private static Loadable[] preloads = {
         new AnimatedNightSky(),
         new CameraNameState(),
         new ClassicMotorcycle(),

@@ -22,7 +22,7 @@ public class PeakyEngine extends Engine {
     /**
      * points defining the power curve: x=rpmFraction, y=powerFraction
      */
-    final private static Vector3f[] points = new Vector3f[]{
+    final private static Vector3f[] points = {
         new Vector3f(0f, 0f, 0f),
         new Vector3f(0.08f, 0.048f, 0f),
         new Vector3f(0.12f, 0.0936f, 0f),
