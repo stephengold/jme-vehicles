@@ -31,7 +31,7 @@ class EngineSoundMenu extends AnimatedMenu {
     // *************************************************************************
     // fields
 
-    /*
+    /**
      * selected Sound, or null for silence
      */
     private Sound selectedSound;

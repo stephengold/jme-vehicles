@@ -77,7 +77,7 @@ public class AttributionMenu extends AnimatedMenu {
      * width of the GUI viewport (in pixels)
      */
     private float viewPortWidth;
-    /*
+    /**
      * visual presentation
      */
     final private Node node = new Node("Attribution Node");
