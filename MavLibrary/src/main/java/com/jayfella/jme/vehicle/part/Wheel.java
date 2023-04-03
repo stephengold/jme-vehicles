@@ -1,7 +1,6 @@
 package com.jayfella.jme.vehicle.part;
 
 import com.jayfella.jme.vehicle.Steering;
-import static com.jayfella.jme.vehicle.Steering.DIRECT;
 import com.jayfella.jme.vehicle.Vehicle;
 import com.jayfella.jme.vehicle.VehicleWorld;
 import com.jayfella.jme.vehicle.tire.PacejkaTireModel;

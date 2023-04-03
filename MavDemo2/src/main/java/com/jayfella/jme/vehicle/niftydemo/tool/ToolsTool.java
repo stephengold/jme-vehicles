@@ -1,7 +1,5 @@
 package com.jayfella.jme.vehicle.niftydemo.tool;
 
-import com.jayfella.jme.vehicle.niftydemo.MainHud;
-import com.jayfella.jme.vehicle.niftydemo.MavDemo2;
 import java.util.List;
 import java.util.logging.Logger;
 import jme3utilities.MyString;
