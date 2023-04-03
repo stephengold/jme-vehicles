@@ -306,7 +306,7 @@ class WheelSkid {
         return result;
     }
 
-    private float smoothstep(final float a, final float b, final float x) {
+    private static float smoothstep(final float a, final float b, final float x) {
         if (x < a) {
             return 0;
         } else if (x > b) {

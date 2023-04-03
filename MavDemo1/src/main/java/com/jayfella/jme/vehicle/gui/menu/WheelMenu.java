@@ -78,7 +78,7 @@ class WheelMenu extends AnimatedMenu {
     // *************************************************************************
     // private methods
 
-    private void setModel(Class<? extends WheelModel> wheelModelClass) {
+    private static void setModel(Class<? extends WheelModel> wheelModelClass) {
         Vehicle vehicle = MavDemo1.getVehicle();
         int numWheels = vehicle.countWheels();
         for (int wheelIndex = 0; wheelIndex < numWheels; ++wheelIndex) {

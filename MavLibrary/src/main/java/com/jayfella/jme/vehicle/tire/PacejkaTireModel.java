@@ -141,7 +141,7 @@ public class PacejkaTireModel {
     }
 
     // slipAngle is in RADIANS
-    private float calcSlipAngleFactor(float slipAngle, TireSettings settings) {
+    private static float calcSlipAngleFactor(float slipAngle, TireSettings settings) {
         // float x = slipAngle * FastMath.DEG_TO_RAD;
         // float x = slipAngle;
 
@@ -153,7 +153,7 @@ public class PacejkaTireModel {
         return FastMath.sin(angle);
     }
 
-    private float calcLoadForce(float load, TireSettings settings) {
+    private static float calcLoadForce(float load, TireSettings settings) {
         float ka = settings.getLoadCoefficientKA();
         float kb = settings.getLoadCoefficientKB();
         return ka * (1 - kb * load) * load;

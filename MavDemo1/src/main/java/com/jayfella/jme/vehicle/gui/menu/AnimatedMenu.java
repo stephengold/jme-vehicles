@@ -230,7 +230,7 @@ abstract class AnimatedMenu extends BaseAppState {
     // *************************************************************************
     // private methods
 
-    private void formatButton(Button button) {
+    private static void formatButton(Button button) {
         button.setTextHAlignment(HAlignment.Center);
         ((TbtQuadBackgroundComponent) button.getBackground()).setMargin(10f, 5f);
         button.setFontSize(16f);

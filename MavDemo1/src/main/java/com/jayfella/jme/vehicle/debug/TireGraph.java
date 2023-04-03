@@ -150,7 +150,7 @@ final public class TireGraph extends Geometry {
         }
     }
 
-    private float map(float value, float oldMin, float oldMax, float newMin, float newMax) {
+    private static float map(float value, float oldMin, float oldMax, float newMin, float newMax) {
         return (((value - oldMin) * (newMax - newMin)) / (oldMax - oldMin)) + newMin;
     }
 }

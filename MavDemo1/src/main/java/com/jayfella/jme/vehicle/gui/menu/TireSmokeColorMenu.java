@@ -69,7 +69,7 @@ class TireSmokeColorMenu extends AnimatedMenu {
     // *************************************************************************
     // private methods
 
-    private void setColor(float red, float green, float blue) {
+    private static void setColor(float red, float green, float blue) {
         float alpha = 0.3f;
         ColorRGBA color = new ColorRGBA(red, green, blue, alpha);
 

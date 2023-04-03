@@ -33,7 +33,7 @@ public class TireEditor extends Container {
         addChild(printButton);
     }
 
-    private PropertyPanel createPropertyPanel(TireSettings tireSettings) {
+    private static PropertyPanel createPropertyPanel(TireSettings tireSettings) {
 
         PropertyPanel result = new PropertyPanel("glass");
 

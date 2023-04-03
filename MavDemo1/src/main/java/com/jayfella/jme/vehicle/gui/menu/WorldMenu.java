@@ -54,7 +54,7 @@ class WorldMenu extends AnimatedMenu {
     // *************************************************************************
     // private methods
 
-    private void setWorld(World newWorld) {
+    private static void setWorld(World newWorld) {
         MavDemo1 main = MavDemo1.getApplication();
         AssetManager assetManager = main.getAssetManager();
         newWorld.load(assetManager);

@@ -246,7 +246,7 @@ public class DrivingInputMode extends InputMode {
      * Re-orient the Vehicle so that it is upright, reset its motion to zero,
      * and attempt to locate it someplace it won't immediately collide.
      */
-    private void resetVehicle() {
+    private static void resetVehicle() {
         Vehicle vehicle = MavDemo1.getVehicle();
         VehicleControl engineBody = vehicle.getVehicleControl();
 

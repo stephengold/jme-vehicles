@@ -180,7 +180,7 @@ public class TireSmokeEmitter extends BaseAppState {
     // *************************************************************************
     // private methods
 
-    private ParticleEmitter createEmitter(
+    private static ParticleEmitter createEmitter(
             AssetManager assetManager, ColorRGBA startColor) {
         int numParticles = 80;
         ParticleEmitter result = new ParticleEmitter(

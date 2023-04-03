@@ -54,7 +54,7 @@ class SkyMenu extends AnimatedMenu {
     // *************************************************************************
     // private methods
 
-    private void setSky(Sky sky) {
+    private static void setSky(Sky sky) {
         MavDemo1 main = MavDemo1.getApplication();
         AssetManager assetManager = main.getAssetManager();
         sky.load(assetManager);
