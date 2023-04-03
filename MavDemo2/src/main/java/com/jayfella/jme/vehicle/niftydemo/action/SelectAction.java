@@ -64,7 +64,6 @@ final class SelectAction {
         if (handled) {
             return true;
         }
-        handled = true;
 
         String arg;
         if (actionString.startsWith(ActionPrefix.selectAllWheelModel)) {
