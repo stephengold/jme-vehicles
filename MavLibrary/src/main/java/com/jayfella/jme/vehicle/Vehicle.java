@@ -185,7 +185,7 @@ abstract public class Vehicle
         Validate.nonNull(name, "name");
 
         this.name = name;
-        node = new Node("Vehicle: " + name);
+        this.node = new Node("Vehicle: " + name);
         assert !isLoaded();
     }
     // *************************************************************************

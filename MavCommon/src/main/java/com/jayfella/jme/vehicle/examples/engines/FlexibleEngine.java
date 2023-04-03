@@ -58,7 +58,7 @@ public class FlexibleEngine extends Engine {
     public FlexibleEngine(String name, float maxWatts, float idleRpm,
             float redlineRpm) {
         super(name, maxWatts, idleRpm, redlineRpm);
-        spline = new Spline(Spline.SplineType.Linear, points, 0.1f, false);
+        this.spline = new Spline(Spline.SplineType.Linear, points, 0.1f, false);
     }
     // *************************************************************************
     // Engine methods

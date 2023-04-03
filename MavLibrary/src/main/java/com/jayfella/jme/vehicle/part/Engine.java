@@ -158,7 +158,7 @@ abstract public class Engine implements EngineSpeed {
      */
     public void setMaxOutputWatts(float watts) {
         Validate.positive(watts, "watts");
-        maxOutputWatts = watts;
+        this.maxOutputWatts = watts;
     }
 
     /**
@@ -168,7 +168,7 @@ abstract public class Engine implements EngineSpeed {
      */
     public void setRpmFraction(float revs) {
         Validate.fraction(revs, "revs");
-        rpmFraction = revs;
+        this.rpmFraction = revs;
     }
 
     /**
@@ -177,7 +177,7 @@ abstract public class Engine implements EngineSpeed {
      * @param newState the desired state (default=false)
      */
     public void setRunning(boolean newState) {
-        isRunning = newState;
+        this.isRunning = newState;
     }
 
     /**

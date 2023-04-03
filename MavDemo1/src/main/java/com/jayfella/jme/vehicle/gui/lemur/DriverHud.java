@@ -212,7 +212,7 @@ public class DriverHud extends BaseAppState {
         float radius = 0.05f * viewPortHeight;
         int numVertices = 25;
         Mesh mesh = new DiscMesh(radius, numVertices);
-        hornButton = new Geometry("horn button", mesh);
+        this.hornButton = new Geometry("horn button", mesh);
 
         // Add an Expander to toggle the horn sounding/silent.
         Expander listener = new Expander(hornButton) {
@@ -384,7 +384,7 @@ public class DriverHud extends BaseAppState {
         float radius = 0.035f * viewPortHeight;
         int numVertices = 25;
         Mesh mesh = new DiscMesh(radius, numVertices);
-        exitButton = new Geometry("exit button", mesh);
+        this.exitButton = new Geometry("exit button", mesh);
         attachToGui(exitButton);
 
         exitButton.setMaterial(exitMaterial);
@@ -430,7 +430,7 @@ public class DriverHud extends BaseAppState {
         float radius = 0.035f * viewPortHeight;
         int numVertices = 25;
         Mesh mesh = new DiscMesh(radius, numVertices);
-        powerButton = new Geometry("power button", mesh);
+        this.powerButton = new Geometry("power button", mesh);
         attachToGui(powerButton);
 
         if (on) {
@@ -467,7 +467,7 @@ public class DriverHud extends BaseAppState {
     private void showSpeedometer(SpeedUnit speedUnit) {
         hideSpeedometer();
 
-        speedometer = new SpeedometerState(vehicle, speedUnit);
+        this.speedometer = new SpeedometerState(vehicle, speedUnit);
         getStateManager().attach(speedometer);
     }
 
@@ -482,7 +482,7 @@ public class DriverHud extends BaseAppState {
         float y = 0.18f * viewPortHeight;
         float z = guiZ - 0.1f; // behind the horn button
         Vector3f location = new Vector3f(x, y, z);
-        steeringWheel = new SteeringWheelState(radius, location);
+        this.steeringWheel = new SteeringWheelState(radius, location);
         getStateManager().attach(steeringWheel);
 
         steeringWheel.setVehicle(vehicle);
@@ -496,7 +496,7 @@ public class DriverHud extends BaseAppState {
         hideTachometer();
 
         Engine engine = vehicle.getEngine();
-        tachometer = new TachometerState(engine);
+        this.tachometer = new TachometerState(engine);
         getStateManager().attach(tachometer);
     }
 }

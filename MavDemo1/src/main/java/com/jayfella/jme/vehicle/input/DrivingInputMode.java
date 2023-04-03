@@ -345,23 +345,23 @@ public class DrivingInputMode extends InputMode {
     private void updateTurn(float tpf) {
         if (turningLeft && !turningRight && steeringAngle >= 0f) {
             // turn more to the left
-            steeringAngle += turnRate * tpf;
-            steeringAngle = Math.min(steeringAngle, maxSteeringAngle);
+            this.steeringAngle += turnRate * tpf;
+            this.steeringAngle = Math.min(steeringAngle, maxSteeringAngle);
 
         } else if (turningRight && !turningLeft && steeringAngle <= 0f) {
             // turn more to the right
-            steeringAngle -= turnRate * tpf;
-            steeringAngle = Math.max(steeringAngle, -maxSteeringAngle);
+            this.steeringAngle -= turnRate * tpf;
+            this.steeringAngle = Math.max(steeringAngle, -maxSteeringAngle);
 
         } else if (steeringAngle > 0f) {
             // return from turning left
-            steeringAngle -= returnRate * tpf;
-            steeringAngle = Math.max(steeringAngle, 0f);
+            this.steeringAngle -= returnRate * tpf;
+            this.steeringAngle = Math.max(steeringAngle, 0f);
 
         } else if (steeringAngle < 0f) {
             // return from turning right
-            steeringAngle += returnRate * tpf;
-            steeringAngle = Math.min(steeringAngle, 0f);
+            this.steeringAngle += returnRate * tpf;
+            this.steeringAngle = Math.min(steeringAngle, 0f);
         }
 
         MavDemo1.getVehicle().steer(steeringAngle);

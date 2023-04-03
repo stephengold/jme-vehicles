@@ -140,17 +140,17 @@ public class PhysicsHud extends BaseAppState {
     @Override
     protected void initialize(Application application) {
         Camera camera = application.getCamera();
-        viewPortHeight = camera.getHeight();
-        viewPortWidth = camera.getWidth();
+        this.viewPortHeight = camera.getHeight();
+        this.viewPortWidth = camera.getWidth();
         /*
          * pre-load unshaded materials for buttons
          */
         AssetManager manager = application.getAssetManager();
         Texture texture = manager.loadTexture("/Textures/Georg/pause.png");
-        pauseMaterial = MyAsset.createUnshadedMaterial(manager, texture);
+        this.pauseMaterial = MyAsset.createUnshadedMaterial(manager, texture);
 
         texture = manager.loadTexture("/Textures/Georg/run.png");
-        runMaterial = MyAsset.createUnshadedMaterial(manager, texture);
+        this.runMaterial = MyAsset.createUnshadedMaterial(manager, texture);
         /*
          * Construct a Geometry for the single-step button.
          */
@@ -217,7 +217,7 @@ public class PhysicsHud extends BaseAppState {
     private void hidePauseButton() {
         if (pauseButton != null) {
             pauseButton.removeFromParent();
-            pauseButton = null;
+            this.pauseButton = null;
         }
     }
 
@@ -240,7 +240,7 @@ public class PhysicsHud extends BaseAppState {
         float radius = 0.025f * viewPortHeight;
         int numVertices = 25;
         Mesh mesh = new DiscMesh(radius, numVertices);
-        pauseButton = new Geometry("pause button", mesh);
+        this.pauseButton = new Geometry("pause button", mesh);
         attachToGui(pauseButton);
 
         if (paused) {

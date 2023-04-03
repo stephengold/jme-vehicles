@@ -101,7 +101,7 @@ public class PropProposal implements JmeCloneable {
      * Mark this proposal invalid.
      */
     public void invalidate() {
-        valid = false;
+        this.valid = false;
     }
 
     /**
@@ -210,7 +210,7 @@ public class PropProposal implements JmeCloneable {
      * @param setting true&rarr;activate, false&rarr;deactivate
      */
     public void setActive(boolean setting) {
-        active = setting;
+        this.active = setting;
     }
 
     /**
@@ -219,7 +219,7 @@ public class PropProposal implements JmeCloneable {
      * @param setting true&rarr;select, false&rarr;don't select
      */
     public void setAutoSelect(boolean setting) {
-        autoSelect = setting;
+        this.autoSelect = setting;
     }
 
     /**
@@ -279,9 +279,9 @@ public class PropProposal implements JmeCloneable {
 
         if (scale != scaleFactor) {
             float increaseFactor = scale / scaleFactor;
-            totalMass *= MyMath.cube(increaseFactor);
+            this.totalMass *= MyMath.cube(increaseFactor);
 
-            scaleFactor = scale;
+            this.scaleFactor = scale;
         }
     }
 
@@ -294,8 +294,8 @@ public class PropProposal implements JmeCloneable {
         Validate.nonNull(type, "type");
 
         if (type != propType) {
-            propType = type;
-            initialOrientation.loadIdentity();
+            this.propType = type;
+            this.initialOrientation.loadIdentity();
 
             float scaleFactor = 1f;
             float totalMass = 1f;
@@ -348,8 +348,8 @@ public class PropProposal implements JmeCloneable {
      */
     @Override
     public void cloneFields(Cloner cloner, Object original) {
-        initialOrientation = cloner.clone(initialOrientation);
-        initialLocation = cloner.clone(initialLocation);
+        this.initialOrientation = cloner.clone(initialOrientation);
+        this.initialLocation = cloner.clone(initialLocation);
     }
 
     /**

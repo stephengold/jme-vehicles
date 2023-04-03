@@ -146,24 +146,24 @@ public class AudioHud
     @Override
     protected void initialize(Application application) {
         Camera camera = application.getCamera();
-        viewPortHeight = camera.getHeight();
-        viewPortWidth = camera.getWidth();
+        this.viewPortHeight = camera.getHeight();
+        this.viewPortWidth = camera.getWidth();
         /*
          * pre-load unshaded materials for buttons
          */
         AssetManager manager = application.getAssetManager();
         Texture texture = manager.loadTexture("/Textures/Georg/mute.png");
-        muteMaterial = MyAsset.createUnshadedMaterial(manager, texture);
+        this.muteMaterial = MyAsset.createUnshadedMaterial(manager, texture);
 
         texture = manager.loadTexture("/Textures/Georg/sound.png");
-        soundMaterial = MyAsset.createUnshadedMaterial(manager, texture);
+        this.soundMaterial = MyAsset.createUnshadedMaterial(manager, texture);
 
         // pre-load the master-volume materials
         texture = manager.loadTexture("/Textures/Georg/left-triangle.png");
-        mvBackgroundMaterial
+        this.mvBackgroundMaterial
                 = MyAsset.createUnshadedMaterial(manager, texture);
         ColorRGBA color = new ColorRGBA(1f, 1f, 0f, 1f);
-        mvSliderMaterial = MyAsset.createUnshadedMaterial(manager, color);
+        this.mvSliderMaterial = MyAsset.createUnshadedMaterial(manager, color);
 
         // Position the MV control in the viewport.
         float x = 0.713f * viewPortWidth;
@@ -198,7 +198,7 @@ public class AudioHud
         zNormal = +1f;
         Mesh sliderMesh
                 = new RoundedRectangle(x1, x2, y1, y2, cornerRadius, zNormal);
-        mvSlider = new Geometry("Master-volume Slider", sliderMesh);
+        this.mvSlider = new Geometry("Master-volume Slider", sliderMesh);
         mvNode.attachChild(mvSlider);
         mvSlider.setMaterial(mvSliderMaterial);
 
@@ -304,7 +304,7 @@ public class AudioHud
     private void hideMuteButton() {
         if (muteButton != null) {
             muteButton.removeFromParent();
-            muteButton = null;
+            this.muteButton = null;
         }
     }
 
