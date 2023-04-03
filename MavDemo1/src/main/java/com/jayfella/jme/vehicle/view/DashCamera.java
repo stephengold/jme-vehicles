@@ -110,9 +110,7 @@ final public class DashCamera
      */
     @Override
     public void update(float tpf) {
-        /*
-         * Sum the discrete inputs (signals).
-         */
+        // Sum the discrete inputs (signals).
         int zoomSignalDirection = 0;
         for (CameraSignal function : CameraSignal.values()) {
             if (isActive(function)) {

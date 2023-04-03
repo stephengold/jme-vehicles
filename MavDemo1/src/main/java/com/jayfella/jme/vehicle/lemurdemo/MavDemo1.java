@@ -271,9 +271,8 @@ final public class MavDemo1 extends SimpleApplication {
 
         world = newWorld;
         attachAllToScene();
-        /*
-         * Re-use the existing input state with the new Vehicle instance.
-         */
+
+        // Re-use the existing input state with the new Vehicle instance.
         findAppState(CameraInputMode.class).setVehicle(vehicle);
     }
     // *************************************************************************
@@ -282,9 +281,8 @@ final public class MavDemo1 extends SimpleApplication {
     @Override
     public void simpleInitApp() {
         NativeLibrary.setStartupMessageEnabled(false);
-        /*
-         * Log library versions.
-         */
+
+        // Log library versions.
         logger.log(Level.INFO, "jme3-core version is {0}",
                 MyString.quote(JmeVersion.FULL_NAME));
         logger.log(Level.INFO, "Heart version is {0}",

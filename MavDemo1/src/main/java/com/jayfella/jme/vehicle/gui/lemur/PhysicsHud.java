@@ -142,9 +142,8 @@ public class PhysicsHud extends BaseAppState {
         Camera camera = application.getCamera();
         this.viewPortHeight = camera.getHeight();
         this.viewPortWidth = camera.getWidth();
-        /*
-         * pre-load unshaded materials for buttons
-         */
+
+        // pre-load unshaded materials for buttons
         AssetManager manager = application.getAssetManager();
         Texture texture = manager.loadTexture("/Textures/Georg/pause.png");
         this.pauseMaterial = MyAsset.createUnshadedMaterial(manager, texture);
@@ -248,15 +247,13 @@ public class PhysicsHud extends BaseAppState {
         } else {
             pauseButton.setMaterial(runMaterial);
         }
-        /*
-         * Position the button in the viewport.
-         */
+
+        // Position the button in the viewport.
         float x = 0.8f * viewPortWidth;
         float y = 0.95f * viewPortHeight;
         pauseButton.setLocalTranslation(x, y, guiZ);
-        /*
-         * Add an Expander to toggle the simulation running/paused.
-         */
+
+        //Add an Expander to toggle the simulation running/paused.
         Expander listener = new Expander(pauseButton) {
             @Override
             public void onClick(boolean isPressed) {
@@ -276,9 +273,8 @@ public class PhysicsHud extends BaseAppState {
         if (singleStepButton.getParent() == null) {
             attachToGui(singleStepButton);
         }
-        /*
-         * Position the button in the viewport.
-         */
+
+        // Position the button in the viewport.
         float x = 0.84f * viewPortWidth;
         float y = 0.95f * viewPortHeight;
         singleStepButton.setLocalTranslation(x, y, guiZ);

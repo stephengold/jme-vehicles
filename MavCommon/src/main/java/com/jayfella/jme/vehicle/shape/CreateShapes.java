@@ -64,16 +64,14 @@ final public class CreateShapes {
     public static void main(String[] arguments) {
         NativeLibraryLoader.loadNativeLibrary("bulletjme", true);
         NativeLibrary.setStartupMessageEnabled(false);
-        /*
-         * Configure the AssetManager (from scratch).
-         */
+
+        // Configure the AssetManager (from scratch).
         assetManager.registerLoader(AWTLoader.class, "jpeg", "png");
         assetManager.registerLoader(BinaryLoader.class, "j3o");
         assetManager.registerLoader(J3MLoader.class, "j3m", "j3md");
         assetManager.registerLocator(null, ClasspathLocator.class);
-        /*
-         * Create collision shapes for vehicle chassis.
-         */
+
+        // Create collision shapes for vehicle chassis.
         createBikeChassisShapes("classic_motorcycle", "chassis");
         createChassisShape("GT", "scene.gltf");
         createChassisShape("Tank", "chassis");
@@ -82,9 +80,8 @@ final public class CreateShapes {
         createChassisShape("hcr2_buggy", "dune-buggy");
         createChassisShape("hcr2_rotator", "chassis");
         createChassisShape("modern_hatchback", "hatchback");
-        /*
-         * Create a convex hull for each Prop model.
-         */
+
+        // Create a convex hull for each Prop model.
         createPropHull("barrier_pack", "barrel1");
         createPropHull("barrier_pack", "barrel2");
         createPropHull("barrier_pack", "barrier");
@@ -100,9 +97,8 @@ final public class CreateShapes {
         createPropHull("barrier_pack", "wall_barrier_painted");
         createPropHull("barrier_pack", "warning_sign");
         createPropHull("barrier_pack", "weight");
-        /*
-         * Create a CollisionShape for each World.
-         */
+
+        // Create a CollisionShape for each World.
         createWorldShape("race1", "race1");
         createWorldShape("vehicle-playground", "vehicle-playground");
     }
@@ -183,9 +179,8 @@ final public class CreateShapes {
         System.out.printf("done!%n");
         dumper.dump(collisionShape, "    ");
         System.out.flush();
-        /*
-         * Save the collision shape in J3O format.
-         */
+
+        // Save the collision shape in J3O format.
         String writeFilePath = "src/main/resources/Models/" + folderName
                 + "/shapes/" + fileName;
         Heart.writeJ3O(writeFilePath, collisionShape);
@@ -220,9 +215,8 @@ final public class CreateShapes {
         System.out.printf("done!%n");
         dumper.dump(collisionShape, "    ");
         System.out.flush();
-        /*
-         * Write the convex hull in J3O format.
-         */
+
+        // Write the convex hull in J3O format.
         String writeFilePath = String.format(
                 "src/main/resources/Models/Props/%s/%s_hull.j3o",
                 folderName, cgmBaseFileName);
@@ -253,9 +247,8 @@ final public class CreateShapes {
         System.out.printf("done!%n");
         dumper.dump(collisionShape, "    ");
         System.out.flush();
-        /*
-         * Save the shape in J3O format.
-         */
+
+        // Save the shape in J3O format.
         String assetName;
         Platform platform = JmeSystem.getPlatform();
         if (platform == Platform.Windows64) {

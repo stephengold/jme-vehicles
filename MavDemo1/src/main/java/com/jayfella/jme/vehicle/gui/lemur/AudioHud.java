@@ -148,9 +148,8 @@ public class AudioHud
         Camera camera = application.getCamera();
         this.viewPortHeight = camera.getHeight();
         this.viewPortWidth = camera.getWidth();
-        /*
-         * pre-load unshaded materials for buttons
-         */
+
+        // pre-load unshaded materials for buttons
         AssetManager manager = application.getAssetManager();
         Texture texture = manager.loadTexture("/Textures/Georg/mute.png");
         this.muteMaterial = MyAsset.createUnshadedMaterial(manager, texture);
@@ -333,9 +332,8 @@ public class AudioHud
         } else {
             muteButton.setMaterial(soundMaterial);
         }
-        /*
-         * Position the button in the viewport.
-         */
+
+        // Position the button in the viewport.
         float x = 0.76f * viewPortWidth;
         float y = 0.95f * viewPortHeight;
         muteButton.setLocalTranslation(x, y, guiZ);

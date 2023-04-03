@@ -137,9 +137,8 @@ public class DriverHud extends BaseAppState {
         } else {
             hornButton.setMaterial(hornSilentMaterial);
         }
-        /*
-         * Position the button in the viewport.
-         */
+
+        // Position the button in the viewport.
         float x = 0.5f * viewPortWidth;
         float y = 0.18f * viewPortHeight;
         hornButton.setLocalTranslation(x, y, guiZ);
@@ -277,9 +276,8 @@ public class DriverHud extends BaseAppState {
     @Override
     public void update(float tpf) {
         super.update(tpf);
-        /*
-         * Re-orient the horn button and the steering-wheel indicator.
-         */
+
+        // Re-orient the horn button and the steering-wheel indicator.
         float angle = vehicle.steeringWheelAngle();
         Quaternion orientation = new Quaternion(); // TODO garbage
         orientation.fromAngles(0f, 0f, angle);
@@ -388,15 +386,13 @@ public class DriverHud extends BaseAppState {
         attachToGui(exitButton);
 
         exitButton.setMaterial(exitMaterial);
-        /*
-         * Position the button in the viewport.
-         */
+
+        // Position the button in the viewport.
         float x = 0.975f * viewPortWidth;
         float y = 0.955f * viewPortHeight;
         exitButton.setLocalTranslation(x, y, guiZ);
-        /*
-         * Add an Expander to return to the main menu.
-         */
+
+        // Add an Expander to return to the main menu.
         Expander listener = new Expander(exitButton) {
             @Override
             public void onClick(boolean isPressed) {
@@ -438,15 +434,13 @@ public class DriverHud extends BaseAppState {
         } else {
             powerButton.setMaterial(powerOffMaterial);
         }
-        /*
-         * Position the button in the viewport.
-         */
+
+        // Position the button in the viewport.
         float x = 0.625f * viewPortWidth;
         float y = 0.07f * viewPortHeight;
         powerButton.setLocalTranslation(x, y, guiZ);
-        /*
-         * Add an Expander to toggle the engine on/off.
-         */
+
+        // Add an Expander to toggle the engine on/off.
         Expander listener = new Expander(powerButton) {
             @Override
             public void onClick(boolean isPressed) {

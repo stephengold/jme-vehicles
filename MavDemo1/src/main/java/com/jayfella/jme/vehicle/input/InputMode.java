@@ -55,9 +55,8 @@ abstract public class InputMode extends BaseAppState {
     protected InputMode(String appStateId, FunctionId... functions) {
         super(appStateId);
         super.setEnabled(false);
-        /*
-         * Initially, none of the functions do anything.
-         */
+
+        // Initially, none of the functions do anything.
         for (FunctionId function : functions) {
             functionToHandler.put(function, null);
         }

@@ -313,15 +313,13 @@ public class DrivingInputMode extends InputMode {
 
     private void updateBrakeAndAccelerate() {
         Vehicle vehicle = MavDemo1.getVehicle();
-        /*
-         * Update the brake control signals.
-         */
+
+        // Update the brake control signals.
         float main = mainBrake ? 1f : 0f;
         float parking = parkingBrake ? 1f : 0f;
         vehicle.setBrakeSignals(main, parking);
-        /*
-         * Update the "accelerate" control signal.
-         */
+
+        // Update the "accelerate" control signal.
         float acceleration = 0f;
         boolean isEngineRunning = vehicle.getEngine().isRunning();
         if (isEngineRunning && accelerating) {
