@@ -11,7 +11,6 @@ import com.jayfella.jme.vehicle.niftydemo.view.Cameras;
 import com.jayfella.jme.vehicle.niftydemo.view.View;
 import com.jme3.app.Application;
 import com.jme3.asset.AssetManager;
-import com.jme3.bullet.BulletAppState;
 import com.jme3.bullet.PhysicsSpace;
 import com.jme3.bullet.PhysicsTickListener;
 import com.jme3.bullet.collision.PhysicsCollisionObject;
@@ -256,45 +255,6 @@ public class DemoState
         assert maLogVolume >= 0f : maLogVolume;
         assert maLogVolume <= 1f : maLogVolume;
         return maLogVolume;
-    }
-
-    /**
-     * Pick the nearest Prop under the mouse cursor using a physics ray.
-     *
-     * @return the pre-existing instance, or null of none found
-     */
-    public static Prop pickProp() {
-        Vector3f near = new Vector3f();
-        Vector3f far = new Vector3f();
-        MavDemo2.findAppState(View.class).mouseRay(near, far);
-
-        BulletAppState bas = MavDemo2.findAppState(BulletAppState.class);
-        PhysicsSpace physicsSpace = bas.getPhysicsSpace();
-        List<PhysicsRayTestResult> results = physicsSpace.rayTest(near, far);
-
-        // Calculate the offset from near end to the far end.
-        Vector3f offset = far.subtract(near);
-        /*
-         * Collision results are sorted by increasing distance from the camera,
-         * so the first result is also the nearest one.
-         */
-        for (PhysicsRayTestResult result : results) {
-            /*
-             * If the dot product of the normal with the offset is negative,
-             * then the triangle is facing the camera.
-             */
-            Vector3f worldNormal = result.getHitNormalLocal(null);
-            PhysicsCollisionObject pco = result.getCollisionObject();
-            float dotProduct = offset.dot(worldNormal);
-            if (dotProduct < 0f) {
-                Object appData = pco.getApplicationData();
-                if (appData instanceof Prop) {
-                    return (Prop) appData;
-                }
-            }
-        }
-
-        return null;
     }
 
     /**
