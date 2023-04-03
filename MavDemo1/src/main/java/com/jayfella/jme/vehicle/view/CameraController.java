@@ -62,7 +62,7 @@ abstract public class CameraController {
 
         this.vehicle = vehicle;
         this.camera = camera;
-        signalTracker = tracker;
+        this.signalTracker = tracker;
     }
     // *************************************************************************
     // new methods exposed
@@ -89,7 +89,7 @@ abstract public class CameraController {
      */
     public void setVehicle(Vehicle newVehicle) {
         Validate.nonNull(newVehicle, "new vehicle");
-        vehicle = newVehicle;
+        this.vehicle = newVehicle;
     }
 
     /**

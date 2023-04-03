@@ -232,7 +232,7 @@ public class PropProposal implements JmeCloneable {
         Validate.finite(location, "location");
 
         initialLocation.set(location);
-        valid = true;
+        this.valid = true;
     }
 
     /**

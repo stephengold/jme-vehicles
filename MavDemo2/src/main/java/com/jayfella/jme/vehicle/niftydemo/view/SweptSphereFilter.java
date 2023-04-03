@@ -78,11 +78,11 @@ class SweptSphereFilter implements BulletDebugAppState.DebugAppStateFilter {
     void setEnabled(ViewFlags viewFlag, boolean newValue) {
         switch (viewFlag) {
             case PropSpheres:
-                enableProps = newValue;
+                this.enableProps = newValue;
                 break;
 
             case VehicleSpheres:
-                enableVehicles = newValue;
+                this.enableVehicles = newValue;
                 break;
 
             default:
