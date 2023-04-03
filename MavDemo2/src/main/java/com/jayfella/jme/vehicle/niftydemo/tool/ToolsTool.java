@@ -88,7 +88,7 @@ class ToolsTool extends Tool {
             String toolName = MyString.remainder(boxName, "tools");
             toolName = MyString.firstToLower(toolName);
 
-            boolean isEnabled = tools.isEnabled(toolName);
+            boolean isEnabled = Tools.isEnabled(toolName);
             setChecked(boxName, isEnabled);
 
             String location = tools.describeLocation(toolName);

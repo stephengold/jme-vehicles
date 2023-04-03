@@ -59,6 +59,6 @@ class SkyMenu extends AnimatedMenu {
         AssetManager assetManager = main.getAssetManager();
         sky.load(assetManager);
 
-        main.setSky(sky);
+        MavDemo1.setSky(sky);
     }
 }
