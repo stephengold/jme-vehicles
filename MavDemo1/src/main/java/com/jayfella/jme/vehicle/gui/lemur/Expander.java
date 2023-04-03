@@ -65,8 +65,8 @@ abstract class Expander implements MouseListener {
     // MouseListener methods
 
     @Override
-    public void mouseButtonEvent(MouseButtonEvent event, Spatial s1,
-            Spatial s2) {
+    public void mouseButtonEvent(
+            MouseButtonEvent event, Spatial s1, Spatial s2) {
         int buttonIndex = event.getButtonIndex();
         if (buttonIndex == 0) { // ignore buttons other than the LMB
             boolean isPressed = event.isPressed();

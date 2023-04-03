@@ -55,8 +55,8 @@ public class FlexibleEngine extends Engine {
      * @param idleRpm the desired idle speed (in RPMs, &ge;0, &lt;redlineRpm)
      * @param redlineRpm the desired redline speed (&gt;0)
      */
-    public FlexibleEngine(String name, float maxWatts, float idleRpm,
-            float redlineRpm) {
+    public FlexibleEngine(
+            String name, float maxWatts, float idleRpm, float redlineRpm) {
         super(name, maxWatts, idleRpm, redlineRpm);
         this.spline = new Spline(Spline.SplineType.Linear, points, 0.1f, false);
     }

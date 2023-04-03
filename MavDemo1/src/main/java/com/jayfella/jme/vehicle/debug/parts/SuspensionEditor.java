@@ -32,9 +32,9 @@ public class SuspensionEditor extends Container {
         PropertyPanel propertyPanel = new PropertyPanel("glass");
 
         for (int i = 0; i < vehicle.countWheels(); ++i) {
-            propertyPanel.addFloatProperty("Wheel " + i,
-                    vehicle.getWheel(i).getSuspension(), "restLength",
-                    0.01f, 1.0f, 0.01f);
+            propertyPanel.addFloatProperty(
+                    "Wheel " + i, vehicle.getWheel(i).getSuspension(),
+                    "restLength", 0.01f, 1.0f, 0.01f);
         }
 
         return new RollupPanel("Height", propertyPanel, "glass");
@@ -45,9 +45,9 @@ public class SuspensionEditor extends Container {
         PropertyPanel propertyPanel = new PropertyPanel("glass");
 
         for (int i = 0; i < vehicle.countWheels(); ++i) {
-            propertyPanel.addFloatProperty("Wheel " + i,
-                    vehicle.getWheel(i).getSuspension(), "maxForce",
-                    500, 25000, 0.1f);
+            propertyPanel.addFloatProperty(
+                    "Wheel " + i, vehicle.getWheel(i).getSuspension(),
+                    "maxForce", 500, 25000, 0.1f);
         }
 
         return new RollupPanel("Max Force", propertyPanel, "glass");
@@ -58,9 +58,9 @@ public class SuspensionEditor extends Container {
         PropertyPanel propertyPanel = new PropertyPanel("glass");
 
         for (int i = 0; i < vehicle.countWheels(); ++i) {
-            propertyPanel.addFloatProperty("Wheel " + i,
-                    vehicle.getWheel(i).getSuspension(), "stiffness",
-                    1, 200, 0.1f);
+            propertyPanel.addFloatProperty(
+                    "Wheel " + i, vehicle.getWheel(i).getSuspension(),
+                    "stiffness", 1, 200, 0.1f);
         }
 
         return new RollupPanel("Stiffness", propertyPanel, "glass");
@@ -71,9 +71,9 @@ public class SuspensionEditor extends Container {
         PropertyPanel propertyPanel = new PropertyPanel("glass");
 
         for (int i = 0; i < vehicle.countWheels(); ++i) {
-            propertyPanel.addFloatProperty("Wheel " + i,
-                    vehicle.getWheel(i).getSuspension(), "compressDamping",
-                    0.01f, 1.0f, 0.01f);
+            propertyPanel.addFloatProperty(
+                    "Wheel " + i, vehicle.getWheel(i).getSuspension(),
+                    "compressDamping", 0.01f, 1.0f, 0.01f);
         }
 
         return new RollupPanel("Compression", propertyPanel, "glass");
@@ -84,9 +84,9 @@ public class SuspensionEditor extends Container {
         PropertyPanel propertyPanel = new PropertyPanel("glass");
 
         for (int i = 0; i < vehicle.countWheels(); ++i) {
-            propertyPanel.addFloatProperty("Wheel " + i,
-                    vehicle.getWheel(i).getSuspension(), "relaxDamping",
-                    0.01f, 1.0f, 0.01f);
+            propertyPanel.addFloatProperty(
+                    "Wheel " + i, vehicle.getWheel(i).getSuspension(),
+                    "relaxDamping", 0.01f, 1.0f, 0.01f);
         }
 
         return new RollupPanel("Damping", propertyPanel, "glass");

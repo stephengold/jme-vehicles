@@ -57,8 +57,8 @@ public class DuneBuggy extends Vehicle {
          */
         float mass = 525f; // in kilos
         float linearDamping = 0.02f;
-        setChassis("hcr2_buggy", "dune-buggy", assetManager, mass,
-                linearDamping);
+        setChassis(
+                "hcr2_buggy", "dune-buggy", assetManager, mass, linearDamping);
 
         float rearDiameter = 0.944f;
         float frontDiameter = 0.77f;

@@ -250,8 +250,8 @@ public class AtmiState extends BaseAppState {
         float bgHeight = (numModes + 1) * spacingY;
         float cornerRadius = 0.01f * viewPortWidth;
         float bgWidth = maxWidth + 2f * cornerRadius;
-        Mesh bgMesh = new RoundedRectangle(-bgWidth / 2f, bgWidth / 2f, 0f,
-                bgHeight, cornerRadius, 1f);
+        Mesh bgMesh = new RoundedRectangle(
+                -bgWidth / 2f, bgWidth / 2f, 0f, bgHeight, cornerRadius, 1f);
         Geometry bgGeometry = new Geometry("bg", bgMesh);
         node.attachChild(bgGeometry);
         bgGeometry.setLocalTranslation(0f, 0f, -0.1f);

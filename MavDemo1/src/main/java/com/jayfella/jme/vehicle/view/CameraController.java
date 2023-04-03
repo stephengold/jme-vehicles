@@ -56,8 +56,8 @@ abstract public class CameraController {
     // *************************************************************************
     // constructor
 
-    protected CameraController(Vehicle vehicle, Camera camera,
-            SignalTracker tracker) {
+    protected CameraController(
+            Vehicle vehicle, Camera camera, SignalTracker tracker) {
         Validate.nonNull(vehicle, "vehicle");
 
         this.vehicle = vehicle;

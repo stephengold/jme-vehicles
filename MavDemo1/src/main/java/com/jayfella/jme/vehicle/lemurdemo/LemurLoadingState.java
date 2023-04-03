@@ -70,8 +70,8 @@ public class LemurLoadingState extends JmeLoadingState {
      */
     @Override
     protected void startThreads(int numAdditionalThreads) {
-        Validate.nonNegative(numAdditionalThreads,
-                "number of additional threads");
+        Validate.nonNegative(
+                numAdditionalThreads, "number of additional threads");
         super.startThreads(numAdditionalThreads + 1);
         /*
          * Start an additional thread to initialize Lemur.

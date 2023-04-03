@@ -127,8 +127,8 @@ abstract public class InputMode extends BaseAppState {
      * @param handler the desired handler (not null, alias created)
      * @param functions the functions
      */
-    final protected void assign(StateFunctionListener handler,
-            FunctionId... functions) {
+    final protected void assign(
+            StateFunctionListener handler, FunctionId... functions) {
         Validate.nonNull(handler, "handler");
         if (isEnabled()) {
             String message = "Can't modify InputMode while enabled.";

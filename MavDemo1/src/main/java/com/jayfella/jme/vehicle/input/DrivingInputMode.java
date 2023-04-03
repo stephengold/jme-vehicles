@@ -297,10 +297,10 @@ public class DrivingInputMode extends InputMode {
                 DashCamera dashCamera
                         = new DashCamera(vehicle, camera, signalTracker);
                 activeCamera = dashCamera;
-                dashCamera.setSignalName(CameraSignal.ZoomIn,
-                        CameraSignal.ZoomIn.toString());
-                dashCamera.setSignalName(CameraSignal.ZoomOut,
-                        CameraSignal.ZoomOut.toString());
+                dashCamera.setSignalName(
+                        CameraSignal.ZoomIn, CameraSignal.ZoomIn.toString());
+                dashCamera.setSignalName(
+                        CameraSignal.ZoomOut, CameraSignal.ZoomOut.toString());
                 break;
 
             default:

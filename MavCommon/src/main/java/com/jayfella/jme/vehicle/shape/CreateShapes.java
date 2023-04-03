@@ -112,12 +112,12 @@ final public class CreateShapes {
      * @param folderName the name of the folder containing the C-G model
      * @param cgmBaseFileName the base filename of the C-G model
      */
-    private static void createBikeChassisShapes(String folderName,
-            String cgmBaseFileName) {
+    private static void createBikeChassisShapes(
+            String folderName, String cgmBaseFileName) {
         assetManager.clearCache(); // to reclaim direct buffer memory
 
-        String cgmAssetPath = String.format("/Models/%s/%s.j3o", folderName,
-                cgmBaseFileName);
+        String cgmAssetPath = String.format(
+                "/Models/%s/%s.j3o", folderName, cgmBaseFileName);
         Node cgmRoot = (Node) assetManager.loadModel(cgmAssetPath);
 
         String description = folderName + " engine body";
@@ -135,12 +135,12 @@ final public class CreateShapes {
      * @param folderName the name of the folder containing the C-G model
      * @param cgmBaseFileName the base filename of the C-G model
      */
-    private static void createChassisShape(String folderName,
-            String cgmBaseFileName) {
+    private static void createChassisShape(
+            String folderName, String cgmBaseFileName) {
         assetManager.clearCache(); // to reclaim direct buffer memory
 
-        String cgmAssetPath = String.format("/Models/%s/%s.j3o", folderName,
-                cgmBaseFileName);
+        String cgmAssetPath = String.format(
+                "/Models/%s/%s.j3o", folderName, cgmBaseFileName);
         Spatial cgmRoot = assetManager.loadModel(cgmAssetPath);
 
         String description = folderName + " chassis";
@@ -192,12 +192,12 @@ final public class CreateShapes {
      * @param folderName the name of the folder containing the C-G model
      * @param cgmBaseFileName the base filename of the C-G model
      */
-    private static void createPropHull(String folderName,
-            String cgmBaseFileName) {
+    private static void createPropHull(
+            String folderName, String cgmBaseFileName) {
         assetManager.clearCache(); // to reclaim direct buffer memory
 
-        String cgmAssetPath = String.format("/Models/Props/%s/%s.j3o",
-                folderName, cgmBaseFileName);
+        String cgmAssetPath = String.format(
+                "/Models/Props/%s/%s.j3o", folderName, cgmBaseFileName);
         Spatial cgmRoot = assetManager.loadModel(cgmAssetPath);
         Transform rootTransform = cgmRoot.getLocalTransform();
         if (!MyMath.isIdentity(rootTransform)) {
@@ -205,8 +205,8 @@ final public class CreateShapes {
                     cgmBaseFileName + " rootTransform = " + rootTransform);
         }
 
-        System.out.printf("%nCreate convex hull for %s prop ... ",
-                cgmBaseFileName);
+        System.out.printf(
+                "%nCreate convex hull for %s prop ... ", cgmBaseFileName);
         System.out.flush();
 
         CollisionShape collisionShape
@@ -229,16 +229,16 @@ final public class CreateShapes {
      * @param folderName the name of the folder containing the C-G model
      * @param cgmBaseFileName the base filename of the C-G model
      */
-    private static void createWorldShape(String folderName,
-            String cgmBaseFileName) {
+    private static void createWorldShape(
+            String folderName, String cgmBaseFileName) {
         assetManager.clearCache(); // to reclaim direct buffer memory
 
-        String cgmAssetPath = String.format("/Models/%s/%s.j3o", folderName,
-                cgmBaseFileName);
+        String cgmAssetPath = String.format(
+                "/Models/%s/%s.j3o", folderName, cgmBaseFileName);
         Spatial cgmRoot = assetManager.loadModel(cgmAssetPath);
 
-        System.out.printf("%nCreate shape for the %s world ... ",
-                cgmBaseFileName);
+        System.out.printf(
+                "%nCreate shape for the %s world ... ", cgmBaseFileName);
         System.out.flush();
 
         CollisionShape collisionShape

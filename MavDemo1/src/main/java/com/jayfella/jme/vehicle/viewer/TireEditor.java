@@ -21,7 +21,8 @@ public class TireEditor extends Container {
         tabbedPanel.addTab("Align Moment", mntProps);
 
         PropertyPanel tireProps = new PropertyPanel("glass");
-        tireProps.addFloatProperty("Load", tireModel, "load", 0, tireModel.getMaxLoad(), 0.1f);
+        tireProps.addFloatProperty(
+                "Load", tireModel, "load", 0, tireModel.getMaxLoad(), 0.1f);
 
         Button printButton = new Button("Print Data");
         printButton.addClickCommands(source -> System.out.println(tireModel));
