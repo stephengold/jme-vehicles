@@ -271,7 +271,7 @@ Additional controls when the orbit camera is active:
 ## How to add the MaVehicles library to an existing project
 
 The MaVehicles library depends on [Minie].
-However, the Minie dependency is intentionally omitted from MaVehicles's POM
+However, the Minie dependency is intentionally omitted from the MaVehicles POM
 so developers can specify *which* Minie library should be used.
 
 For projects built using Maven or [Gradle], it is *not* sufficient to specify the
