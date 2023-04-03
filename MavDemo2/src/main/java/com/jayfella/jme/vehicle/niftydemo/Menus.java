@@ -24,6 +24,7 @@ import com.jayfella.jme.vehicle.examples.worlds.Mountains;
 import com.jayfella.jme.vehicle.examples.worlds.Playground;
 import com.jayfella.jme.vehicle.examples.worlds.Racetrack;
 import com.jayfella.jme.vehicle.niftydemo.action.ActionPrefix;
+import com.jayfella.jme.vehicle.niftydemo.tool.Tools;
 import com.jayfella.jme.vehicle.niftydemo.view.View;
 import com.jme3.system.JmeVersion;
 import de.lessvoid.nifty.Nifty;
