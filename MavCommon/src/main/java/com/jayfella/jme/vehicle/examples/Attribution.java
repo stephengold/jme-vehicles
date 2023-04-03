@@ -184,7 +184,7 @@ final public class Attribution {
             builder.append(licenseType);
             if (licenseType.equals("CC-BY-4.0")) {
                 builder.append(
-                        " (http://creativecommons.org/licenses/by/4.0/)");
+                        " (https://creativecommons.org/licenses/by/4.0/)");
             }
             builder.append('.');
             builder.append("\n\n");
