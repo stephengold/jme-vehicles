@@ -72,7 +72,7 @@ abstract public class Sky implements Loadable {
     /**
      * A no-arg constructor to avoid javadoc warnings from JDK 18.
      */
-    public Sky() {
+    protected Sky() {
         // do nothing
     }
     // *************************************************************************

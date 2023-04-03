@@ -47,7 +47,7 @@ abstract public class World
     /**
      * A no-arg constructor to avoid javadoc warnings from JDK 18.
      */
-    public World() {
+    protected World() {
         // do nothing
     }
     // *************************************************************************

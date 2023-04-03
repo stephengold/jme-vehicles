@@ -179,7 +179,7 @@ public class TireSettings {
         /**
          * A no-arg constructor to avoid javadoc warnings from JDK 18.
          */
-        public ChangeListener() {
+        protected ChangeListener() {
             // do nothing
         }
 

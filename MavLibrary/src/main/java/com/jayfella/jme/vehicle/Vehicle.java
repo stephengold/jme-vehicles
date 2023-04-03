@@ -181,7 +181,7 @@ abstract public class Vehicle
      *
      * @param name the desired name (not null)
      */
-    public Vehicle(String name) {
+    protected Vehicle(String name) {
         Validate.nonNull(name, "name");
 
         this.name = name;

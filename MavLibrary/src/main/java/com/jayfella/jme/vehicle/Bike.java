@@ -43,7 +43,7 @@ abstract public class Bike extends Vehicle {
      *
      * @param name the desired name (not null)
      */
-    public Bike(String name) {
+    protected Bike(String name) {
         super(name);
     }
     // *************************************************************************
