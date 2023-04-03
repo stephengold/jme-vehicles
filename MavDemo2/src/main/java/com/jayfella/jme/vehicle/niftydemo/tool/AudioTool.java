@@ -27,7 +27,7 @@ class AudioTool extends Tool {
      */
     final private static SliderTransform volumeSt = SliderTransform.None;
     /**
-     * name of the mute check box
+     * name of the mute checkbox
      */
     final private static String muteCn = "masterMute";
     /**
@@ -50,7 +50,7 @@ class AudioTool extends Tool {
     // Tool methods
 
     /**
-     * Enumerate this tool's check boxes.
+     * Enumerate this tool's checkboxes.
      *
      * @return a new list of names (unique id prefixes)
      */
@@ -78,8 +78,8 @@ class AudioTool extends Tool {
     /**
      * Update the MVC model based on a check-box event.
      *
-     * @param name the name (unique id prefix) of the check box
-     * @param isChecked the new state of the check box (true&rarr;checked,
+     * @param name the name (unique id prefix) of the checkbox
+     * @param isChecked the new state of the checkbox (true&rarr;checked,
      * false&rarr;unchecked)
      */
     @Override
