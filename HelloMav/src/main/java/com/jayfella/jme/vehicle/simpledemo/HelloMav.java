@@ -93,6 +93,7 @@ public class HelloMav extends SimpleApplication {
         for (String arg : args) {
             if (arg.equals("--noDialog")) {
                 showSettingsDialog = false;
+                break;
             }
         }
 
@@ -134,9 +135,7 @@ public class HelloMav extends SimpleApplication {
          * Add the main Vehicle to the World and start its Engine.
          * Add parked vehicles and props.
          */
-        GlobalAudio globalAudio = () -> {
-            return 1f;
-        };
+        GlobalAudio globalAudio = () -> 1f;
         vehicle.addToWorld(world, globalAudio);
 
         Engine engine = vehicle.getEngine();

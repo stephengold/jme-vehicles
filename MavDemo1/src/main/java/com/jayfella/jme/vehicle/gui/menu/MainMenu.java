@@ -37,7 +37,7 @@ public class MainMenu extends AnimatedMenu {
         List<Button> result = new ArrayList<>(6);
 
         addButton(result, "Drive",
-                source -> animateOut(() -> drive()));
+                source -> animateOut(this::drive));
         addButton(result, "Change World",
                 source -> animateOut(() -> goTo(new WorldMenu())));
         addButton(result, "Change Vehicle",

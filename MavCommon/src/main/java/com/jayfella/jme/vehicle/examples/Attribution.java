@@ -158,10 +158,7 @@ final public class Attribution {
      */
     public static String plainMessage(LicensedWork... licensedWorks) {
         StringBuilder builder = new StringBuilder(512);
-        int numWorks = licensedWorks.length;
-        for (int workIndex = 0; workIndex < numWorks; ++workIndex) {
-            LicensedWork work = licensedWorks[workIndex];
-
+        for (LicensedWork work : licensedWorks) {
             String workName = work.workName;
             String workUrl = work.workUrl;
             String authorName = work.authorName.replace("ş", "s");

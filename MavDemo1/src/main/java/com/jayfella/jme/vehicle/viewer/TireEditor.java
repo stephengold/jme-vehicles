@@ -24,9 +24,7 @@ public class TireEditor extends Container {
         tireProps.addFloatProperty("Load", tireModel, "load", 0, tireModel.getMaxLoad(), 0.1f);
 
         Button printButton = new Button("Print Data");
-        printButton.addClickCommands(source -> {
-            System.out.println(tireModel);
-        });
+        printButton.addClickCommands(source -> System.out.println(tireModel));
 
         addChild(tabbedPanel);
         addChild(tireProps);
