@@ -77,7 +77,6 @@ abstract class AnimatedMenu extends BaseAppState {
      * @param label the text to display on the Button
      * @param command the command to execute when the Button is clicked
      */
-    @SuppressWarnings("unchecked")
     protected static void addButton(List<? super Button> list, String label,
             Command<? super Button> command) {
         Button button = new Button(label);

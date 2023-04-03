@@ -9,7 +9,6 @@ import com.simsilica.lemur.props.PropertyPanel;
 
 public class TireEditor extends Container {
 
-    @SuppressWarnings("unchecked")
     public TireEditor(PacejkaTireModel tireModel) {
         PropertyPanel latProps = createPropertyPanel(tireModel.getLateral());
         PropertyPanel lngProps = createPropertyPanel(tireModel.getLongitudinal());
