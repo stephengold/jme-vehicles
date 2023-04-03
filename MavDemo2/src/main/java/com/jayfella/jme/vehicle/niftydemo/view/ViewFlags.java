@@ -40,5 +40,5 @@ public enum ViewFlags {
     /**
      * collision shapes for the World
      */
-    WorldShapes;
+    WorldShapes
 }

@@ -72,5 +72,5 @@ public enum PropType {
     /**
      * iron weight, from "Barrier & Traffic Cone Pack"
      */
-    Weight;
+    Weight
 }

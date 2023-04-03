@@ -22,5 +22,5 @@ public enum PerformanceMode {
      * display maximum latency using the PerformanceAppState from the
      * Jme3-utilities project
      */
-    DebugPas;
+    DebugPas
 }
