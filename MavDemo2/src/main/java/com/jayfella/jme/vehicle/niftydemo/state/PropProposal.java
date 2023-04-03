@@ -300,7 +300,7 @@ public class PropProposal implements JmeCloneable {
             float totalMass = 1f;
             Prop tmpProp = create(type, scaleFactor, totalMass);
             float descaledMass = tmpProp.defaultDescaledMass();
-            totalMass = descaledMass * MyMath.cube(scaleFactor);
+            this.totalMass = descaledMass * MyMath.cube(scaleFactor);
         }
     }
 
