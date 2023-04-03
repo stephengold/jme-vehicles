@@ -68,8 +68,6 @@ class ToolsTool extends Tool {
     public void onCheckBoxChanged(String boxName, boolean isChecked) {
         String toolName = MyString.remainder(boxName, "tools");
         toolName = MyString.firstToLower(toolName);
-
-        MainHud mainHud = MavDemo2.findAppState(MainHud.class);
         Tools.setEnabled(toolName, isChecked);
     }
 
@@ -79,8 +77,6 @@ class ToolsTool extends Tool {
      */
     @Override
     protected void toolUpdate() {
-        MainHud mainHud = MavDemo2.findAppState(MainHud.class);
-
         List<String> list = listCheckBoxes();
         for (String boxName : list) {
             String toolName = MyString.remainder(boxName, "tools");

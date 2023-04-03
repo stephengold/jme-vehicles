@@ -515,7 +515,6 @@ final public class Menus {
     private static boolean menuSettings(String remainder) {
         boolean handled = true;
         MainHud hud = MavDemo2.findAppState(MainHud.class);
-        PopupMenuBuilder builder = new PopupMenuBuilder();
 
         switch (remainder) {
             case "Display":
