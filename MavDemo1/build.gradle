@@ -26,7 +26,7 @@ dependencies {
     implementation minieCoordinates
     implementation 'com.simsilica:lemur:1.16.0'
     implementation 'com.simsilica:lemur-props:1.2.0'
-    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.19.0'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.20.0'
     runtimeOnly 'org.codehaus.groovy:groovy-jsr223:3.0.16'
 
     implementation project(':MavCommon')
