@@ -42,7 +42,7 @@ public class Tools {
     // constructors
 
     /**
-     * Instantiate all of the tools in the specified screen.
+     * Instantiate all the tools in the specified screen.
      *
      * @param screenController the screen's controller (not null)
      */

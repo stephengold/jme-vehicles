@@ -277,7 +277,7 @@ public class Wheel {
      *
      * Wheels are assumed able to turn the same amount in both directions.
      *
-     * @return the anglular limit (in radians, &ge;0)
+     * @return the angular limit (in radians, &ge;0)
      */
     public float getMaxSteerAngle() {
         assert maxSteerAngle >= 0f : maxSteerAngle;
