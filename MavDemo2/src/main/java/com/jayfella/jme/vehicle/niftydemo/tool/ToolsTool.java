@@ -70,8 +70,7 @@ class ToolsTool extends Tool {
         toolName = MyString.firstToLower(toolName);
 
         MainHud mainHud = MavDemo2.findAppState(MainHud.class);
-        Tools tools = mainHud.tools;
-        tools.setEnabled(toolName, isChecked);
+        Tools.setEnabled(toolName, isChecked);
     }
 
     /**
@@ -81,7 +80,6 @@ class ToolsTool extends Tool {
     @Override
     protected void toolUpdate() {
         MainHud mainHud = MavDemo2.findAppState(MainHud.class);
-        Tools tools = mainHud.tools;
 
         List<String> list = listCheckBoxes();
         for (String boxName : list) {
@@ -91,7 +89,7 @@ class ToolsTool extends Tool {
             boolean isEnabled = Tools.isEnabled(toolName);
             setChecked(boxName, isEnabled);
 
-            String location = tools.describeLocation(toolName);
+            String location = Tools.describeLocation(toolName);
             String statusName = boxName + "Status";
             this.setStatusText(statusName, location);
         }

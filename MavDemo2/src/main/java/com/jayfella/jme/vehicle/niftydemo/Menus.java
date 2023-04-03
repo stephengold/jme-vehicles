@@ -547,7 +547,7 @@ final public class Menus {
                 break;
 
             case "View":
-                hud.tools.select("view");
+                Tools.select("view");
                 break;
 
             case "Wheels":
@@ -581,7 +581,7 @@ final public class Menus {
                 break;
 
             case "Show the tools tool":
-                hud.tools.select("tools");
+                Tools.select("tools");
                 break;
 
             default:

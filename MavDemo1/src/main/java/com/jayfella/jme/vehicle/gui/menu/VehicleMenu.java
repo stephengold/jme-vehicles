@@ -71,7 +71,7 @@ class VehicleMenu extends AnimatedMenu {
         MavDemo1 main = MavDemo1.getApplication();
         AssetManager assetManager = main.getAssetManager();
         vehicle.load(assetManager);
-        main.setVehicle(vehicle);
+        MavDemo1.setVehicle(vehicle);
 
         getState(CameraInputMode.class).setVehicle(vehicle);
     }

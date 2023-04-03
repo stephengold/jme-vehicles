@@ -203,7 +203,7 @@ public class DrivingInputMode extends InputMode {
         MavDemo1 main = MavDemo1.getApplication();
         AssetManager assetManager = main.getAssetManager();
         newVehicle.load(assetManager);
-        main.setVehicle(newVehicle);
+        MavDemo1.setVehicle(newVehicle);
 
         stateManager.attach(new MainMenu());
         getState(CameraInputMode.class).orbit();

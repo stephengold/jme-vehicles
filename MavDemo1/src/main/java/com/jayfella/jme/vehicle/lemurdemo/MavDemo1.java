@@ -238,7 +238,7 @@ final public class MavDemo1 extends SimpleApplication {
      *
      * @param newSky the desired Sky (not null, loaded)
      */
-    public void setSky(Sky newSky) {
+    public static void setSky(Sky newSky) {
         sky.removeFromWorld();
         sky = newSky;
         sky.addToWorld(world);
@@ -249,7 +249,7 @@ final public class MavDemo1 extends SimpleApplication {
      *
      * @param newVehicle the Vehicle to select (not null, loaded)
      */
-    public void setVehicle(Vehicle newVehicle) {
+    public static void setVehicle(Vehicle newVehicle) {
         vehicle.removeFromWorld();
         vehicle = newVehicle;
 

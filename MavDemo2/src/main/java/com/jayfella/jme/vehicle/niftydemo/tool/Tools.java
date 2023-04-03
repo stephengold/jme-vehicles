@@ -87,7 +87,7 @@ public class Tools {
      * @param toolName which Tool to describe (not null, not empty)
      * @return textual description
      */
-    String describeLocation(String toolName) {
+    static String describeLocation(String toolName) {
         Validate.nonEmpty(toolName, "tool name");
 
         String result = "??";
@@ -135,7 +135,7 @@ public class Tools {
      *
      * @param toolName which Tool to select (not null, not empty)
      */
-    public void select(String toolName) {
+    public static void select(String toolName) {
         Validate.nonEmpty(toolName, "tool name");
 
         MainHud screen = MavDemo2.findAppState(MainHud.class);
@@ -166,7 +166,7 @@ public class Tools {
      * @param toolName which Tool to show or hide (not null, not empty)
      * @param newState the desired state
      */
-    void setEnabled(String toolName, boolean newState) {
+    static void setEnabled(String toolName, boolean newState) {
         Validate.nonEmpty(toolName, "tool name");
 
         MainHud screen = MavDemo2.findAppState(MainHud.class);
