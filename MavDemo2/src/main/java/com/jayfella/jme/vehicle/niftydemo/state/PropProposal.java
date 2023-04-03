@@ -24,8 +24,7 @@ public class PropProposal implements JmeCloneable {
     /**
      * argument-type array for getDeclaredConstructor()
      */
-    final private static Class[] twoFloats
-            = new Class[]{float.class, float.class};
+    final private static Class[] twoFloats = {float.class, float.class};
     /**
      * message logger for this class
      */
