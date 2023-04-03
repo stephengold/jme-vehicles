@@ -54,7 +54,8 @@ It contains 4 sub-projects:
 
 [Jump to table of contents](#toc)
 
-<img height="400" src="https://i.imgur.com/TsWukzO.png">
+<img height="400" src="https://i.imgur.com/TsWukzO.png"
+alt="A silver sports car flies out of a pipe. There are driving controls in the foreground and a racetrack in the background.">
 
 
 <a name="prebuilt"></a>
