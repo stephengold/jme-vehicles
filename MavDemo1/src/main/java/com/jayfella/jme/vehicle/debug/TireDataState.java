@@ -171,7 +171,8 @@ public class TireDataState extends BaseAppState {
     // *************************************************************************
     // private methods
 
-    private static Geometry createNeedle(AssetManager assetManager, ColorRGBA color) {
+    private static Geometry createNeedle(
+            AssetManager assetManager, ColorRGBA color) {
         Geometry result = new Geometry("Needle", new Quad(1, graphHeight));
         result.setMaterial(new Material(assetManager, Materials.UNSHADED));
         result.getMaterial().setColor("Color", color);

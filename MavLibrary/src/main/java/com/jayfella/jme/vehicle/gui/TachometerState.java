@@ -119,7 +119,8 @@ public class TachometerState extends BaseAppState {
         Material material = new Material(assetManager, Materials.UNSHADED);
         needleGeometry.setMaterial(material);
         material.setTexture("ColorMap", needleTexture);
-        material.getAdditionalRenderState().setBlendMode(RenderState.BlendMode.Alpha);
+        material.getAdditionalRenderState()
+                .setBlendMode(RenderState.BlendMode.Alpha);
 
         needleGeometry.setLocalTranslation(
                 -(width / 2f),

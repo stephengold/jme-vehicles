@@ -216,7 +216,8 @@ abstract public class Vehicle
              * with that of the engine body, which is Y-up and Z-forward.
              */
             VehicleController controller = body.getController();
-            Quaternion b2e = relativeTransforms[bodyIndex].getRotation(); // alias
+            Quaternion b2e
+                    = relativeTransforms[bodyIndex].getRotation(); // alias
             Quaternion e2b = b2e.inverse();
             Vector3f right = new Vector3f(1f, 0f, 0f);
             e2b.mult(right, right);
@@ -623,7 +624,8 @@ abstract public class Vehicle
          */
         float signedSignal = gearBox.isInReverse() ? -strength : +strength;
         float maxWatts = getEngine().outputWatts();
-        float totalWatts = signedSignal * maxWatts; // signed so that <0 means reverse
+        float totalWatts
+                = signedSignal * maxWatts; // signed so that <0 means reverse
         for (Wheel wheel : wheels) {
             float powerFraction = wheel.getPowerFraction();
             float wheelPower = powerFraction * totalWatts;

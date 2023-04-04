@@ -34,7 +34,8 @@ final public class EnginePowerGraph extends Geometry {
     // *************************************************************************
     // constructors
 
-    public EnginePowerGraph(AssetManager assetManager, Engine engine, int width, int height) {
+    public EnginePowerGraph(
+            AssetManager assetManager, Engine engine, int width, int height) {
         super("Engine Graph");
 
         this.engine = engine;
@@ -78,7 +79,8 @@ final public class EnginePowerGraph extends Geometry {
     // *************************************************************************
     // private methods
 
-    private static float map(float value, float oldMin, float oldMax, float newMin, float newMax) {
+    private static float map(float value, float oldMin, float oldMax,
+            float newMin, float newMax) {
         return (((value - oldMin) * (newMax - newMin)) / (oldMax - oldMin)) + newMin;
     }
 }

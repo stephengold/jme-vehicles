@@ -141,7 +141,8 @@ public class PacejkaTireModel {
     }
 
     // slipAngle is in RADIANS
-    private static float calcSlipAngleFactor(float slipAngle, TireSettings settings) {
+    private static float calcSlipAngleFactor(
+            float slipAngle, TireSettings settings) {
         // float x = slipAngle * FastMath.DEG_TO_RAD;
         // float x = slipAngle;
 

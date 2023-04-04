@@ -149,7 +149,8 @@ class ViewTool extends Tool {
 
         BulletAppState bas = MavDemo2.findAppState(BulletAppState.class);
         float axesLength = bas.debugAxisLength();
-        String axesLengthStatus = String.format("%.0f cm", 100f * axesLength); // TODO wuToCm
+        String axesLengthStatus
+                = String.format("%.0f cm", 100f * axesLength); // TODO wuToCm
         setButtonText("viewPhysicsAxes", axesLengthStatus);
 
         Sky sky = view.getSky();

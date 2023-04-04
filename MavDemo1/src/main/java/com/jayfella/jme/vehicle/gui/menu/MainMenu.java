@@ -67,7 +67,8 @@ public class MainMenu extends AnimatedMenu {
         getState(DrivingInputMode.class).setEnabled(true);
 
         // engine graph GUI for viewing torque/power @ revs
-        EnginePowerGraphState enginePowerGraphState = new EnginePowerGraphState(vehicle);
+        EnginePowerGraphState enginePowerGraphState
+                = new EnginePowerGraphState(vehicle);
         enginePowerGraphState.setEnabled(false);
         AppStateManager stateManager = getStateManager();
         stateManager.attach(enginePowerGraphState);

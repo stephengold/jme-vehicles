@@ -136,7 +136,8 @@ final public class ChaseCamera extends CameraController {
 
             @Override
             public Vector3f locateTarget(Vector3f storeResult) {
-                Vector3f result = newVehicle.locateTarget(rearBias, storeResult);
+                Vector3f result
+                        = newVehicle.locateTarget(rearBias, storeResult);
                 return result;
             }
         };

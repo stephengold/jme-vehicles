@@ -32,7 +32,8 @@ final public class TireGraph extends Geometry {
     private ColorRGBA longitudinalColor = ColorRGBA.Black;
     private ColorRGBA momentColor = ColorRGBA.Green;
 
-    public TireGraph(AssetManager assetManager, PacejkaTireModel tireModel, int width, int height) {
+    public TireGraph(AssetManager assetManager, PacejkaTireModel tireModel,
+            int width, int height) {
         super("Tire Graph");
 
         this.tireModel = tireModel;
@@ -150,7 +151,8 @@ final public class TireGraph extends Geometry {
         }
     }
 
-    private static float map(float value, float oldMin, float oldMax, float newMin, float newMax) {
+    private static float map(float value, float oldMin, float oldMax,
+            float newMin, float newMax) {
         return (((value - oldMin) * (newMax - newMin)) / (oldMax - oldMin)) + newMin;
     }
 }

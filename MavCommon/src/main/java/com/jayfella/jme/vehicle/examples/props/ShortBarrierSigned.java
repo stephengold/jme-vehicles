@@ -63,7 +63,8 @@ public class ShortBarrierSigned extends Prop {
             logger2.log(Level.SEVERE, "Already loaded.");
             return;
         }
-        String assetPath = "/Models/Props/barrier_pack/short_barrier_signed.j3o";
+        String assetPath
+                = "/Models/Props/barrier_pack/short_barrier_signed.j3o";
         Spatial cgmRoot = assetManager.loadModel(assetPath);
 
         assetPath = "/Models/Props/barrier_pack/short_barrier_signed_hull.j3o";

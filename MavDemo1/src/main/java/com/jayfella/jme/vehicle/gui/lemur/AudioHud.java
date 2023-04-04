@@ -150,7 +150,8 @@ public class AudioHud
         Material mvBackgroundMaterial
                 = MyAsset.createUnshadedMaterial(manager, texture);
         ColorRGBA color = new ColorRGBA(1f, 1f, 0f, 1f);
-        Material mvSliderMaterial = MyAsset.createUnshadedMaterial(manager, color);
+        Material mvSliderMaterial
+                = MyAsset.createUnshadedMaterial(manager, color);
 
         // Position the MV control in the viewport.
         float x = 0.713f * viewPortWidth;

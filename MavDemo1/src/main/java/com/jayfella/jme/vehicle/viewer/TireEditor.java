@@ -39,21 +39,26 @@ public class TireEditor extends Container {
         // propertyPanel.addFloatProperty("Max Load", tireSettings, "maxLoad", 1, 20000, 0.001f);
         // slip angle
         // affects how quickly grip will drop
-        result.addFloatProperty("SlipAngle C", tireSettings, "slipAngleCoefficientC", 0, 5, 0.001f);
+        result.addFloatProperty("SlipAngle C", tireSettings,
+                "slipAngleCoefficientC", 0, 5, 0.001f);
 
         // affects how "tight" the curve is.
-        result.addFloatProperty("SlipAngle B", tireSettings, "slipAngleCoefficientB", 0, 30, 0.001f);
+        result.addFloatProperty("SlipAngle B", tireSettings,
+                "slipAngleCoefficientB", 0, 30, 0.001f);
 
         // affects how much the slip "drops off".0...
-        result.addFloatProperty("SlipAngle E", tireSettings, "slipAngleCoefficientE", -2, 2, 0.001f);
+        result.addFloatProperty("SlipAngle E", tireSettings,
+                "slipAngleCoefficientE", -2, 2, 0.001f);
 
         // load / force
         // I'm not certain of the difference between these two...
         // affects how much load can be applied.
-        result.addFloatProperty("Load KA", tireSettings, "loadCoefficientKA", 0, 10, 0.001f);
+        result.addFloatProperty(
+                "Load KA", tireSettings, "loadCoefficientKA", 0, 10, 0.001f);
 
         // affects how much load can be applied to the tire.
-        result.addFloatProperty("Load KB", tireSettings, "loadCoefficientKB", 0, 0.0005f, 0.000001f);
+        result.addFloatProperty("Load KB", tireSettings, "loadCoefficientKB", 0,
+                0.0005f, 0.000001f);
 
         return result;
     }

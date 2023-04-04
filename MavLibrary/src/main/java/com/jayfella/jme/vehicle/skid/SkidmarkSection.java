@@ -95,12 +95,12 @@ class SkidmarkSection {
                 previous.tangent.set(tangent);
 
                 previous.locationLeft.set(previous.location);
-                MyVector3f.accumulateScaled(previous.locationLeft,
-                        tangent, -halfWidth);
+                MyVector3f.accumulateScaled(
+                        previous.locationLeft, tangent, -halfWidth);
 
                 previous.locationRight.set(previous.location);
-                MyVector3f.accumulateScaled(previous.locationRight,
-                        tangent, halfWidth);
+                MyVector3f.accumulateScaled(
+                        previous.locationRight, tangent, halfWidth);
             }
         }
     }
