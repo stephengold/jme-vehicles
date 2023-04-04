@@ -1,6 +1,6 @@
 # Release log for the MaVehicles library
 
-## Version 0.7.1 released on TBD
+## Version 0.7.1 released on 4 April 2023
 
 + API changes:
   + Used the `Steering` enum to simplify the APIs
@@ -29,7 +29,7 @@
   + Added the `Steering` enum to describe how wheels are steered.
 + Updated 17 textures provided by the Georg project.
 + Began using the CheckStyle tool.
-+ Upgrade JME to v3.6.0-stable, Garrett to v0.5.3, Heart to v8.3.2,
++ Upgrade JMonkeyEngine to v3.6.0-stable, Garrett to v0.5.3, Heart to v8.3.2,
   and Minie to v7.4.0 .
 
 ## Version 0.7.0 released on 7 October 2021

@@ -288,8 +288,8 @@ Add to the project’s "build.gradle" file:
         mavenCentral()
     }
     dependencies {
-        implementation 'com.github.stephengold:MaVehicles:0.7.0'
-        implementation 'com.github.stephengold:Minie:4.9.0+big3'
+        implementation 'com.github.stephengold:MaVehicles:0.7.1'
+        implementation 'com.github.stephengold:Minie:7.4.0'
     }
 
 For some older versions of Gradle,
@@ -309,13 +309,13 @@ Add to the project’s "pom.xml" file:
     <dependency>
       <groupId>com.github.stephengold</groupId>
       <artifactId>MaVehicles</artifactId>
-      <version>0.7.0</version>
+      <version>0.7.1</version>
     </dependency>
 
     <dependency>
       <groupId>com.github.stephengold</groupId>
       <artifactId>Minie</artifactId>
-      <version>4.9.0+big3</version>
+      <version>7.4.0</version>
     </dependency>
 
 [Jump to table of contents](#toc)
