@@ -299,7 +299,7 @@ public class MavDemo2 extends GuiApplication {
         }
 
         SignalTracker signals = getSignals();
-        Vehicle vehicle = MavDemo2.getDemoState().getVehicles().getSelected();
+        Vehicle vehicle = demoState.getVehicles().getSelected();
         if (vehicle.getEngine().isRunning()) {
             float accelerate = signals.test("accelerate") ? 1f : 0f;
             vehicle.setAccelerateSignal(accelerate);
@@ -340,7 +340,7 @@ public class MavDemo2 extends GuiApplication {
         assert success;
 
         CompassState compass = new CompassState();
-        InputMode dim = MavDemo2.getApplication().getDefaultInputMode();
+        InputMode dim = getApplication().getDefaultInputMode();
         compass.setEnabled(dim.isEnabled());
         dim.influence(compass);
         success = stateManager.attach(compass);
@@ -503,7 +503,7 @@ public class MavDemo2 extends GuiApplication {
             steerAngle = 0f;
         }
 
-        Vehicle vehicle = MavDemo2.getDemoState().getVehicles().getSelected();
+        Vehicle vehicle = demoState.getVehicles().getSelected();
         vehicle.steer(steerAngle);
     }
 }

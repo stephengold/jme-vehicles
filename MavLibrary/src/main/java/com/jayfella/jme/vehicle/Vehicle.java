@@ -1303,10 +1303,10 @@ abstract public class Vehicle
                 result = kph;
                 break;
             case MPH:
-                result = kph * Vehicle.KPH_TO_MPH;
+                result = kph * KPH_TO_MPH;
                 break;
             case WUPS:
-                result = kph * Vehicle.KPH_TO_WUPS;
+                result = kph * KPH_TO_WUPS;
                 break;
             default:
                 throw new IllegalArgumentException("speedUnit = " + speedUnit);
