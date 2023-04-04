@@ -48,7 +48,7 @@ final public class EnginePowerGraph extends Geometry {
         image.setFormat(Image.Format.BGRA8);
         image.setData(BufferUtils.createByteBuffer(image.getWidth() * image.getHeight() * 4));
 
-        imageRaster = ImageRaster.create(image);
+        this.imageRaster = ImageRaster.create(image);
         Texture2D texture = new Texture2D(image);
 
         setMesh(new Quad(width, height));
