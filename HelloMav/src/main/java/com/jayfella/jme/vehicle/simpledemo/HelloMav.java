@@ -16,11 +16,7 @@ import com.jayfella.jme.vehicle.examples.props.WarningSign;
 import com.jayfella.jme.vehicle.examples.skies.AnimatedDaySky;
 import com.jayfella.jme.vehicle.examples.sounds.EngineSound2;
 import com.jayfella.jme.vehicle.examples.vehicles.DuneBuggy;
-import com.jayfella.jme.vehicle.examples.vehicles.GrandTourer;
-import com.jayfella.jme.vehicle.examples.vehicles.HatchBack;
 import com.jayfella.jme.vehicle.examples.vehicles.HoverTank;
-import com.jayfella.jme.vehicle.examples.vehicles.Nismo;
-import com.jayfella.jme.vehicle.examples.vehicles.Rotator;
 import com.jayfella.jme.vehicle.examples.worlds.Mountains;
 import com.jayfella.jme.vehicle.gui.CompassState;
 import com.jayfella.jme.vehicle.gui.SpeedometerState;
@@ -172,11 +168,7 @@ public class HelloMav extends SimpleApplication {
 
         // Print asset attributions to the console.
         String attributionMessage = Attribution.plainMessage(
-                Attribution.opelGtRetopo,
-                Attribution.nissanGtr,
                 Attribution.hcr2Buggy,
-                Attribution.hcr2Rotator,
-                Attribution.modernHatchbackLowPoly,
                 Attribution.batcPack,
                 Attribution.raceSuit);
         System.out.print(attributionMessage);
@@ -226,32 +218,11 @@ public class HelloMav extends SimpleApplication {
 
         float yRotation = world.dropYRotation() + FastMath.HALF_PI;
 
-        for (int vehicleIndex = 0; vehicleIndex < numVehicles; ++vehicleIndex) {
-            Vehicle parkedVehicle;
-            switch (vehicleIndex % 5) {
-                case 0:
-                    parkedVehicle = new DuneBuggy();
-                    break;
-                case 1:
-                    parkedVehicle = new Nismo();
-                    break;
-                case 2:
-                    parkedVehicle = new GrandTourer();
-                    break;
-                case 3:
-                    parkedVehicle = new HatchBack();
-                    break;
-                case 4:
-                    parkedVehicle = new Rotator();
-                    break;
-                default:
-                    throw new AssertionError("vehicleIndex = " + vehicleIndex);
-            }
-            parkedVehicle.addToWorld(world, globalAudio, location, yRotation);
-            parkedVehicle.setBrakeSignals(1f, 1f);
+        Vehicle parkedVehicle = new DuneBuggy();
+        parkedVehicle.addToWorld(world, globalAudio, location, yRotation);
+        parkedVehicle.setBrakeSignals(1f, 1f);
 
-            location.addLocal(offset);
-        }
+        location.addLocal(offset);
     }
 
     /**
