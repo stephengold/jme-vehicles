@@ -233,7 +233,8 @@ public class Wheel {
      * @return the diameter (in meters)
      */
     public float getDiameter() {
-        return vehicleWheel.getWheelSpatial().getLocalScale().y; // they should all be the same.
+        return vehicleWheel.getWheelSpatial().getLocalScale().y;
+        // All 3 components should all be the same.
     }
 
     /**
