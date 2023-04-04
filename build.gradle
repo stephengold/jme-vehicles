@@ -15,7 +15,7 @@ ext {
 
     // current versions of libraries:
     jme3Version = '3.6.0-stable'
-    maVehiclesVersion = '0.7.1-SNAPSHOT'
+    maVehiclesVersion = '0.7.1'
 }
 
 subprojects {
