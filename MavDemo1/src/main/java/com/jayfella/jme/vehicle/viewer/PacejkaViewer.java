@@ -23,8 +23,6 @@ final public class PacejkaViewer extends SimpleApplication {
     // *************************************************************************
     // fields
 
-    private PacejkaTireModel tireModel;
-
     public static void main(String... args) {
         PacejkaViewer pacejkaViewer = new PacejkaViewer();
 
@@ -46,7 +44,7 @@ final public class PacejkaViewer extends SimpleApplication {
         BaseStyles.loadGlassStyle();
         GuiGlobals.getInstance().getStyles().setDefaultStyle("glass");
 
-        tireModel = new Tire01();
+        PacejkaTireModel tireModel = new Tire01();
 
         TireGraph tireGraph = new TireGraph(
                 assetManager, tireModel, cam.getWidth(), cam.getHeight());

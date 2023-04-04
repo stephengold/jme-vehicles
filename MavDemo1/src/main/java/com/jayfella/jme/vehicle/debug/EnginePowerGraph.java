@@ -31,7 +31,6 @@ final public class EnginePowerGraph extends Geometry {
     final private int width;
 
     final private ImageRaster imageRaster;
-    final private Texture2D texture;
     // *************************************************************************
     // constructors
 
@@ -49,7 +48,7 @@ final public class EnginePowerGraph extends Geometry {
         image.setData(BufferUtils.createByteBuffer(image.getWidth() * image.getHeight() * 4));
 
         imageRaster = ImageRaster.create(image);
-        texture = new Texture2D(image);
+        Texture2D texture = new Texture2D(image);
 
         setMesh(new Quad(width, height));
 

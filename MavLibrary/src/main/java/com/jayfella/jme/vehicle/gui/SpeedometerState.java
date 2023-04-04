@@ -57,7 +57,6 @@ public class SpeedometerState extends BaseAppState {
      */
     private BitmapFont font;
 
-    private BitmapText speedLabel;
     private float prevTheta = theta0;
     private Node guiNode;
     final private Node needleNode = new Node("Speedometer Needle");
@@ -140,7 +139,7 @@ public class SpeedometerState extends BaseAppState {
                 -(width / 2f) - 7f,
                 0f);
 
-        speedLabel = new BitmapText(font);
+        BitmapText speedLabel = new BitmapText(font);
         node.attachChild(speedLabel);
         speedLabel.setColor(markingColor);
         speedLabel.setText(speedUnit.toString());

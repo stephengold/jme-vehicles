@@ -50,7 +50,6 @@ public class TachometerState extends BaseAppState {
      */
     private BitmapFont font;
 
-    private BitmapText revsLabel;
     /**
      * corresponding engine
      */
@@ -127,7 +126,7 @@ public class TachometerState extends BaseAppState {
                 -(width / 2f) - 7f,
                 0f);
 
-        revsLabel = new BitmapText(font);
+        BitmapText revsLabel = new BitmapText(font);
         node.attachChild(revsLabel);
         revsLabel.setColor(markingColor);
         revsLabel.setText("RPM x1000");
