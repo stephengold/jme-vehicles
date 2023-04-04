@@ -2,7 +2,7 @@ package com.jayfella.jme.vehicle.examples.skies;
 
 import com.jayfella.jme.vehicle.Sky;
 import com.jayfella.jme.vehicle.VehicleWorld;
-import com.jme3.app.LegacyApplication;
+import com.jme3.app.Application;
 import com.jme3.asset.AssetManager;
 import com.jme3.light.DirectionalLight;
 import com.jme3.light.LightProbe;
@@ -52,7 +52,7 @@ public class AnimatedDaySky extends Sky {
      * @param application the application instance (not null)
      * @return a new Control
      */
-    public static SkyControl createSkyControl(LegacyApplication application) {
+    public static SkyControl createSkyControl(Application application) {
         AssetManager assetManager = application.getAssetManager();
         Camera camera = application.getCamera();
         float cloudFlattening = 0.8f;
@@ -106,7 +106,7 @@ public class AnimatedDaySky extends Sky {
     public void load(AssetManager assetManager) {
         super.load(assetManager);
 
-        LegacyApplication application = getApplication();
+        Application application = getApplication();
         this.skyControl = createSkyControl(application);
 
         Node node = new Node();
