@@ -13,6 +13,7 @@ import com.simsilica.lemur.Command;
 import com.simsilica.lemur.HAlignment;
 import com.simsilica.lemur.Insets3f;
 import com.simsilica.lemur.component.TbtQuadBackgroundComponent;
+import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 import jme3utilities.math.MyMath;
@@ -71,14 +72,14 @@ abstract class AnimatedMenu extends BaseAppState {
 
     /**
      * Convenience method to create a GUI Button and add it to the specified
-     * list.
+     * collection.
      *
-     * @param list the list to extend (not null, modified)
+     * @param list the collection to extend (not null, modified)
      * @param label the text to display on the Button
      * @param command the command to execute when the Button is clicked
      */
-    protected static void addButton(List<? super Button> list, String label,
-            Command<? super Button> command) {
+    protected static void addButton(Collection<? super Button> list,
+            String label, Command<? super Button> command) {
         Button button = new Button(label);
         button.addClickCommands(command);
         list.add(button);
