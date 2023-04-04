@@ -45,7 +45,7 @@ import jme3utilities.math.MyVector3f;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class HelloMav extends SimpleApplication {
+class HelloMav extends SimpleApplication {
     // *************************************************************************
     // constants and loggers
 
