@@ -58,10 +58,6 @@ public class AudioHud
      */
     private static float masterVolume = 0.5f;
     /**
-     * distance the slider travels (in pixels)
-     */
-    private float sliderTravel;
-    /**
      * height of the GUI viewport (in pixels)
      */
     private float viewPortHeight;
@@ -77,14 +73,6 @@ public class AudioHud
      * visualize the mute button
      */
     private Geometry muteButton;
-    /**
-     * pre-loaded Material for the master-volume background
-     */
-    private Material mvBackgroundMaterial;
-    /**
-     * pre-loaded Material for the master-volume slider
-     */
-    private Material mvSliderMaterial;
     /**
      * indicate audio is muted
      */
@@ -159,10 +147,10 @@ public class AudioHud
 
         // pre-load the master-volume materials
         texture = manager.loadTexture("/Textures/Georg/left-triangle.png");
-        this.mvBackgroundMaterial
+        Material mvBackgroundMaterial
                 = MyAsset.createUnshadedMaterial(manager, texture);
         ColorRGBA color = new ColorRGBA(1f, 1f, 0f, 1f);
-        this.mvSliderMaterial = MyAsset.createUnshadedMaterial(manager, color);
+        Material mvSliderMaterial = MyAsset.createUnshadedMaterial(manager, color);
 
         // Position the MV control in the viewport.
         float x = 0.713f * viewPortWidth;
@@ -170,7 +158,7 @@ public class AudioHud
         mvNode.setLocalTranslation(x, y, guiZ);
 
         // Attach a rounded-rectangle Geometry for the background.
-        sliderTravel = 0.088f * viewPortHeight;
+        float sliderTravel = 0.088f * viewPortHeight;
         float cornerRadius = 0.005f * viewPortHeight;
         float bgWidth = 0.1f * viewPortHeight;
         float bgHeight = 0.05f * viewPortHeight;
