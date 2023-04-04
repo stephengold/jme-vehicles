@@ -1,6 +1,6 @@
 package com.jayfella.jme.vehicle.gui;
 
-import com.atr.jme.font.TrueTypeFont;
+import com.atr.jme.font.TrueTypeMesh;
 import com.atr.jme.font.asset.TrueTypeKeyMesh;
 import com.atr.jme.font.shape.TrueTypeNode;
 import com.atr.jme.font.util.Style;
@@ -9,7 +9,6 @@ import com.jayfella.jme.vehicle.part.GearBox;
 import com.jme3.app.Application;
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.BaseAppState;
-import com.jme3.asset.AssetKey;
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
@@ -66,8 +65,10 @@ public class AtmiState extends BaseAppState {
      * Node that represents the indicator
      */
     private Node node;
-
-    private TrueTypeFont droidFont;
+    /**
+     * pre-loaded font for the text
+     */
+    private TrueTypeMesh droidFont;
     private Vehicle vehicle;
     // *************************************************************************
     // constructors
@@ -118,9 +119,9 @@ public class AtmiState extends BaseAppState {
 
         // pre-load the Droid font
         AssetManager manager = application.getAssetManager();
-        AssetKey<TrueTypeFont> assetKey = new TrueTypeKeyMesh(
+        TrueTypeKeyMesh assetKey = new TrueTypeKeyMesh(
                 "Interface/Fonts/DroidSerifBold-aMPE.ttf", Style.Plain, 18);
-        this.droidFont = manager.loadAsset(assetKey);
+        this.droidFont = (TrueTypeMesh) manager.loadAsset(assetKey);
 
         // pre-load unshaded materials for the mode indicator
         this.backgroundMaterial

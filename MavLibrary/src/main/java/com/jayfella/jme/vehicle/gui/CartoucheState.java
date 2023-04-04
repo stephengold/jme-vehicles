@@ -1,13 +1,12 @@
 package com.jayfella.jme.vehicle.gui;
 
-import com.atr.jme.font.TrueTypeFont;
+import com.atr.jme.font.TrueTypeMesh;
 import com.atr.jme.font.asset.TrueTypeKeyMesh;
 import com.atr.jme.font.shape.TrueTypeNode;
 import com.atr.jme.font.util.Style;
 import com.jme3.app.Application;
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.BaseAppState;
-import com.jme3.asset.AssetKey;
 import com.jme3.asset.AssetManager;
 import com.jme3.material.Material;
 import com.jme3.math.ColorRGBA;
@@ -62,7 +61,7 @@ abstract public class CartoucheState
     /**
      * pre-loaded font for the text
      */
-    private TrueTypeFont droidFont;
+    private TrueTypeMesh droidFont;
     // *************************************************************************
     // constructors
 
@@ -233,9 +232,9 @@ abstract public class CartoucheState
     @Override
     public void load(AssetManager assetManager) {
         // pre-load the Droid font
-        AssetKey<TrueTypeFont> assetKey = new TrueTypeKeyMesh(
+        TrueTypeKeyMesh assetKey = new TrueTypeKeyMesh(
                 "Interface/Fonts/DroidSerifBold-aMPE.ttf", Style.Plain, 18);
-        this.droidFont = assetManager.loadAsset(assetKey);
+        this.droidFont = (TrueTypeMesh) assetManager.loadAsset(assetKey);
 
         // pre-load the background Material
         ColorRGBA bgColor = new ColorRGBA(0.1f, 0.2f, 0.5f, 1f);
