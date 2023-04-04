@@ -47,7 +47,7 @@ public class MainMenu extends AnimatedMenu {
         addButton(result, "Attribution",
                 source -> animateOut(() -> goTo(new AttributionMenu())));
         addButton(result, "Quit the Demo",
-                source -> animateOut(() -> application.stop()));
+                source -> animateOut(application::stop));
 
         return result;
     }
