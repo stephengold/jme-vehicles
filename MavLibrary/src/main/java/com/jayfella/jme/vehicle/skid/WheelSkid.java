@@ -5,6 +5,7 @@ import com.jayfella.jme.vehicle.part.Wheel;
 import com.jme3.asset.AssetManager;
 import com.jme3.bullet.objects.VehicleWheel;
 import com.jme3.material.Material;
+import com.jme3.math.FastMath;
 import com.jme3.math.Vector3f;
 import com.jme3.renderer.queue.RenderQueue;
 import com.jme3.scene.Geometry;
@@ -161,9 +162,7 @@ class WheelSkid {
         if (opacity < 0f) {
             return -1;
         }
-        if (opacity > 1f) {
-            opacity = 1f;
-        }
+        float clampedOpacity = FastMath.saturate(opacity);
 
         SkidmarkSection previous;
         if (prevIndex == -1) {
@@ -183,7 +182,7 @@ class WheelSkid {
         }
 
         SkidmarkSection section = new SkidmarkSection(pavementLocation, normal,
-                height, opacity, previous, width / 2f);
+                height, clampedOpacity, previous, width / 2f);
         sections.add(section);
         int numSections = sections.size();
         int sectionIndex = numSections - 1;

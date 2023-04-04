@@ -9,7 +9,6 @@ import com.jme3.bullet.PhysicsSpace;
 import com.jme3.bullet.collision.shapes.CollisionShape;
 import com.jme3.renderer.Limits;
 import com.jme3.renderer.Renderer;
-import com.jme3.renderer.opengl.GLRenderer;
 import java.util.logging.Logger;
 import jme3utilities.MyString;
 import jme3utilities.nifty.dialog.AllowNull;
@@ -188,8 +187,7 @@ final class SetAction {
      */
     private static void setDefaultAniso() {
         Renderer renderer = MavDemo2.getApplication().getRenderer();
-        GLRenderer glRenderer = (GLRenderer) renderer;
-        int degree = glRenderer.getDefaultAnisotropicFilter();
+        int degree = renderer.getDefaultAnisotropicFilter();
         String defaultText = Integer.toString(degree);
 
         int maxDegree = renderer.getLimits().get(Limits.TextureAnisotropy);

@@ -6,7 +6,6 @@ import com.jayfella.jme.vehicle.niftydemo.view.View;
 import com.jayfella.jme.vehicle.niftydemo.view.ViewFlags;
 import com.jme3.bullet.BulletAppState;
 import com.jme3.renderer.Renderer;
-import com.jme3.renderer.opengl.GLRenderer;
 import java.util.List;
 import java.util.logging.Logger;
 import jme3utilities.nifty.GuiScreenController;
@@ -144,8 +143,7 @@ class ViewTool extends Tool {
         setChecked("viewWorldShapes", flag);
 
         Renderer renderer = MavDemo2.getApplication().getRenderer();
-        GLRenderer glRenderer = (GLRenderer) renderer;
-        int degree = glRenderer.getDefaultAnisotropicFilter();
+        int degree = renderer.getDefaultAnisotropicFilter();
         String anisoStatus = Integer.toString(degree);
         setButtonText("viewDefaultAniso", anisoStatus);
 
