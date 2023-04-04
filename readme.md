@@ -2,12 +2,13 @@
 [the jMonkeyEngine (JME) game engine][jme]
 and provides a library to support driving simulations.
 
-It contains 4 sub-projects:
+It contains 5 sub-projects:
 
 1. MavLibrary: the MaVehicles library
-2. MavDemo1: a demo application with a Lemur-based GUI
-3. HelloMav: a very simple application using the MaVehicles library
-4. MavCommon: examples of vehicles, worlds, skies, etcetera
+2. MavDemo1: a demo application with a [Lemur]-based GUI
+3. MavDemo2: a demo application with a [Nifty]-based GUI
+4. HelloMav: a very simple application using the MaVehicles library
+5. MavCommon: examples of vehicles, worlds, skies, etcetera
 
 
 <a name="toc"></a>
@@ -37,9 +38,10 @@ It contains 4 sub-projects:
   + automatic transmission
   + wheels
   + tires with Pacejka model for friction (only the latitudinal forces are applied)
-  + suspension
-  + speedometer unit
-+ graphical user interface using [the Lemur UI Toolkit][lemur]:
+  + suspensions
+  + speedometer units
+  + passengers
++ graphical user interfaces:
   + buttons and animated menus
   + compass
   + speedometer
@@ -47,6 +49,7 @@ It contains 4 sub-projects:
   + steering-wheel indicator
   + automatic-transmission mode indicator
   + edit vehicle parameters
+  + camera selection
 + special effects:
   + skid marks
   + tire smoke
@@ -72,7 +75,7 @@ alt="A silver sports car flies out of a pipe. There are driving controls in the 
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Install the latest MavDemo1 release from GitHub:
-  + Browse to https://github.com/stephengold/jme-vehicles/releases/tag/project-1.5.0
+  + Browse to https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.0
   + Follow the "MavDemo1.zip" link.
   + Save the ZIP file.
   + Extract the contents of the saved ZIP file.
@@ -109,7 +112,7 @@ the Main Menu appears in the upper-left corner of the window.
   + using Git:
     + `git clone https://github.com/stephengold/jme-vehicles.git`
     + `cd jme-vehicles`
-    + `git checkout -b latest project-1.5.0`
+    + `git checkout -b latest project-1.6.0`
   + using a web browser:
     + browse to [the latest release][latest]
     + follow the "Source code (zip)" link
@@ -130,6 +133,10 @@ You can install the artifacts to your local Maven repository:
 You can run the MavDemo1 application:
 + using Bash or PowerShell or Zsh: `./gradlew :MavDemo1:run`
 + using Windows Command Prompt: `.\gradlew :MavDemo1:run`
+
+You can run the MavDemo2 application:
++ using Bash or PowerShell or Zsh: `./gradlew :MavDemo2:run`
++ using Windows Command Prompt: `.\gradlew :MavDemo2:run`
 
 You can run the HelloMav application:
 + using Bash or PowerShell or Zsh: `./gradlew :HelloMav:run`
@@ -289,7 +296,7 @@ Add to the project’s "build.gradle" file:
     }
     dependencies {
         implementation 'com.github.stephengold:MaVehicles:0.7.1'
-        implementation 'com.github.stephengold:Minie:7.4.0'
+        implementation 'com.github.stephengold:Minie:7.4.0+big3'
     }
 
 For some older versions of Gradle,
@@ -315,7 +322,7 @@ Add to the project’s "pom.xml" file:
     <dependency>
       <groupId>com.github.stephengold</groupId>
       <artifactId>Minie</artifactId>
-      <version>7.4.0</version>
+      <version>7.4.0+big3</version>
     </dependency>
 
 [Jump to table of contents](#toc)
@@ -555,10 +562,11 @@ correct the situation: sgold@sonic.net
 [jfrog]: https://www.jfrog.com "JFrog"
 [jme]: https://jmonkeyengine.org "jMonkeyEngine Project"
 [jme-ttf]: http://1337atr.weebly.com/jttf.html "jME-TTF Rendering System"
-[latest]: https://github.com/stephengold/jme-vehicles/releases/tag/project-1.5.0 "latest release"
+[latest]: https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.0 "latest release"
 [lemur]: https://github.com/jMonkeyEngine-Contributions/Lemur "Lemur UI Toolkit"
 [makehuman]: http://www.makehumancommunity.org/ "MakeHuman Community"
 [mav]: https://github.com/stephengold/jme-vehicles "More Advanced Vehicles Project"
+[nifty]: https://nifty-gui.github.io/nifty-gui/ "Nifty GUI"
 [pspeed]: https://github.com/pspeed42 "Paul Speed"
 [sergej]: https://hdrihaven.com/hdris/?a=Sergej%20Majboroda "HDRIs by Sergej Majboroda"
 [sonatype]: https://www.sonatype.com "Sonatype"
