@@ -85,10 +85,10 @@ abstract class AnimatedMenu extends BaseAppState {
     }
 
     protected void animateOut(AnimCompleteEvent animComplete) {
-        time = 0f;
-        allComplete = false;
-        in = false;
-        completeEvent = animComplete;
+        this.time = 0f;
+        this.allComplete = false;
+        this.in = false;
+        this.completeEvent = animComplete;
     }
 
     /**
@@ -130,7 +130,7 @@ abstract class AnimatedMenu extends BaseAppState {
      */
     @Override
     protected void initialize(Application application) {
-        buttons = createItems();
+        this.buttons = createItems();
 
         for (Button button : buttons) {
             formatButton(button);
@@ -139,7 +139,7 @@ abstract class AnimatedMenu extends BaseAppState {
             // Find the widest button, so we can move them all offscreen.
             float width = button.getPreferredSize().x;
             if (width > maxWidth) {
-                maxWidth = width;
+                this.maxWidth = width;
             }
         }
 
@@ -188,13 +188,13 @@ abstract class AnimatedMenu extends BaseAppState {
         }
 
         // There's a delay before the first button starts moving. It looks nicer.
-        startupTime += tpf;
+        this.startupTime += tpf;
         if (startupTime < startupDelay) {
             return;
         }
 
         // prevent time from growing endlessly
-        time = FastMath.clamp(time + tpf, 0f, 100f);
+        this.time = FastMath.clamp(time + tpf, 0f, 100f);
 
         int numButtons = buttons.size();
         for (int i = 0; i < numButtons; ++i) {
@@ -217,11 +217,11 @@ abstract class AnimatedMenu extends BaseAppState {
             button.setLocalTranslation(x, translation.y, translation.z);
 
             if (i == numButtons - 1 && easeTime == duration) {
-                allComplete = true;
+                this.allComplete = true;
 
                 if (completeEvent != null) {
                     completeEvent.completed();
-                    completeEvent = null;
+                    this.completeEvent = null;
                 }
             }
         }

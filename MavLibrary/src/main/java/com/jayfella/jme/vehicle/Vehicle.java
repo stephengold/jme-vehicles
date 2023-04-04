@@ -597,7 +597,7 @@ abstract public class Vehicle
 
         removeFromPhysicsSpace();
         node.removeFromParent();
-        world = null;
+        this.world = null;
     }
 
     /**
