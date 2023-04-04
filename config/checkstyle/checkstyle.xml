@@ -28,7 +28,7 @@
     </module>
     <module name="LineLength">
         <property name="fileExtensions" value="java"/>
-        <property name="max" value="110"/>
+        <property name="max" value="99"/>
         <property name="ignorePattern"
                   value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
     </module>
