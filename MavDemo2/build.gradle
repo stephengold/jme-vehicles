@@ -30,8 +30,8 @@ dependencies {
     implementation skyControlCoordinates
 
     implementation project(':MavCommon')
-    implementation project(':MavLibrary')
-    //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion
+    //implementation project(':MavLibrary')
+    implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion
 }
 
 tasks.register('debugForceDialog', JavaExec) {
