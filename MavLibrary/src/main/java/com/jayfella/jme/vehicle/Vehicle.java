@@ -931,7 +931,8 @@ abstract public class Vehicle
      * @param clipName the name of the animation clip to play (not null, not
      * empty)
      */
-    protected void addPassenger(AssetManager assetManager, String assetPath,
+    protected static void addPassenger(
+            AssetManager assetManager, String assetPath,
             VehicleControl body, Vector3f offset, String clipName) {
         Validate.nonEmpty(assetPath, "asset path");
         Validate.nonNull(offset, "offset");

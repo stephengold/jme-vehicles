@@ -282,7 +282,7 @@ abstract public class Sky implements Loadable {
      *
      * @return the pre-existing instance (not null)
      */
-    final protected AmbientLight getAmbientLight() {
+    final protected static AmbientLight getAmbientLight() {
         assert ambientLight != null;
         return ambientLight;
     }
@@ -292,7 +292,7 @@ abstract public class Sky implements Loadable {
      *
      * @return the pre-existing instance (not null)
      */
-    final protected SimpleApplication getApplication() {
+    final protected static SimpleApplication getApplication() {
         assert simpleApp != null;
         return simpleApp;
     }
@@ -302,7 +302,7 @@ abstract public class Sky implements Loadable {
      *
      * @return the pre-existing instance (not null)
      */
-    final protected DirectionalLight getDirectionalLight() {
+    final protected static DirectionalLight getDirectionalLight() {
         assert directionalLight != null;
         return directionalLight;
     }
@@ -312,7 +312,7 @@ abstract public class Sky implements Loadable {
      *
      * @return the pre-existing instance (not null)
      */
-    final protected DirectionalLightShadowRenderer getShadowRenderer() {
+    final protected static DirectionalLightShadowRenderer getShadowRenderer() {
         assert shadowRenderer != null;
         return shadowRenderer;
     }
