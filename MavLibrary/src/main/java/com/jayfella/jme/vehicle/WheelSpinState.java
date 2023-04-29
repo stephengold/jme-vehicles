@@ -63,13 +63,13 @@ public class WheelSpinState extends BaseAppState {
      */
     @Override
     protected void initialize(Application application) {
-        wheelCount = vehicle.countWheels();
-        angles = new float[wheelCount][3];
+        this.wheelCount = vehicle.countWheels();
+        this.angles = new float[wheelCount][3];
 
-        rot = new Quaternion[wheelCount];
+        this.rot = new Quaternion[wheelCount];
 
         for (int i = 0; i < rot.length; ++i) {
-            rot[i] = new Quaternion();
+            this.rot[i] = new Quaternion();
         }
     }
 
@@ -183,11 +183,11 @@ public class WheelSpinState extends BaseAppState {
 
                 // around and around we go...
                 if (angles[i][0] < -FastMath.PI) {
-                    angles[i][0] += FastMath.PI;
+                    this.angles[i][0] += FastMath.PI;
                 }
 
-                angles[i][1] = existingAngles[1];
-                angles[i][2] = existingAngles[2];
+                this.angles[i][1] = existingAngles[1];
+                this.angles[i][2] = existingAngles[2];
 
                 rot[i].fromAngles(angles[i]);
 
@@ -221,18 +221,18 @@ public class WheelSpinState extends BaseAppState {
                 // + for left
                 // - for right
                 if (wheelRot[1] == 0) {
-                    angles[i][0] -= rotation;
+                    this.angles[i][0] -= rotation;
                 } else {
-                    angles[i][0] += rotation;
+                    this.angles[i][0] += rotation;
                 }
 
                 // around and around we go...
                 if (angles[i][0] < -FastMath.PI) {
-                    angles[i][0] += FastMath.PI;
+                    this.angles[i][0] += FastMath.PI;
                 }
 
-                angles[i][1] = existingAngles[1];
-                angles[i][2] = existingAngles[2];
+                this.angles[i][1] = existingAngles[1];
+                this.angles[i][2] = existingAngles[2];
 
                 rot[i].fromAngles(angles[i]);
 

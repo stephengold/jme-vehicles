@@ -82,7 +82,7 @@ public class DecalManager {
 
         fifo.addLast(decal);
         decalNode.attachChild(decal);
-        totalTriangles += triangleCount;
+        this.totalTriangles += triangleCount;
 
         purge();
     }

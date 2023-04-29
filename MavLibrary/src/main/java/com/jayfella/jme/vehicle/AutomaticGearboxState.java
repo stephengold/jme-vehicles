@@ -63,7 +63,7 @@ public class AutomaticGearboxState extends BaseAppState {
      */
     @Override
     protected void initialize(Application application) {
-        wheelCount = vehicle.countWheels();
+        this.wheelCount = vehicle.countWheels();
     }
 
     /**
@@ -81,7 +81,7 @@ public class AutomaticGearboxState extends BaseAppState {
      */
     @Override
     protected void onEnable() {
-        gearBox = vehicle.getGearBox();
+        this.gearBox = vehicle.getGearBox();
     }
 
     /**

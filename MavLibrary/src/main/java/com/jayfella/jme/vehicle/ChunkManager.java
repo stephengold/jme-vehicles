@@ -93,7 +93,7 @@ public class ChunkManager extends BaseAppState {
         if (world != null) {
             world.chunkDimensions(chunkDimensions);
         }
-        originChunk = Vector3i.zero;
+        this.originChunk = Vector3i.zero;
     }
     // *************************************************************************
     // BaseAppState methods

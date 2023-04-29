@@ -117,7 +117,7 @@ abstract public class World
         Node decalNode = decalManager.getNode();
         parentNode.attachChild(decalNode);
 
-        rigidBody
+        this.rigidBody
                 = new PhysicsRigidBody(loadedShape, PhysicsBody.massForStatic);
         getPhysicsSpace().add(rigidBody);
         rigidBody.setApplicationData(this);
@@ -177,8 +177,8 @@ abstract public class World
         decalManager.getNode().removeFromParent();
         getChunkManager().setWorld(null);
 
-        parentNode = null;
-        application = null;
+        this.parentNode = null;
+        this.application = null;
     }
 
     /**

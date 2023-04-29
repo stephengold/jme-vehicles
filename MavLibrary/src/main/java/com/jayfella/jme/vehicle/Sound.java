@@ -142,7 +142,7 @@ public class Sound implements Loadable {
 
         if (activeNode != null) {
             activeNode.stop();
-            activeNode = null;
+            this.activeNode = null;
         }
     }
 
@@ -169,7 +169,7 @@ public class Sound implements Loadable {
             if (bestNode != activeNode && activeNode != null) {
                 activeNode.stop();
             }
-            activeNode = bestNode;
+            this.activeNode = bestNode;
         }
 
         float recordedPitch = recordedPitch(activeNode);

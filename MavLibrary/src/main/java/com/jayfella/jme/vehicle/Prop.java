@@ -106,8 +106,8 @@ abstract public class Prop
         Validate.positive(scaleFactor, "scale factor");
         Validate.positive(totalMass, "total mass");
 
-        name = nameGenerator.unique(namePrefix);
-        node = new Node("Prop: " + name);
+        this.name = nameGenerator.unique(namePrefix);
+        this.node = new Node("Prop: " + name);
 
         this.scaleFactor = scaleFactor;
         this.totalMass = totalMass;
@@ -185,7 +185,7 @@ abstract public class Prop
             PhysicsSpace physicsSpace = world.getPhysicsSpace();
             physicsSpace.removeJoint(equipmentConstraint);
 
-            equipmentConstraint = null;
+            this.equipmentConstraint = null;
         }
     }
 
@@ -351,7 +351,7 @@ abstract public class Prop
             physicsSpace.removeCollisionObject(body);
         }
         world.removeProp(this);
-        world = null;
+        this.world = null;
         /*
          * This Prop might have been supporting unrelated bodies
          * that had been deactivated.
@@ -397,7 +397,7 @@ abstract public class Prop
         assert constraint != null;
         assert equipmentConstraint == null;
 
-        equipmentConstraint = constraint;
+        this.equipmentConstraint = constraint;
     }
 
     /**
