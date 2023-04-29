@@ -5,6 +5,7 @@ import com.jme3.asset.AssetManager;
 import com.jme3.bullet.PhysicsSpace;
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
+import jme3utilities.DecalManager;
 
 /**
  * A 3-D world for vehicles.

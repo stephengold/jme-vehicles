@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import jme3utilities.DecalManager;
 import jme3utilities.Loadable;
 import jme3utilities.MyCamera;
 import jme3utilities.Validate;
