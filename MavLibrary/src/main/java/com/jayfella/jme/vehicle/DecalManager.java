@@ -133,10 +133,12 @@ public class DecalManager {
     /**
      * Translate all decals by the specified offset.
      *
-     * @param offset the desired offset (in world coordinates, not null,
+     * @param offset the desired offset (in world coordinates, not null, finite,
      * unaffected)
      */
     public void translateAll(Vector3f offset) {
+        Validate.finite(offset, "offset");
+
         for (Geometry geometry : fifo) {
             geometry.move(offset);
         }
