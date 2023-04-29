@@ -83,13 +83,7 @@ public class DecalManager {
         decalNode.attachChild(decal);
         totalTriangles += triangleCount;
 
-        // Remove enough old decals to stay at or below the limit.
-        while (totalTriangles > maxTriangles) {
-            Geometry oldest = fifo.removeFirst();
-            oldest.removeFromParent();
-            int count = oldest.getTriangleCount();
-            totalTriangles -= count;
-        }
+        purge();
     }
 
     /**
@@ -99,6 +93,19 @@ public class DecalManager {
      */
     public Node getNode() {
         return decalNode;
+    }
+
+    /**
+     * Remove just enough of the old decals to conform to the triangle limit.
+     */
+    public void purge() {
+        while (totalTriangles > maxTriangles) {
+            Geometry oldest = fifo.removeFirst();
+            oldest.removeFromParent();
+
+            int count = oldest.getTriangleCount();
+            this.totalTriangles -= count;
+        }
     }
 
     /**
