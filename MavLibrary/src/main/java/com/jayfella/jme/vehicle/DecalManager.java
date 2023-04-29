@@ -72,7 +72,7 @@ public class DecalManager {
      *
      * @param decal the decal to add (not null, not empty, alias created)
      */
-    void addDecal(Geometry decal) {
+    public void addDecal(Geometry decal) {
         int triangleCount = decal.getTriangleCount();
         assert triangleCount > 0 : triangleCount;
 
@@ -97,7 +97,7 @@ public class DecalManager {
      *
      * @return the pre-existing instance (not null)
      */
-    Node getNode() {
+    public Node getNode() {
         return decalNode;
     }
 
@@ -107,7 +107,7 @@ public class DecalManager {
      * @param offset the desired offset (in world coordinates, not null,
      * unaffected)
      */
-    void translateAll(Vector3f offset) {
+    public void translateAll(Vector3f offset) {
         for (Geometry geometry : fifo) {
             geometry.move(offset);
         }
