@@ -6,6 +6,7 @@ import com.jme3.scene.Node;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.logging.Logger;
+import jme3utilities.Validate;
 
 /**
  * Manage decal geometries, "aging them out" on a first-in, first-out (FIFO)
