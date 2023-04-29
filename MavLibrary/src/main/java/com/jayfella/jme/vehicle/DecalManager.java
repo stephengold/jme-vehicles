@@ -119,6 +119,15 @@ public class DecalManager {
     }
 
     /**
+     * Remove all decals.
+     */
+    public void removeAll() {
+        fifo.clear();
+        decalNode.detachAllChildren();
+        this.totalTriangles = 0;
+    }
+
+    /**
      * Alter the maximum number of decal triangles to retain.
      *
      * @param newLimit the desired limit value (&gt;0, default=9999)
