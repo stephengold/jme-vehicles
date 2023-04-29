@@ -18,10 +18,6 @@ public class DecalManager {
     // constants and loggers
 
     /**
-     * maximum number of triangles to retain
-     */
-    final private static int maxTriangles = 9_999;
-    /**
      * message logger for this class
      */
     final public static Logger logger
@@ -33,6 +29,10 @@ public class DecalManager {
      * queue of retained decals, from oldest to newest
      */
     final private Deque<Geometry> fifo = new LinkedList<>();
+    /**
+     * maximum number of triangles to retain
+     */
+    private int maxTriangles = 9_999;
     /**
      * assign unique names to inactive decals
      */
@@ -87,6 +87,15 @@ public class DecalManager {
     }
 
     /**
+     * Return the maximum number of decal triangles to retain.
+     *
+     * @return the limit value (&gt;0)
+     */
+    public int getMaxTriangles() {
+        return maxTriangles;
+    }
+
+    /**
      * Access the scene-graph node which parents all the decals.
      *
      * @return the pre-existing instance (not null)
@@ -106,6 +115,18 @@ public class DecalManager {
             int count = oldest.getTriangleCount();
             this.totalTriangles -= count;
         }
+    }
+
+    /**
+     * Alter the maximum number of decal triangles to retain.
+     *
+     * @param newLimit the desired limit value (&gt;0, default=9999)
+     */
+    public void setMaxTriangles(int newLimit) {
+        Validate.positive(newLimit, "new limit");
+
+        this.maxTriangles = newLimit;
+        purge();
     }
 
     /**
