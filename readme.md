@@ -109,7 +109,7 @@ the Main Menu appears in the upper-left corner of the window.
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Download and extract the More Advanced Vehicles source code from GitHub:
-  + using Git:
+  + using [Git]:
     + `git clone https://github.com/stephengold/jme-vehicles.git`
     + `cd jme-vehicles`
     + `git checkout -b latest project-1.6.0`
