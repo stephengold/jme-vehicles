@@ -336,7 +336,7 @@ More Advanced Vehicles is a work in progress.  Some ideas for future development
 
 + More alternatives for:
   + Worlds, such as: 3-D maze, block world, drag strip, parking garage, parking lot, showroom, and urban grid
-  + Surface conditions, such as: wet, dirt, and grass
+  + Surface conditions, such as: wet pavement, dirt, sand, snow, and grass
   + Propulsion, such as: draft animals, jets, human power, propellers, and sails
   + Skies, such as TehLeo's SevenSky
   + User interface, such as: joystick and NiftyGUI
