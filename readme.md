@@ -499,6 +499,19 @@ artists and software developers:
 + Rob Tuytel created the "marble_01" textures.
 + [Sergej Majboroda][sergej] created the "Quarry 03" texture.
 + Tom Ruen created the "Lunar libration with phase Oct 2007" animation.
++ the creators of (and contributors to) the following software:
+    + the [Blender] 3-D animation suite
+    + the [Checkstyle] tool
+    + the [Git] revision-control system and GitK commit viewer
+    + the [GitKraken] client
+    + the [Gradle] build tool
+    + the Java compiler, standard doclet, and runtime environment
+    + [jMonkeyEngine][jme] and the jME3 Software Development Kit
+    + LWJGL, the Lightweight Java Game Library
+    + the [MakeHuman] 3-D character creation tool
+    + the [Markdown] document-conversion tool
+    + Microsoft Windows
+    + the [NetBeans] integrated development environment
 
 ### CC Attribution
 
@@ -555,7 +568,11 @@ correct the situation: sgold@sonic.net
 [adi]: https://github.com/scenemax3d "Adi Barda and SceneMax3D"
 [adoptium]: https://adoptium.net/releases.html "Adoptium Project"
 [atryder]: https://github.com/ATryder "Adam T. Ryder"
+[blender]: https://docs.blender.org "Blender Project"
+[checkstyle]: https://checkstyle.org "Checkstyle"
+[git]: https://git-scm.com "Git"
 [github]: https://github.com "GitHub"
+[gitkraken]: https://www.gitkraken.com "GitKraken client"
 [gradle]: https://gradle.org "Gradle Project"
 [imgur]: https://imgur.com/ "Imgur"
 [java]: https://java.com "Java"
@@ -565,7 +582,9 @@ correct the situation: sgold@sonic.net
 [latest]: https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.0 "latest release"
 [lemur]: https://github.com/jMonkeyEngine-Contributions/Lemur "Lemur UI Toolkit"
 [makehuman]: http://www.makehumancommunity.org/ "MakeHuman Community"
+[markdown]: https://daringfireball.net/projects/markdown "Markdown Project"
 [mav]: https://github.com/stephengold/jme-vehicles "More Advanced Vehicles Project"
+[netbeans]: https://netbeans.org "NetBeans Project"
 [nifty]: https://nifty-gui.github.io/nifty-gui/ "Nifty GUI"
 [pspeed]: https://github.com/pspeed42 "Paul Speed"
 [sergej]: https://hdrihaven.com/hdris/?a=Sergej%20Majboroda "HDRIs by Sergej Majboroda"
