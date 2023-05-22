@@ -246,16 +246,6 @@ public class PropProposal implements JmeCloneable {
     }
 
     /**
-     * Alter the proposed total mass.
-     *
-     * @param mass the desired mass (in kilograms, &gt;0)
-     */
-    public void setTotalMass(float mass) {
-        Validate.positive(mass, "mass");
-        this.totalMass = mass;
-    }
-
-    /**
      * Alter the initial orientation.
      *
      * @param orientation the desired orientation (in world coordinates, not
@@ -282,6 +272,16 @@ public class PropProposal implements JmeCloneable {
 
             this.scaleFactor = scale;
         }
+    }
+
+    /**
+     * Alter the proposed total mass.
+     *
+     * @param mass the desired mass (in kilograms, &gt;0)
+     */
+    public void setTotalMass(float mass) {
+        Validate.positive(mass, "mass");
+        this.totalMass = mass;
     }
 
     /**
