@@ -10,6 +10,7 @@ import com.jme3.bullet.util.CollisionShapeFactory;
 import com.jme3.scene.Spatial;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import jme3utilities.Heart;
 
 /**
  * A Prop for a tubular lane marker, built around a portion of Sabri Ayeş's
@@ -70,6 +71,7 @@ public class Marker extends Prop {
         ConvexShape hullShape;
         try {
             hullShape = (ConvexShape) assetManager.loadAsset(assetPath);
+            hullShape = Heart.deepCopy(hullShape); // shape is not a smart asset
         } catch (AssetNotFoundException exception) {
             hullShape = CollisionShapeFactory.createMergedHullShape(cgmRoot);
         }

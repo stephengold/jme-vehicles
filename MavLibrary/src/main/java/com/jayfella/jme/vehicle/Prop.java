@@ -434,7 +434,7 @@ abstract public class Prop
         this.sweepShape = sweepShape;
 
         float massKg = totalMass();
-        mainRbc = new RigidBodyControl(bodyShape, massKg);
+        this.mainRbc = new RigidBodyControl(bodyShape, massKg);
         mainRbc.setApplicationData(this);
         partNameToBody.put("main", mainRbc);
 
