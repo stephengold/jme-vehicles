@@ -22,6 +22,10 @@ subprojects {
     apply from: rootProject.file('common.gradle')
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds' // to disable caching of SNAPSHOTs
+}
+
 tasks.register('checkstyle') {
     dependsOn ':HelloMav:checkstyleMain', ':MavCommon:checkstyleMain', \
             ':MavDemo1:checkstyleMain', ':MavDemo2:checkstyleMain', \
