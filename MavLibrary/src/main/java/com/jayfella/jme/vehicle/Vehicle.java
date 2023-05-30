@@ -45,6 +45,7 @@ import java.util.logging.Logger;
 import jme3utilities.Loadable;
 import jme3utilities.MySpatial;
 import jme3utilities.Validate;
+import jme3utilities.math.MyMath;
 import jme3utilities.math.MyQuaternion;
 import jme3utilities.math.MyVector3f;
 
@@ -889,7 +890,7 @@ abstract public class Vehicle
         for (int bodyIndex = 0; bodyIndex < numBodies; ++bodyIndex) {
             Transform bodyToEngine = relativeTransforms[bodyIndex];
             Transform bodyToWorld
-                    = bodyToEngine.clone().combineWithParent(engineToWorld);
+                    = MyMath.combine(bodyToEngine, engineToWorld, null);
 
             PhysicsRigidBody body = bodies[bodyIndex];
             body.setPhysicsTransform(bodyToWorld);
@@ -1411,9 +1412,8 @@ abstract public class Vehicle
         for (int bodyIndex = 0; bodyIndex < numBodies; ++bodyIndex) {
             VehicleControl body = bodies[bodyIndex];
             Transform b2r = body.getSpatial().getWorldTransform(); // alias
-            Transform bodyToEngine
-                    = b2r.clone().combineWithParent(rootToEngine);
-            relativeTransforms[bodyIndex] = bodyToEngine;
+            Transform bodyToEngine = MyMath.combine(b2r, rootToEngine, null);
+            this.relativeTransforms[bodyIndex] = bodyToEngine;
         }
     }
 }
