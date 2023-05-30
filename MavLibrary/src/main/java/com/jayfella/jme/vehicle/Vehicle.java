@@ -45,6 +45,7 @@ import java.util.logging.Logger;
 import jme3utilities.Loadable;
 import jme3utilities.MySpatial;
 import jme3utilities.Validate;
+import jme3utilities.math.MyQuaternion;
 import jme3utilities.math.MyVector3f;
 
 /**
@@ -220,11 +221,11 @@ abstract public class Vehicle
                     = relativeTransforms[bodyIndex].getRotation(); // alias
             Quaternion e2b = b2e.inverse();
             Vector3f right = new Vector3f(1f, 0f, 0f);
-            e2b.mult(right, right);
+            MyQuaternion.rotate(e2b, right, right);
             Vector3f up = new Vector3f(0f, 1f, 0f);
-            e2b.mult(up, up);
+            MyQuaternion.rotate(e2b, up, up);
             Vector3f forward = new Vector3f(0f, 0f, 1f);
-            e2b.mult(forward, forward);
+            MyQuaternion.rotate(e2b, forward, forward);
             controller.setCoordinateSystem(right, up, forward);
         }
 

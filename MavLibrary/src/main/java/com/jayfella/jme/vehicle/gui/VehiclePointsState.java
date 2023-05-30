@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import jme3utilities.Loadable;
 import jme3utilities.MyAsset;
 import jme3utilities.debug.PointVisualizer;
+import jme3utilities.math.MyQuaternion;
 
 /**
  * AppState to visualize key points on the selected vehicle, for debugging. Each
@@ -194,7 +195,7 @@ public class VehiclePointsState
         Vector3f offset = new Vector3f(); // TODO garbage
         vehicle.locateDashCam(offset);
         motionState.getOrientation(tmpOrientation);
-        tmpOrientation.mult(offset, offset);
+        MyQuaternion.rotate(tmpOrientation, offset, offset);
         tmpLocation.addLocal(offset);
         dashCamera.setLocalTranslation(tmpLocation);
 
