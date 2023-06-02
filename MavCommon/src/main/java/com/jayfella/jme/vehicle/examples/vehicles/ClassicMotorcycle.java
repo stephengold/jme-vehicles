@@ -31,6 +31,7 @@ import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import jme3utilities.math.MyMath;
 import jme3utilities.math.MyVector3f;
 
 /**
@@ -370,7 +371,7 @@ public class ClassicMotorcycle extends Bike {
          * Estimate the acceleration of the engine body's support point
          * in world coordinates.
          */
-        tmpTransform.transformVector(supportOffset, tmpLocation);
+        MyMath.transform(tmpTransform, supportOffset, tmpLocation);
         tmpLocation.subtract(previousLocation, tmpVelocity);
         tmpVelocity.divideLocal(timeStep);
         previousLocation.set(tmpLocation);
