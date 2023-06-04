@@ -10,7 +10,7 @@ ext {
     heartCoordinates = 'com.github.stephengold:Heart:8.6.0'
     jmePowerCoordinates = 'com.github.stephengold:JmePower:1.1.1'
     jmeTtfCoordinates = 'com.github.stephengold:jme-ttf:3.0.0'
-    minieCoordinates = 'com.github.stephengold:Minie:7.5.0'
+    minieCoordinates = 'com.github.stephengold:Minie:7.6.0'
     skyControlCoordinates = 'com.github.stephengold:SkyControl:1.0.4'
 
     // current versions of libraries:
