@@ -227,12 +227,9 @@ abstract public class Sky implements Loadable {
 
     /**
      * Generate a sky geometry from an equirectangular texture asset. This
-     * method has a couple advantages over
-     * com.jme3.util.SkyFactory.createSky(AssetManager, Texture, EnvMapType):
-     * <ul>
-     * <li>It adds fewer triangles to the scene: 32 instead of 160.</li>
-     * <li>It uses a custom J3MD to avoid JME issue #1414.</li>
-     * </ul>
+     * method is superior to com.jme3.util.SkyFactory.createSky(AssetManager,
+     * Texture, EnvMapType) because it adds fewer triangles to the scene: 32
+     * instead of 160.
      *
      * @param assetManager for loading assets (not null)
      * @param textureAssetPath the path to the texture asset (not null, not
