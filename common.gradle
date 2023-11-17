@@ -9,7 +9,7 @@ java {
 }
 
 checkstyle {
-    toolVersion '10.12.3'
+    toolVersion '10.12.5'
 }
 
 tasks.withType(JavaCompile).configureEach { // Java compile-time options:
