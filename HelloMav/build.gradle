@@ -25,7 +25,7 @@ dependencies {
     //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
 
-// cleanup tasks:
+// Register cleanup tasks:
 
 clean.dependsOn('cleanDLLs', 'cleanDyLibs', 'cleanLogs', 'cleanSOs')
 

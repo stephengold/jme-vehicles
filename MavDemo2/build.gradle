@@ -47,7 +47,7 @@ tasks.register('runForceDialog', JavaExec) {
     mainClass = 'com.jayfella.jme.vehicle.niftydemo.MavDemo2'
 }
 
-// cleanup tasks:
+// Register cleanup tasks:
 
 clean.dependsOn('cleanDLLs', 'cleanDyLibs', 'cleanLogs', 'cleanSOs')
 clean.dependsOn('cleanScreenShots')
