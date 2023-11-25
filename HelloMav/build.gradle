@@ -21,7 +21,7 @@ dependencies {
     implementation minieCoordinates
 
     implementation project(':MavCommon')
-    implementation project(':MavLibrary') // for latest library build
+    implementation project(':MavLibrary') // for local library build
     //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
 

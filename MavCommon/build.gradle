@@ -8,6 +8,6 @@ dependencies {
     implementation skyControlCoordinates
     runtimeOnly 'org.jmonkeyengine:jme3-lwjgl3:' + jme3Version
 
-    implementation project(':MavLibrary') // for latest library build
+    implementation project(':MavLibrary') // for local library build
     //compileOnly 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
