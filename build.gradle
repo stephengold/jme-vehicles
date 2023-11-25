@@ -7,7 +7,7 @@ plugins {
 ext {
     // module coordinates of external dependencies:
     garrettCoordinates = 'com.github.stephengold:Garrett:0.5.3'
-    heartCoordinates = 'com.github.stephengold:Heart:8.7.0'
+    heartCoordinates = 'com.github.stephengold:Heart:8.8.0'
     jmePowerCoordinates = 'com.github.stephengold:JmePower:1.1.1'
     jmeTtfCoordinates = 'com.github.stephengold:jme-ttf:3.0.0'
     minieCoordinates = 'com.github.stephengold:Minie:7.7.0'
