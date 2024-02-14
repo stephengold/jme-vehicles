@@ -24,7 +24,7 @@ dependencies {
 
     // non-JME dependencies:
     runtimeOnly 'com.github.nifty-gui:nifty-style-black:1.4.3'
-    implementation 'com.github.stephengold:Acorus:1.1.1'
+    implementation 'com.github.stephengold:Acorus:2.0.0'
     implementation 'com.github.stephengold:jme3-utilities-nifty:0.9.36'
     implementation garrettCoordinates
     implementation jmePowerCoordinates
