@@ -72,6 +72,7 @@ alt="A silver sports car flies out of a pipe. There are driving controls in the 
    or "/usr/lib/jvm/java-8-openjdk-amd64" or
    "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home" .)
   + using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
+  + using [Fish]: `set -g JAVA_HOME "` *path to installation* `"`
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Install the latest MavDemo1 release from GitHub:
@@ -81,7 +82,7 @@ alt="A silver sports car flies out of a pipe. There are driving controls in the 
   + Extract the contents of the saved ZIP file.
 4. `cd` to the extracted "MavDemo1" directory/folder that contains "bin" and "lib".
 5. Run the Maud startup script:
-  + using Bash or Zsh: `./bin/MavDemo1`
+  + using Bash or Fish or or Zsh: `./bin/MavDemo1`
   + using Windows Command Prompt: `./bin/MavDemo1.bat`
   + using PowerShell: `.\bin\MavDemo1.bat`
 
@@ -106,6 +107,7 @@ the Main Menu appears in the upper-left corner of the window.
    or "/usr/lib/jvm/java-8-openjdk-amd64" or
    "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home" .)
   + using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
+  + using Fish: `set -g JAVA_HOME "` *path to installation* `"`
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Download and extract the More Advanced Vehicles source code from GitHub:
@@ -120,30 +122,30 @@ the Main Menu appears in the upper-left corner of the window.
     + extract the contents of the saved ZIP file
     + `cd` to the extracted directory/folder
 4. Run the [Gradle] wrapper:
-  + using Bash or PowerShell or Zsh: `./gradlew build`
+  + using Bash or Fish or PowerShell or Zsh: `./gradlew build`
   + using Windows Command Prompt: `.\gradlew build`
 
 After a successful build,
 Maven artifacts will be found in "MavLibrary/build/libs".
 
 You can install the artifacts to your local Maven repository:
-+ using Bash or PowerShell or Zsh: `./gradlew install`
++ using Bash or Fish or PowerShell or Zsh: `./gradlew install`
 + using Windows Command Prompt: `.\gradlew install`
 
 You can run the MavDemo1 application:
-+ using Bash or PowerShell or Zsh: `./gradlew :MavDemo1:run`
++ using Bash or Fish or PowerShell or Zsh: `./gradlew :MavDemo1:run`
 + using Windows Command Prompt: `.\gradlew :MavDemo1:run`
 
 You can run the MavDemo2 application:
-+ using Bash or PowerShell or Zsh: `./gradlew :MavDemo2:run`
++ using Bash or Fish or PowerShell or Zsh: `./gradlew :MavDemo2:run`
 + using Windows Command Prompt: `.\gradlew :MavDemo2:run`
 
 You can run the HelloMav application:
-+ using Bash or PowerShell or Zsh: `./gradlew :HelloMav:run`
++ using Bash or Fish or PowerShell or Zsh: `./gradlew :HelloMav:run`
 + using Windows Command Prompt: `.\gradlew :HelloMav:run`
 
 You can restore the project to a pristine state:
-+ using Bash or PowerShell or Zsh: `./gradlew clean`
++ using Bash or Fish or PowerShell or Zsh: `./gradlew clean`
 + using Windows Command Prompt: `.\gradlew clean`
 
 [Jump to table of contents](#toc)
@@ -570,6 +572,7 @@ correct the situation: sgold@sonic.net
 [atryder]: https://github.com/ATryder "Adam T. Ryder"
 [blender]: https://docs.blender.org "Blender Project"
 [checkstyle]: https://checkstyle.org "Checkstyle"
+[fish]: https://fishshell.com/ "Fish command-line shell"
 [git]: https://git-scm.com "Git"
 [github]: https://github.com "GitHub"
 [gitkraken]: https://www.gitkraken.com "GitKraken client"
