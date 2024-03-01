@@ -464,7 +464,7 @@ Package names begin with `com.jayfella.jme.vehicle`
 
 Both the source code and the pre-built libraries are compatible with JDK 8.
 
-The world (and physics-space) coordinate system is:
+The world (and physics-space) coordinate system is right-handed:
 
 + the `+X` axis points toward the northern horizon
 + the `+Y` axis points up (toward the zenith)
