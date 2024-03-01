@@ -67,10 +67,13 @@ alt="A silver sports car flies out of a pipe. There are driving controls in the 
 
 1. Install a 64-bit [Java], if you don't already have one.
    (MavDemo1 no longer supports 32-bit Java.)
-2. Point the "JAVA_HOME" environment variable to your Java installation.
-   (The path might be something like "C:\Program Files\Java\jre1.8.0_301"
-   or "/usr/lib/jvm/java-8-openjdk-amd64" or
-   "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home" .)
+2. Point the `JAVA_HOME` environment variable to your JDK installation:
+   (In other words, set it to the path of a directory/folder
+   containing a "bin" that contains a Java executable.
+   That path might look something like
+   "C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
+   or "/usr/lib/jvm/java-17-openjdk-amd64/" or
+   "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home" .)
   + using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
   + using [Fish]: `set -g JAVA_HOME "` *path to installation* `"`
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
@@ -102,10 +105,13 @@ the Main Menu appears in the upper-left corner of the window.
 
 1. Install a 64-bit [Java Development Kit (JDK)][adoptium],
    if you don't already have one.
-2. Point the "JAVA_HOME" environment variable to your JDK installation.
-   (The path might be something like "C:\Program Files\Java\jre1.8.0_301"
-   or "/usr/lib/jvm/java-8-openjdk-amd64" or
-   "/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home" .)
+2. Point the `JAVA_HOME` environment variable to your JDK installation:
+   (In other words, set it to the path of a directory/folder
+   containing a "bin" that contains a Java executable.
+   That path might look something like
+   "C:\Program Files\Eclipse Adoptium\jdk-17.0.3.7-hotspot"
+   or "/usr/lib/jvm/java-17-openjdk-amd64/" or
+   "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home" .)
   + using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
   + using Fish: `set -g JAVA_HOME "` *path to installation* `"`
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
