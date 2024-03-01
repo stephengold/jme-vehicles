@@ -584,7 +584,7 @@ correct the situation: sgold@sonic.net
 [gitkraken]: https://www.gitkraken.com "GitKraken client"
 [gradle]: https://gradle.org "Gradle Project"
 [imgur]: https://imgur.com/ "Imgur"
-[java]: https://java.com "Java"
+[java]: https://en.wikipedia.org/wiki/Java_(programming_language) "Java programming language"
 [jfrog]: https://www.jfrog.com "JFrog"
 [jme]: https://jmonkeyengine.org "jMonkeyEngine Project"
 [jme-ttf]: http://1337atr.weebly.com/jttf.html "jME-TTF Rendering System"
