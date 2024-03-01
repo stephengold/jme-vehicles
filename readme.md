@@ -55,7 +55,7 @@ It contains 5 sub-projects:
   + tire smoke
   + engine/horn sounds
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 <img height="400" src="https://i.imgur.com/TsWukzO.png"
 alt="A silver sports car flies out of a pipe. There are driving controls in the foreground and a racetrack in the background.">
@@ -93,7 +93,7 @@ the Main Menu appears in the upper-left corner of the window.
 + Navigate menus by clicking with the left mouse button (LMB).
 + If you have a wheel mouse, use the wheel to change the field of view.
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="build"></a>
@@ -148,7 +148,7 @@ You can restore the project to a pristine state:
 + using Bash or Fish or PowerShell or Zsh: `./gradlew clean`
 + using Windows Command Prompt: `.\gradlew clean`
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="controls"></a>
@@ -272,7 +272,7 @@ Additional controls when the orbit camera is active:
 + Wheel down : zoom out (widen the field of view)
 + Esc : exit the application
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="add"></a>
@@ -327,7 +327,7 @@ Add to the project’s "pom.xml" file:
       <version>7.4.0+big3</version>
     </dependency>
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="wishlist"></a>
@@ -393,7 +393,7 @@ More Advanced Vehicles is a work in progress.  Some ideas for future development
 See also
 [the project's issue tracker](https://github.com/stephengold/jme-vehicles/issues).
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="licensing"></a>
@@ -447,7 +447,7 @@ Resources/assets/media:
   were generated procedurally using [the Georg Project](https://github.com/stephengold/Georg),
   which has a BSD 3-Clause license.
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="conventions"></a>
@@ -466,7 +466,7 @@ The world (and physics-space) coordinate system is:
 
 The world (and physics-space) units of distance are *meters*.
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="links"></a>
@@ -478,7 +478,7 @@ The world (and physics-space) units of distance are *meters*.
 + [the More Advanced Vehicles page](https://store.jmonkeyengine.org/2d0fc6de-2e4d-49b1-8372-4f364d79e175)
     at [the JmonkeyStore](https://store.jmonkeyengine.org)
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 <a name="acks"></a>
@@ -564,7 +564,7 @@ I'm also grateful to my dear Holly, for keeping me sane.
 If I've misattributed anything or left anyone out, please let me know, so I can
 correct the situation: sgold@sonic.net
 
-[Jump to table of contents](#toc)
+[Jump to the table of contents](#toc)
 
 
 [adi]: https://github.com/scenemax3d "Adi Barda and SceneMax3D"
