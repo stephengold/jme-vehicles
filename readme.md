@@ -113,7 +113,7 @@ the Main Menu appears in the upper-left corner of the window.
    or "/usr/lib/jvm/java-17-openjdk-amd64/" or
    "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home" .)
   + using Bash or Zsh: `export JAVA_HOME="` *path to installation* `"`
-  + using Fish: `set -g JAVA_HOME "` *path to installation* `"`
+  + using [Fish]: `set -g JAVA_HOME "` *path to installation* `"`
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Download and extract the More Advanced Vehicles source code from GitHub:
