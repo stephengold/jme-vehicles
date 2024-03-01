@@ -460,9 +460,9 @@ Both the source code and the pre-built libraries are compatible with JDK 8.
 
 The world (and physics-space) coordinate system is:
 
- + the `+X` axis points toward the northern horizon
- + the `+Y` axis points up (toward the zenith)
- + the `+Z` axis points toward the eastern horizon
++ the `+X` axis points toward the northern horizon
++ the `+Y` axis points up (toward the zenith)
++ the `+Z` axis points toward the eastern horizon
 
 The world (and physics-space) units of distance are *meters*.
 
