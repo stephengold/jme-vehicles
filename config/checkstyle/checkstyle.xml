@@ -183,7 +183,8 @@
                      value="Package name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="TypeName">
-            <property name="tokens" value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, RECORD_DEF"/>
+            <property name="tokens"
+                      value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, RECORD_DEF"/>
             <message key="name.invalidPattern"
                      value="Type name ''{0}'' must match pattern ''{1}''."/>
         </module>
@@ -343,11 +344,13 @@
                      value="Method name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="SingleLineJavadoc"/>
+
         <module name="EmptyCatchBlock">
             <property name="exceptionVariableName" value="expected"/>
         </module>
         <module name="CommentsIndentation">
-            <property name="tokens" value="BLOCK_COMMENT_BEGIN"/>
+            <property name="tokens"
+                      value="BLOCK_COMMENT_BEGIN"/>
         </module>
 
         <!-- Checks for size violations              -->
