@@ -593,6 +593,7 @@ correct the situation: sgold@sonic.net
 [makehuman]: http://www.makehumancommunity.org/ "MakeHuman Community"
 [markdown]: https://daringfireball.net/projects/markdown "Markdown Project"
 [mav]: https://github.com/stephengold/jme-vehicles "More Advanced Vehicles Project"
+[minie]: https://stephengold.github.io/Minie/minie/overview.html "Minie Project"
 [netbeans]: https://netbeans.org "NetBeans Project"
 [nifty]: https://nifty-gui.github.io/nifty-gui/ "Nifty GUI"
 [pspeed]: https://github.com/pspeed42 "Paul Speed"
