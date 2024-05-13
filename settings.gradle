@@ -1,6 +1,4 @@
-/*
- * settings.gradle: global settings shared by all jme-vehicles subprojects
- */
+// global settings shared by all jme-vehicles subprojects
 
 dependencyResolutionManagement {
     repositories {
