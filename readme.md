@@ -2,7 +2,7 @@
 [the jMonkeyEngine (JME) game engine][jme]
 and provides a library to support driving simulations.
 
-It contains 5 sub-projects:
+It contains 5 subprojects:
 
 1. MavLibrary: the MaVehicles library
 2. MavDemo1: a demo application with a [Lemur]-based GUI
