@@ -5,10 +5,10 @@
 //   of the root project.
 
 dependencies {
-    implementation 'org.jmonkeyengine:jme3-desktop:' + jme3Version
-    implementation minieCoordinates
-    implementation skyControlCoordinates
-    runtimeOnly 'org.jmonkeyengine:jme3-lwjgl3:' + jme3Version
+    implementation(libs.jme3.desktop)
+    implementation(libs.minie)
+    implementation(libs.skyControl)
+    runtimeOnly(libs.jme3.lwjgl3)
 
     implementation project(':MavLibrary') // for local library build
     //compileOnly 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library

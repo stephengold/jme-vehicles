@@ -13,14 +13,14 @@ application {
 }
 
 dependencies {
-    runtimeOnly 'org.jmonkeyengine:jme3-awt-dialogs:' + jme3Version
-    runtimeOnly 'org.jmonkeyengine:jme3-desktop:' + jme3Version
-    runtimeOnly 'org.jmonkeyengine:jme3-jogg:' + jme3Version
-    runtimeOnly 'org.jmonkeyengine:jme3-lwjgl3:' + jme3Version
+    runtimeOnly(libs.jme3.awt.dialogs)
+    runtimeOnly(libs.jme3.desktop)
+    runtimeOnly(libs.jme3.jogg)
+    runtimeOnly(libs.jme3.lwjgl3)
 
     // non-JME dependencies:
-    implementation garrettCoordinates
-    implementation minieCoordinates
+    implementation(libs.garrett)
+    implementation(libs.minie)
 
     implementation project(':MavCommon')
     implementation project(':MavLibrary') // for local library build

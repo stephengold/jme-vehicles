@@ -19,13 +19,13 @@ ext {
 }
 
 dependencies {
-    api 'org.jmonkeyengine:jme3-core:' + jme3Version
-    api 'org.jmonkeyengine:jme3-effects:' + jme3Version
+    api(libs.jme3.core)
+    api(libs.jme3.effects)
 
     // non-JME dependencies:
-    api jmeTtfCoordinates
-    api heartCoordinates
-    compileOnly minieCoordinates
+    api(libs.jme.ttf)
+    api(libs.heart)
+    compileOnly(libs.minie)
 }
 
 // Register publishing tasks:
