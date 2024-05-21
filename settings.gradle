@@ -1,4 +1,4 @@
-// global settings shared by all jme-vehicles subprojects
+// global build settings for the jme-vehicles project
 
 rootProject.name = 'jme-vehicles'
 
@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 /*
  * Enumerate subdirectories in the project's root directory that contain a
  * "build.gradle" file. Any subdirectory that contains a "build.gradle" file is
- * automatically a subproject of this project.
+ * automatically included as a subproject.
  */
 def subDirs = rootDir.listFiles(
     new FileFilter() {
