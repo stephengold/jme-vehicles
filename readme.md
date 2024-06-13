@@ -602,7 +602,7 @@ correct the situation: sgold@sonic.net
 [minie]: https://stephengold.github.io/Minie/minie/overview.html "Minie Project"
 [mint]: https://linuxmint.com "Linux Mint Project"
 [netbeans]: https://netbeans.org "NetBeans Project"
-[nifty]: https://nifty-gui.github.io/nifty-gui/ "Nifty GUI"
+[nifty]: https://nifty-gui.github.io/nifty-gui "Nifty GUI Project"
 [pspeed]: https://github.com/pspeed42 "Paul Speed"
 [sergej]: https://hdrihaven.com/hdris/?a=Sergej%20Majboroda "HDRIs by Sergej Majboroda"
 [sonatype]: https://www.sonatype.com "Sonatype"
