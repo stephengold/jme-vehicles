@@ -522,6 +522,7 @@ artists and software developers:
     + LWJGL, the Lightweight Java Game Library
     + the [MakeHuman] 3-D character creation tool
     + the [Markdown] document-conversion tool
+    + the [Meld] visual merge tool
     + Microsoft Windows
     + the [NetBeans] integrated development environment
     + the [Nifty] graphical user-interface library
@@ -599,6 +600,7 @@ correct the situation: sgold@sonic.net
 [makehuman]: http://www.makehumancommunity.org/ "MakeHuman Community"
 [markdown]: https://daringfireball.net/projects/markdown "Markdown Project"
 [mav]: https://github.com/stephengold/jme-vehicles "More Advanced Vehicles Project"
+[meld]: https://meldmerge.org "Meld merge tool"
 [minie]: https://stephengold.github.io/Minie/minie/overview.html "Minie Project"
 [mint]: https://linuxmint.com "Linux Mint Project"
 [netbeans]: https://netbeans.org "NetBeans Project"
