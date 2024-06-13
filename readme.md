@@ -512,16 +512,19 @@ artists and software developers:
 + the creators of (and contributors to) the following software:
     + the [Blender] 3-D animation suite
     + the [Checkstyle] tool
+    + the [Firefox] web browser
     + the [Git] revision-control system and GitK commit viewer
     + the [GitKraken] client
     + the [Gradle] build tool
     + the [Java] compiler, standard doclet, and runtime environment
     + [jMonkeyEngine][jme] and the jME3 Software Development Kit
+    + the [Linux Mint][mint] operating system
     + LWJGL, the Lightweight Java Game Library
     + the [MakeHuman] 3-D character creation tool
     + the [Markdown] document-conversion tool
     + Microsoft Windows
     + the [NetBeans] integrated development environment
+    + the [Nifty] graphical user-interface library
 
 ### CC Attribution
 
@@ -580,6 +583,7 @@ correct the situation: sgold@sonic.net
 [atryder]: https://github.com/ATryder "Adam T. Ryder"
 [blender]: https://docs.blender.org "Blender Project"
 [checkstyle]: https://checkstyle.org "Checkstyle"
+[firefox]: https://www.mozilla.org/en-US/firefox "Firefox"
 [fish]: https://fishshell.com/ "Fish command-line shell"
 [git]: https://git-scm.com "Git"
 [github]: https://github.com "GitHub"
@@ -596,6 +600,7 @@ correct the situation: sgold@sonic.net
 [markdown]: https://daringfireball.net/projects/markdown "Markdown Project"
 [mav]: https://github.com/stephengold/jme-vehicles "More Advanced Vehicles Project"
 [minie]: https://stephengold.github.io/Minie/minie/overview.html "Minie Project"
+[mint]: https://linuxmint.com "Linux Mint Project"
 [netbeans]: https://netbeans.org "NetBeans Project"
 [nifty]: https://nifty-gui.github.io/nifty-gui/ "Nifty GUI"
 [pspeed]: https://github.com/pspeed42 "Paul Speed"
