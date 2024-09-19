@@ -28,14 +28,14 @@ jobs:
       - uses: actions/checkout@v4
       - run: ./gradlew build javadoc --console=plain --no-daemon --stacktrace
 
-  Java22-Windows:
+  Java23-Windows:
     if: contains(toJson(github.event.commits), '[ci skip] ') == false
     runs-on: windows-2022
     steps:
       - uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: 22
+          java-version: 23
       - uses: actions/checkout@v4
       - run: ./gradlew build javadoc --console=plain --no-daemon --stacktrace
         shell: bash
