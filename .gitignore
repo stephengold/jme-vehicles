@@ -4,9 +4,13 @@
 /.gradle/
 /.idea/
 /.nb-gradle/
+
+# Ignore Gradle's build output directories:
+/build/
 /HelloMav/build/
 /MavCommon/build/
 /MavDemo1/build/
-/MavLibrary/build/
 /MavDemo2/build/
+/MavLibrary/build/
+
 /MavDemo2/private/
