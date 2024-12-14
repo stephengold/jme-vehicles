@@ -2,6 +2,7 @@
 <!DOCTYPE module PUBLIC
           "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
           "https://checkstyle.org/dtds/configuration_1_3.dtd">
+<!-- Checkstyle configuration for the jme-vehicles project. -->
 
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
@@ -13,7 +14,6 @@
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
-
     <module name="RegexpSingleline">
         <property name="format" value="\s+$"/>
         <property name="minimum" value="0"/>
