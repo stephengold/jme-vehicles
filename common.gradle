@@ -16,7 +16,7 @@ javadoc {
 }
 
 checkstyle {
-    toolVersion libs.versions.checkstyle.get()
+    toolVersion = libs.versions.checkstyle.get()
 }
 
 tasks.withType(JavaCompile).configureEach { // Java compile-time options:
@@ -41,7 +41,7 @@ tasks.withType(JavaExec).configureEach { // Java runtime options:
         args '--noDialog'
         jvmArgs '-XstartOnFirstThread'
     }
-    enableAssertions true
+    enableAssertions = true
     //jvmArgs '-verbose:gc'
     jvmArgs '-Xms512m', '-Xmx512m' // to enlarge the Java heap
     jvmArgs '-XX:MaxDirectMemorySize=1200m' // to limit memory consumption by direct buffers
@@ -53,12 +53,12 @@ tasks.withType(JavaExec).configureEach { // Java runtime options:
 tasks.register('javadocJar', Jar) {
     archiveClassifier = 'javadoc'
     dependsOn 'javadoc'
-    description 'Creates a JAR of javadoc.'
+    description = 'Creates a JAR of javadoc.'
     from javadoc.destinationDir
 }
 
 tasks.register('sourcesJar', Jar) {
     archiveClassifier = 'sources'
-    description 'Creates a JAR of sourcecode.'
+    description = 'Creates a JAR of sourcecode.'
     from sourceSets.main.allJava // default is ".allSource", which includes resources
 }
