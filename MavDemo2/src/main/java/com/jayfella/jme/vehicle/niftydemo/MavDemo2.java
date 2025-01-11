@@ -33,7 +33,9 @@ import com.jme3.bullet.BulletAppState;
 import com.jme3.bullet.PhysicsSpace;
 import com.jme3.math.Vector3f;
 import com.jme3.system.AppSettings;
+import com.jme3.system.JmeSystem;
 import com.jme3.system.JmeVersion;
+import com.jme3.system.Platform;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -430,7 +432,25 @@ public class MavDemo2 extends GuiApplication {
 
                 setShowDialog(showDialog);
                 settings.setGammaCorrection(true);
-                settings.setRenderer(AppSettings.LWJGL_OPENGL32);
+
+                Platform.Os osEnum = JmeSystem.getPlatform().getOs();
+                switch (osEnum) {
+                    case Linux:
+                        /*
+                         * On some Linuxes, jme3-lwjgl3 works only
+                         * with OpenGL compatibility profile.
+                         */
+                        settings.setRenderer(AppSettings.LWJGL_OPENGL2);
+                        break;
+
+                    case MacOS:
+                        // Always start in OpenGL 3.2 core profile on macOS.
+                        settings.setRenderer(AppSettings.LWJGL_OPENGL32);
+                        break;
+
+                    default:
+                }
+
                 settings.setResolution(1280, 720);
                 settings.setSamples(8);
                 settings.setTitle(title);
