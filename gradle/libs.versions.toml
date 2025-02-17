@@ -24,7 +24,7 @@ jmePower = "com.github.stephengold:JmePower:1.1.1"
 lemur = "com.simsilica:lemur:1.16.0"
 lemur-props = "com.simsilica:lemur-props:1.2.0"
 log4j-slf4j-impl = "org.apache.logging.log4j:log4j-slf4j-impl:2.24.3"
-minie = "com.github.stephengold:Minie:8.2.0"
+minie = "com.github.stephengold:Minie:9.0.0"
 nifty-style-black = "com.github.nifty-gui:nifty-style-black:1.4.3"
 skyControl = "com.github.stephengold:SkyControl:1.1.0"
 
