@@ -28,7 +28,7 @@ dependencies {
     implementation(libs.minie)
     implementation(libs.lemur)
     implementation(libs.lemur.props)
-    runtimeOnly(libs.log4j.slf4j.impl)
+    runtimeOnly(libs.log4j.impl)
     runtimeOnly(libs.groovy.jsr223)
 
     implementation project(':MavCommon')
