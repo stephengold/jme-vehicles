@@ -116,6 +116,7 @@
 
         <!-- Checks for whitespace:                       -->
         <!-- See https://checkstyle.org/checks/whitespace -->
+        <module name="EmptyForInitializerPad"/>
         <module name="EmptyForIteratorPad"/>
         <module name="EmptyLineSeparator">
             <property name="tokens"
@@ -216,6 +217,12 @@
             <message key="ws.notPreceded"
                      value="WhitespaceAround: ''{0}'' is not preceded with whitespace."/>
         </module>
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="\{[ ]+\}"/>
+            <property name="message" value="Empty blocks should have no spaces. Empty blocks
+                                   may only be represented as '{}' when not part of a
+                                   multi-block statement (4.1.3)"/>
+        </module>
 
         <module name="OneStatementPerLine"/>
         <module name="MultipleVariableDeclarations"/>
@@ -223,6 +230,13 @@
         <module name="MissingSwitchDefault"/>
         <module name="FallThrough"/>
         <module name="UpperEll"/>
+        <module name="EmptyLineSeparator">
+            <property name="tokens"
+                      value="IMPORT, STATIC_IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF,
+                    STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF, RECORD_DEF,
+                    COMPACT_CTOR_DEF"/>
+            <property name="allowNoEmptyLineBetweenFields" value="true"/>
+        </module>
 
         <!-- Checks for naming conventions:           -->
         <!-- See https://checkstyle.org/checks/naming -->
