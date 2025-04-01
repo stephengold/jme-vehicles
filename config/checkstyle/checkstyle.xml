@@ -2,14 +2,14 @@
 <!DOCTYPE module PUBLIC
           "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
           "https://checkstyle.org/dtds/configuration_1_3.dtd">
-<!-- Checkstyle configuration for the jme-vehicles project. -->
+<!-- Checkstyle configuration for the More Advanced Vehicles project. -->
 
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
     <property name="severity" value="error"/>
     <property name="fileExtensions" value="java, properties, xml"/>
 
-    <!-- Checks for whitespace                        -->
+    <!-- Checks for whitespace:                       -->
     <!-- See https://checkstyle.org/checks/whitespace -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
@@ -21,7 +21,7 @@
         <property name="message" value="Line has trailing whitespace."/>
     </module>
 
-    <!-- Checks for size violations              -->
+    <!-- Checks for size violations:             -->
     <!-- See https://checkstyle.org/checks/sizes -->
     <module name="FileLength">
         <property name="max" value="1500"/>
@@ -51,7 +51,7 @@
             <property name="allowNonPrintableEscapes" value="true"/>
         </module>
 
-        <!-- Checks for imports                        -->
+        <!-- Checks for imports:                       -->
         <!-- See https://checkstyle.org/checks/imports -->
         <module name="AvoidStarImport"/>
         <module name="CustomImportOrder">
@@ -71,7 +71,7 @@
             <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT"/>
         </module>
 
-        <!-- Checks for blocks. You know, those {}'s  -->
+        <!-- Checks for blocks:                       -->
         <!-- See https://checkstyle.org/checks/blocks -->
         <module name="EmptyBlock">
             <property name="option" value="TEXT"/>
@@ -114,7 +114,7 @@
                                      or preceding-sibling::*[last()][self::LCURLY]]"/>
         </module>
 
-        <!-- Checks for whitespace                        -->
+        <!-- Checks for whitespace:                       -->
         <!-- See https://checkstyle.org/checks/whitespace -->
         <module name="EmptyForIteratorPad"/>
         <module name="EmptyLineSeparator">
@@ -224,7 +224,7 @@
         <module name="FallThrough"/>
         <module name="UpperEll"/>
 
-        <!-- Checks for naming conventions            -->
+        <!-- Checks for naming conventions:           -->
         <!-- See https://checkstyle.org/checks/naming -->
         <module name="PackageName">
             <property name="format" value="^[a-z][a-z.]*[a-z]$"/>
@@ -322,7 +322,7 @@
         </module>
         <module name="NonEmptyAtclauseDescription"/>
 
-        <!-- Checks for Javadoc comments               -->
+        <!-- Checks for Javadoc comments:              -->
         <!-- See https://checkstyle.org/checks/javadoc -->
         <module name="InvalidJavadocPosition"/>
         <module name="JavadocTagContinuationIndentation">
@@ -359,7 +359,7 @@
                       value="BLOCK_COMMENT_BEGIN"/>
         </module>
 
-        <!-- Checks for size violations              -->
+        <!-- Checks for size violations:             -->
         <!-- See https://checkstyle.org/checks/sizes -->
         <module name="MethodLength">
             <property name="max" value="150"/>
@@ -368,17 +368,17 @@
             <property name="max" value="9"/>
         </module>
 
-        <!-- Modifier checks                            -->
+        <!-- Modifier check:                            -->
         <!-- See https://checkstyle.org/checks/modifier -->
         <module name="RedundantModifier"/>
 
-        <!-- Checks for common coding problems        -->
+        <!-- Checks for common coding problems:       -->
         <!-- See https://checkstyle.org/checks/coding -->
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
         <module name="IllegalInstantiation"/>
 
-        <!-- Checks for class design                  -->
+        <!-- Checks for class design:                 -->
         <!-- See https://checkstyle.org/checks/design -->
         <module name="DesignForExtension"/>
         <module name="FinalClass"/>
