@@ -34,6 +34,8 @@
 
     <module name="TreeWalker">
 
+        <!-- Checks for annotations:                      -->
+        <!-- See https://checkstyle.org/checks/annotation -->
         <module name="AnnotationLocation">
             <property name="id" value="AnnotationLocationMostCases"/>
             <property name="tokens"
@@ -173,6 +175,8 @@
             <property name="period" value=""/>
         </module>
 
+        <!-- Miscellaneous checks:                  -->
+        <!-- See https://checkstyle.org/checks/misc -->
         <module name="ArrayTypeStyle"/>
         <module name="AvoidEscapedUnicodeCharacters">
             <property name="allowEscapesForControlCharacters" value="true"/>
@@ -325,7 +329,7 @@
             <property name="tokens"
                       value="BAND, BOR, BSR, BXOR, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR,
                     LT, MINUS, MOD, NOT_EQUAL, PLUS, QUESTION, SL, SR, STAR, METHOD_REF,
-                    TYPE_EXTENSION_AND "/>
+                    TYPE_EXTENSION_AND"/>
         </module>
         <module name="ParenPad">
             <property name="tokens"
