@@ -1,4 +1,4 @@
-// Gradle script to build the jme-vehicles project
+// Gradle script to build the More Advanced Vehicles project
 
 plugins {
     id 'base' // to add a "clean" task to the root project
