@@ -35,6 +35,7 @@ tasks.withType(JavaCompile).configureEach { // Java compile-time options:
 
 import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
 Boolean isMacOS = DefaultNativePlatform.currentOperatingSystem.isMacOsX()
+Boolean enableNativeAccess = JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)
 
 tasks.withType(JavaExec).configureEach { // Java runtime options:
     if (isMacOS) {
@@ -42,6 +43,9 @@ tasks.withType(JavaExec).configureEach { // Java runtime options:
         jvmArgs '-XstartOnFirstThread'
     }
     enableAssertions = true
+    if (enableNativeAccess) {
+        jvmArgs '--enable-native-access=ALL-UNNAMED' // suppress System::load() warning
+    }
     //jvmArgs '-verbose:gc'
     jvmArgs '-Xms512m', '-Xmx512m' // to enlarge the Java heap
     jvmArgs '-XX:MaxDirectMemorySize=1200m' // to limit memory consumption by direct buffers
