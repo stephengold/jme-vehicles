@@ -9,7 +9,7 @@ jme = "3.8.1-stable"
 
 acorus = "com.github.stephengold:Acorus:2.0.2"
 garrett = "com.github.stephengold:Garrett:0.5.3"
-groovy-jsr223 = "org.codehaus.groovy:groovy-jsr223:3.0.24"
+groovy-jsr223 = "org.codehaus.groovy:groovy-jsr223:3.0.25"
 heart = "com.github.stephengold:Heart:9.2.0"
 jme-ttf = "com.github.stephengold:jme-ttf:3.0.1"
 
