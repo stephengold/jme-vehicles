@@ -1,6 +1,6 @@
 # Release log for the MaVehicles library
 
-## Version 0.7.2 released on TBD
+## Version 0.7.2 released on 13 June 2025
 
 + Bugfix: GLSL version list in SkyEquirect.j3md is incorrect
 + Switched to using the Heart library's `DecalManager` class.
