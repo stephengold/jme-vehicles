@@ -5,7 +5,7 @@ plugins {
 }
 
 ext {
-    maVehiclesVersion = '0.7.2-SNAPSHOT'
+    maVehiclesVersion = '0.7.2'
 }
 
 subprojects {

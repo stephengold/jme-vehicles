@@ -1,5 +1,12 @@
 # Release log for the MaVehicles library
 
+## Version 0.7.2 released on TBD
+
++ Bugfix: GLSL version list in SkyEquirect.j3md is incorrect
++ Switched to using the Heart library's `DecalManager` class.
++ Upgrade JMonkeyEngine to v3.8.1-stable, Garrett to v0.5.4, Heart to v9.2.0,
+  and Minie to v9.0.1 .
+
 ## Version 0.7.1 released on 4 April 2023
 
 + API changes:
