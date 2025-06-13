@@ -23,8 +23,8 @@ dependencies {
     implementation(libs.minie)
 
     implementation project(':MavCommon')
-    implementation project(':MavLibrary') // for local library build
-    //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
+    //implementation project(':MavLibrary') // for local library build
+    implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
 
 // Register cleanup tasks:

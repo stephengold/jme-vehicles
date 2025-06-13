@@ -32,8 +32,8 @@ dependencies {
     implementation(libs.skyControl)
 
     implementation project(':MavCommon')
-    implementation project(':MavLibrary') // for local library build
-    //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
+    //implementation project(':MavLibrary') // for local library build
+    implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
 
 tasks.register('debugForceDialog', JavaExec) {
