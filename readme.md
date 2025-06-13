@@ -79,7 +79,7 @@ alt="A silver sports car flies out of a pipe. There are driving controls in the 
   + using Windows Command Prompt: `set JAVA_HOME="` *path to installation* `"`
   + using PowerShell: `$env:JAVA_HOME = '` *path to installation* `'`
 3. Install the latest MavDemo1 release from GitHub:
-  + Browse to https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.0
+  + Browse to https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.1
   + Follow the "MavDemo1.zip" link.
   + Save the ZIP file.
   + Extract the contents of the saved ZIP file.
@@ -120,7 +120,7 @@ the Main Menu appears in the upper-left corner of the window.
   + using [Git]:
     + `git clone https://github.com/stephengold/jme-vehicles.git`
     + `cd jme-vehicles`
-    + `git checkout -b latest project-1.6.0`
+    + `git checkout -b latest project-1.6.1`
   + using a web browser:
     + browse to [the latest release][latest]
     + follow the "Source code (zip)" link
@@ -209,8 +209,8 @@ Additional controls when the chase camera or orbit camera is active:
 
 Additional controls when the orbit camera is active:
 
- + Drag left with MMB : orbit leftward
- + Drag right with MMB : orbit rightward
+ + Drag leftward with MMB : orbit leftward
+ + Drag rightward with MMB : orbit rightward
 
 ### In the MavDemo2 application
 
@@ -266,8 +266,8 @@ Additional controls when the chase camera or orbit camera is active:
 
 Additional controls when the orbit camera is active:
 
- + RightArrow or drag left with MMB : orbit leftward
- + Leftarrow or Drag right with MMB : orbit rightward
+ + RightArrow or drag leftward with MMB : orbit leftward
+ + Leftarrow or drag rightward with MMB : orbit rightward
 
 ### In the HelloMav application
 
@@ -595,7 +595,7 @@ correct the situation: sgold@sonic.net
 [jfrog]: https://www.jfrog.com "JFrog"
 [jme]: https://jmonkeyengine.org "jMonkeyEngine Project"
 [jme-ttf]: http://1337atr.weebly.com/jttf.html "jME-TTF Rendering System"
-[latest]: https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.0 "latest release"
+[latest]: https://github.com/stephengold/jme-vehicles/releases/tag/project-1.6.1 "latest release"
 [lemur]: https://github.com/jMonkeyEngine-Contributions/Lemur "Lemur UI Toolkit"
 [makehuman]: http://www.makehumancommunity.org/ "MakeHuman Community"
 [markdown]: https://daringfireball.net/projects/markdown "Markdown Project"
