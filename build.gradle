@@ -31,5 +31,5 @@ tasks.register('install') {
 }
 tasks.register('release') {
     dependsOn ':MavLibrary:release'
-    description = 'Stages Maven artifacts to Sonatype OSSRH.'
+    description = 'Stages Maven artifacts to the Central Publisher Portal.'
 }
