@@ -14,8 +14,6 @@ public class SuspensionEditor extends Container {
     // constructors
 
     public SuspensionEditor(Vehicle vehicle) {
-        super();
-
         this.vehicle = vehicle;
 
         addChild(createRestLengthRollup());

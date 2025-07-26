@@ -14,8 +14,6 @@ public class WheelsEditor extends Container {
     // constructors
 
     public WheelsEditor(Vehicle vehicle) {
-        super();
-
         this.vehicle = vehicle;
 
         addChild(createGripRollup());

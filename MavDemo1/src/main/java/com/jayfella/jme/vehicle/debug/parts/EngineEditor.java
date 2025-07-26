@@ -14,8 +14,6 @@ public class EngineEditor extends Container {
     // constructors
 
     public EngineEditor(Vehicle vehicle) {
-        super();
-
         this.vehicle = vehicle;
 
         addChild(createPowerRollup());

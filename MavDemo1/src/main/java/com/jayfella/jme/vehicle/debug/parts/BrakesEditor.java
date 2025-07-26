@@ -15,8 +15,6 @@ public class BrakesEditor extends Container {
     // constructors
 
     public BrakesEditor(Vehicle vehicle) {
-        super();
-
         this.vehicle = vehicle;
         addChild(createBrakesRollup());
     }

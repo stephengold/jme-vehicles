@@ -10,8 +10,6 @@ public class ChassisEditor extends Container {
     // constructors
 
     public ChassisEditor(Vehicle vehicle) {
-        super();
-
         String styleName = "glass";
         PropertyPanel propertyPanel = new PropertyPanel(styleName);
         propertyPanel.addFloatProperty(
