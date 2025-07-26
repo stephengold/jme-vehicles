@@ -28,20 +28,20 @@ class ViewPhysics implements BulletDebugAppState.DebugAppStateFilter {
     /**
      * true&rarr;visualize physics joints, false&rarr;hide physics joints
      */
-    private boolean joints = false;
+    private boolean joints;
     /**
      * true&rarr;visualize prop physics, false&rarr;hide prop collision shapes
      */
-    private boolean props = false;
+    private boolean props;
     /**
      * true&rarr;visualize vehicle physics, false&rarr;hide vehicle collision
      * shapes
      */
-    private boolean vehicles = false;
+    private boolean vehicles;
     /**
      * true&rarr;visualize world physics, false&rarr;hide world collision shapes
      */
-    private boolean world = false;
+    private boolean world;
     // *************************************************************************
     // constructors
 

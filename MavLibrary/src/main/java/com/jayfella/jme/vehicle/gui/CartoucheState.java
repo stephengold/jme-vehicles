@@ -57,7 +57,7 @@ abstract public class CartoucheState
     /**
      * text currently displayed, or null if the Node isn't populated
      */
-    private String displayedText = null;
+    private String displayedText;
     /**
      * pre-loaded font for the text
      */

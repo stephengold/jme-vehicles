@@ -49,7 +49,7 @@ public class DemoState
     /**
      * true&rarr;audio is globally muted, false&rarr;audio enabled
      */
-    private boolean isAudioGloballyMuted = false;
+    private boolean isAudioGloballyMuted;
     /**
      * elapsed physics time (in seconds, &ge;0)
      */

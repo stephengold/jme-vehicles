@@ -38,7 +38,7 @@ final public class DashCamera
     /**
      * accumulated analog zoom amount since the last update (in clicks)
      */
-    private float zoomAnalogSum = 0f;
+    private float zoomAnalogSum;
     // *************************************************************************
     // constructors
 

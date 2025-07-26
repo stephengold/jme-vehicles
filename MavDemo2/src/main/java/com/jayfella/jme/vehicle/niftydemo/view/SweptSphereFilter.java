@@ -29,11 +29,11 @@ class SweptSphereFilter implements BulletDebugAppState.DebugAppStateFilter {
     /**
      * true&rarr;visualize swept spheres for props
      */
-    private boolean enableProps = false;
+    private boolean enableProps;
     /**
      * true&rarr;visualize swept spheres for vehicles
      */
-    private boolean enableVehicles = false;
+    private boolean enableVehicles;
     // *************************************************************************
     // constructors
 

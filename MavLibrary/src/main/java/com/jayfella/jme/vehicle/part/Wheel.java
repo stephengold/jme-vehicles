@@ -61,13 +61,13 @@ public class Wheel {
      * fraction of the engine's output power transmitted to this wheel (&ge;0,
      * &le;1)
      */
-    private float powerFraction = 0f;
+    private float powerFraction;
 
     private float rotationDelta;
     /**
      * horizontal rotation (in radians) TODO direction of measurement?
      */
-    private float steeringAngle = 0f;
+    private float steeringAngle;
     /**
      * index among the physics body's wheels (&ge;0)
      */

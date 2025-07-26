@@ -12,8 +12,8 @@ final public class DebugTabState extends BaseAppState {
     // *************************************************************************
     // fields
 
-    private boolean displayFps = false;
-    private boolean displayStats = false;
+    private boolean displayFps;
+    private boolean displayStats;
     // *************************************************************************
     // new methods exposed
 

@@ -82,11 +82,11 @@ abstract public class Vehicle
     /**
      * for testing TireSmokeEmitter
      */
-    private boolean isBurningRubber = false;
+    private boolean isBurningRubber;
     /**
      * true when driver is sounding the horn, otherwise false
      */
-    private boolean isHornRequested = false;
+    private boolean isHornRequested;
     /**
      * source of motive power
      */
@@ -104,7 +104,7 @@ abstract public class Vehicle
      * the fraction of the total mass in each body (each element &ge;0, &le;1)
      * or null if not determined yet
      */
-    private float[] massFractions = null;
+    private float[] massFractions;
     /**
      * ratio of the steeringWheelAngle to the turn angle of any wheels used for
      * steering
@@ -160,7 +160,7 @@ abstract public class Vehicle
      * default transform of each body relative to the engine body, or null if
      * transforms have not yet been determined
      */
-    private Transform[] relativeTransforms = null;
+    private Transform[] relativeTransforms;
     /**
      * simulate vehicle sounds
      */

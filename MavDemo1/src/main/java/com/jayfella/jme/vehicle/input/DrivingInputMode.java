@@ -75,7 +75,7 @@ public class DrivingInputMode extends InputMode {
     private boolean turningLeft;
     private boolean turningRight;
 
-    private float steeringAngle = 0f;
+    private float steeringAngle;
     /**
      * generate pseudo-random offsets for resetVehicle()
      */

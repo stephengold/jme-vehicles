@@ -25,17 +25,17 @@ public class Gear {
      * signed tread speed (in kilometers per hour) that should trigger an
      * automatic downshift: negative for a reverse gear
      */
-    private float downshiftKph = 0f;
+    private float downshiftKph;
     /**
      * signed tread speed (in kilometers per hour) at the redline: negative for
      * a reverse gear
      */
-    private float redlineKph = 0f;
+    private float redlineKph;
     /**
      * signed tread speed (in kilometers per hour) that should trigger an
      * automatic upshift: negative for a reverse gear
      */
-    private float upshiftKph = 0f;
+    private float upshiftKph;
     /**
      * descriptive name, such as "2nd" or "reverse"
      */

@@ -48,11 +48,11 @@ public class AudioHud
     /**
      * true&rarr;the slider is being dragged
      */
-    private boolean isDraggingSlider = false;
+    private boolean isDraggingSlider;
     /**
      * true&rarr;audio is globally muted, false&rarr;audio enabled
      */
-    private static boolean isGloballyMuted = false;
+    private static boolean isGloballyMuted;
     /**
      * overall audio volume when not muted (log scale, &ge;0, &le;1)
      */

@@ -48,7 +48,7 @@ abstract class AnimatedMenu extends BaseAppState {
     // fields
 
     private AnimCompleteEvent completeEvent;
-    private boolean allComplete = false;
+    private boolean allComplete;
     private boolean in = true;
     /**
      * width of the widest button
@@ -57,11 +57,11 @@ abstract class AnimatedMenu extends BaseAppState {
     /**
      * elapsed startup delay (in seconds)
      */
-    private float startupTime = 0f;
+    private float startupTime;
     /**
      * elapsed time since the animation started (in seconds)
      */
-    private float time = 0f;
+    private float time;
     /**
      * buttons in this menu
      */

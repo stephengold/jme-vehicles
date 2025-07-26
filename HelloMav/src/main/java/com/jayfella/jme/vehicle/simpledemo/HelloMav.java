@@ -66,7 +66,7 @@ final public class HelloMav extends SimpleApplication {
     /**
      * steer angle from the previous update
      */
-    private float steerAngle = 0f;
+    private float steerAngle;
     /**
      * track which of the named input signals are active
      */

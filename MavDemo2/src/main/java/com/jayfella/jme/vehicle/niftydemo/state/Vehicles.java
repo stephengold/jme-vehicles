@@ -47,7 +47,7 @@ public class Vehicles {
     /**
      * selected Vehicle, or null if none
      */
-    private Vehicle selected = null;
+    private Vehicle selected;
     // *************************************************************************
     // constructors
 

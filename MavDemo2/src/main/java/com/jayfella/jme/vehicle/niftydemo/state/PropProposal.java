@@ -36,7 +36,7 @@ public class PropProposal implements JmeCloneable {
     /**
      * true&rarr;active, false&rarr;inactive
      */
-    private boolean active = false;
+    private boolean active;
     /**
      * true&rarr;selected, false&rarr;not selected
      */
