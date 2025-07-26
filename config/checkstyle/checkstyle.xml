@@ -206,11 +206,11 @@
         </module>
         <module name="LocalFinalVariableName"/>
         <module name="LocalVariableName">
-            <property name="format" value="^[a-z][0-9A-Za-z]{0,29}$"/>
+            <property name="format" value="^[a-z][0-9A-Za-z]{0,20}$"/>
             <message key="name.invalidPattern" value="Local variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MemberName">
-            <property name="format" value="^[a-z][0-9A-Za-z]{0,29}$"/>
+            <property name="format" value="^[a-z][0-9A-Za-z]{0,20}$"/>
             <message key="name.invalidPattern" value="Member name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MethodName">
@@ -226,7 +226,7 @@
             <message key="name.invalidPattern" value="Package name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="ParameterName">
-            <property name="format" value="^[a-z][0-9A-Za-z]{0,24}$"/>
+            <property name="format" value="^[a-z][0-9A-Za-z]{0,20}$"/>
             <message key="name.invalidPattern" value="Parameter name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="PatternVariableName">
