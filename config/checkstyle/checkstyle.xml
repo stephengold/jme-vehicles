@@ -26,7 +26,6 @@
         <property name="max" value="1500"/>
     </module>
     <module name="LineLength">
-        <property name="fileExtensions" value="java"/>
         <property name="ignorePattern" value="https://"/>
         <property name="max" value="99"/>
     </module>
@@ -105,13 +104,13 @@
         <module name="ExplicitInitialization"/>
         <module name="FallThrough"/>
         <module name="HiddenField">
-            <property name="tokens" value="VARIABLE_DEF"/>
+            <property name="tokens" value="VARIABLE_DEF, PATTERN_VARIABLE_DEF, LAMBDA, RECORD_COMPONENT_DEF"/>
         </module>
         <module name="IllegalCatch"/>
         <module name="IllegalInstantiation"/>
         <module name="IllegalThrows"/>
         <module name="IllegalToken">
-            <property name="tokens" value="LITERAL_NATIVE, POST_DEC, POST_INC, STATIC_IMPORT"/>
+            <property name="tokens" value="LITERAL_NATIVE, POST_DEC, POST_INC, STATIC_IMPORT, LABELED_STAT"/>
         </module>
         <module name="IllegalTokenText">
             <property name="format" value="\\u00(09|0(a|A)|0(c|C)|0(d|D)|22|27|5(C|c))|\\(0(10|11|12|14|15|42|47)|134)"/>
@@ -272,7 +271,7 @@
             <property name="max" value="150"/>
         </module>
         <module name="ParameterNumber">
-            <property name="max" value="9"/>
+            <property name="max" value="8"/>
         </module>
 
         <!-- Checks for whitespace:                       -->
