@@ -54,6 +54,7 @@
 
         <!-- Checks for blocks:                       -->
         <!-- See https://checkstyle.org/checks/blocks -->
+        <module name="AvoidNestedBlocks"/>
         <module name="EmptyBlock">
             <property name="option" value="TEXT"/>
             <property name="tokens" value="LITERAL_TRY, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE, LITERAL_SWITCH, ARRAY_INIT, INSTANCE_INIT, LITERAL_CASE, LITERAL_CATCH, LITERAL_DEFAULT, LITERAL_DO, LITERAL_FOR, LITERAL_SYNCHRONIZED, LITERAL_WHILE, STATIC_INIT"/>
@@ -86,7 +87,11 @@
         <module name="FinalClass"/>
         <module name="HideUtilityClassConstructor"/>
         <module name="InterfaceIsType"/>
+        <module name="MutableException"/>
         <module name="OneTopLevelClass"/>
+        <module name="ThrowsCount">
+            <property name="max" value="1"/>
+        </module>
 
         <!-- Checks for common coding problems:       -->
         <!-- See https://checkstyle.org/checks/coding -->
@@ -102,6 +107,7 @@
         <module name="HiddenField">
             <property name="tokens" value="VARIABLE_DEF"/>
         </module>
+        <module name="IllegalCatch"/>
         <module name="IllegalInstantiation"/>
         <module name="IllegalThrows"/>
         <module name="IllegalToken">
@@ -114,6 +120,7 @@
         </module>
         <module name="IllegalType"/>
         <module name="MissingSwitchDefault"/>
+        <module name="ModifiedControlVariable"/>
         <module name="MultipleVariableDeclarations"/>
         <module name="NoFinalizer"/>
         <module name="OneStatementPerLine"/>
@@ -172,6 +179,7 @@
         <module name="CommentsIndentation">
             <property name="tokens" value="BLOCK_COMMENT_BEGIN"/>
         </module>
+        <module name="HexLiteralCase"/>
         <module name="NoCodeInFile"/>
         <module name="OuterTypeFilename"/>
         <module name="UpperEll"/>
