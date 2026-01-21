@@ -10,7 +10,7 @@ jme = "3.9.0-stable"
 acorus = "com.github.stephengold:Acorus:2.0.2"
 garrett = "com.github.stephengold:Garrett:0.5.4"
 groovy-jsr223 = "org.apache.groovy:groovy-jsr223:5.0.3"
-heart = "com.github.stephengold:Heart:9.2.0"
+heart = "com.github.stephengold:Heart:9.3.0"
 jme-ttf = "com.github.stephengold:jme-ttf:3.0.1"
 
 jme3-awt-dialogs = { module = "org.jmonkeyengine:jme3-awt-dialogs", version.ref = "jme" }
