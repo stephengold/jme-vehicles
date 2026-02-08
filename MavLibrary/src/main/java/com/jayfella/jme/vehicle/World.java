@@ -119,7 +119,7 @@ abstract public class World implements Loadable, PropWorld, VehicleWorld {
 
         this.rigidBody
                 = new PhysicsRigidBody(loadedShape, PhysicsBody.massForStatic);
-        getPhysicsSpace().add(rigidBody);
+        getPhysicsSpace().addCollisionObject(rigidBody);
         rigidBody.setApplicationData(this);
         /*
          * Set the far clipping plane for this world.
