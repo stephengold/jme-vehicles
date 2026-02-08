@@ -30,8 +30,7 @@ import jme3utilities.math.MyVector3f;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-abstract public class Prop
-        implements HasNode, Loadable {
+abstract public class Prop implements HasNode, Loadable {
     // *************************************************************************
     // constants and loggers
 

@@ -23,9 +23,7 @@ import jme3utilities.mesh.RectangleMesh;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class SteeringWheelState
-        extends BaseAppState
-        implements Loadable {
+public class SteeringWheelState extends BaseAppState implements Loadable {
     // *************************************************************************
     // constants and loggers
 

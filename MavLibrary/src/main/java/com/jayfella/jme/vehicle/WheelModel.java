@@ -13,8 +13,7 @@ import jme3utilities.Validate;
  * By convention, the model has radius=0.5 model units and the local +X axis
  * points inward, toward the middle of the axle.
  */
-abstract public class WheelModel
-        implements Loadable {
+abstract public class WheelModel implements Loadable {
     // *************************************************************************
     // constants and loggers
 

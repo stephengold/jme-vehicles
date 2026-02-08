@@ -29,8 +29,7 @@ import jme3utilities.math.Vector3i;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-abstract public class World
-        implements Loadable, PropWorld, VehicleWorld {
+abstract public class World implements Loadable, PropWorld, VehicleWorld {
     // *************************************************************************
     // constants and loggers
 

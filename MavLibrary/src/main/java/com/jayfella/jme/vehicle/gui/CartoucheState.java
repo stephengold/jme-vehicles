@@ -24,9 +24,7 @@ import jme3utilities.mesh.RoundedRectangle;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-abstract public class CartoucheState
-        extends BaseAppState
-        implements Loadable {
+abstract public class CartoucheState extends BaseAppState implements Loadable {
     // *************************************************************************
     // constants and loggers
 

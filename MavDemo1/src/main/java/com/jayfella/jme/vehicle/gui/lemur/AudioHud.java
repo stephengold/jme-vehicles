@@ -27,9 +27,7 @@ import jme3utilities.mesh.RoundedRectangle;
  * instantiated once and then enabled/disabled as needed. It directly manages
  * the mute button and the master-volume control.
  */
-public class AudioHud
-        extends BaseAppState
-        implements GlobalAudio {
+public class AudioHud extends BaseAppState implements GlobalAudio {
     // *************************************************************************
     // constants and loggers
 

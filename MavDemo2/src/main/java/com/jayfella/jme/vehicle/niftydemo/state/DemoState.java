@@ -33,8 +33,7 @@ import jme3utilities.math.noise.Generator;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class DemoState
-        implements GlobalAudio, PhysicsTickListener {
+public class DemoState implements GlobalAudio, PhysicsTickListener {
     // *************************************************************************
     // constants and loggers
 

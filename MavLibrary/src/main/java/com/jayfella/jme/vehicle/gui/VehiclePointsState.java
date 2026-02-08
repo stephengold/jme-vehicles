@@ -29,9 +29,7 @@ import jme3utilities.math.MyQuaternion;
  *
  * @author Stephen Gold sgold@sonic.net
  */
-public class VehiclePointsState
-        extends BaseAppState
-        implements Loadable {
+public class VehiclePointsState extends BaseAppState implements Loadable {
     // *************************************************************************
     // constants and loggers
 
