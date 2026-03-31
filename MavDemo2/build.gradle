@@ -17,6 +17,7 @@ dependencies {
     implementation(libs.jme3.desktop)
     runtimeOnly(libs.jme3.jogg)
     runtimeOnly(libs.jme3.lwjgl3)
+    runtimeOnly(libs.jme3.saferallocator)
 
     // MavDemo2 doesn't use jme3-plugins
     //  -- it is included solely to avoid warnings from AssetConfig.

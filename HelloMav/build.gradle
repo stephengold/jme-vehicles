@@ -17,6 +17,7 @@ dependencies {
     runtimeOnly(libs.jme3.desktop)
     runtimeOnly(libs.jme3.jogg)
     runtimeOnly(libs.jme3.lwjgl3)
+    runtimeOnly(libs.jme3.saferallocator)
 
     // non-JME dependencies:
     implementation(libs.garrett)
