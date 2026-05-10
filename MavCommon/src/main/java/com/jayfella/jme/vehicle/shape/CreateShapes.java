@@ -14,7 +14,7 @@ import com.jme3.scene.Spatial;
 import com.jme3.system.JmeSystem;
 import com.jme3.system.NativeLibraryLoader;
 import com.jme3.system.Platform;
-import com.jme3.texture.plugins.AWTLoader;
+import com.jme3.texture.plugins.StbImageLoader;
 import java.util.logging.Logger;
 import jme3utilities.Heart;
 import jme3utilities.math.MyMath;
@@ -66,9 +66,9 @@ final public class CreateShapes {
         NativeLibrary.setStartupMessageEnabled(false);
 
         // Configure the AssetManager (from scratch).
-        assetManager.registerLoader(AWTLoader.class, "jpeg", "png");
         assetManager.registerLoader(BinaryLoader.class, "j3o");
         assetManager.registerLoader(J3MLoader.class, "j3m", "j3md");
+        assetManager.registerLoader(StbImageLoader.class, "jpeg", "png");
         assetManager.registerLocator(null, ClasspathLocator.class);
 
         // Create collision shapes for vehicle chassis.
