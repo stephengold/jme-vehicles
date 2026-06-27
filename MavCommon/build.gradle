@@ -11,5 +11,5 @@ dependencies {
     runtimeOnly(libs.jme3.lwjgl3)
 
     implementation project(':MavLibrary') // for local library build
-    //compileOnly 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
+    //compileOnly 'com.github.stephengold:MaVehicles:' + providers.gradleProperty('maVehiclesVersion').get() // for published library
 }

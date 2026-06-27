@@ -4,10 +4,6 @@ plugins {
     id 'base' // to add a "clean" task to the root project
 }
 
-ext {
-    maVehiclesVersion = '0.7.3-SNAPSHOT'
-}
-
 subprojects {
     apply from: rootProject.file('common.gradle')
 }
