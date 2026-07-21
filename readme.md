@@ -582,7 +582,7 @@ correct the situation: sgold@sonic.net
 
 
 [adi]: https://github.com/scenemax3d "Adi Barda and SceneMax3D"
-[adoptium]: https://adoptium.net/releases.html "Adoptium Project"
+[adoptium]: https://adoptium.net/temurin/releases/ "Adoptium Project"
 [atryder]: https://github.com/ATryder "Adam T. Ryder"
 [blender]: https://docs.blender.org "Blender Project"
 [checkstyle]: https://checkstyle.org "Checkstyle"
