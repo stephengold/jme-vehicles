@@ -14,7 +14,9 @@ application {
 
 dependencies {
     runtimeOnly(libs.jme3.awt.dialogs)
+    implementation(libs.jme3.core)
     implementation(libs.jme3.desktop)
+    implementation(libs.jme3.effects)
     implementation(libs.jme3.terrain)
     runtimeOnly(libs.jme3.jogg)
     runtimeOnly(libs.jme3.lwjgl3)

@@ -3,15 +3,15 @@
 [versions]
 
 checkstyle = "14.0.0"
-jme = "3.10.0-alpha4"
+jme = "3.10.0-beta2"
 
 [libraries]
 
 acorus = "com.github.stephengold:Acorus:2.0.2"
 garrett = "com.github.stephengold:Garrett:0.5.4"
 groovy-jsr223 = "org.apache.groovy:groovy-jsr223:5.1.0"
-heart = "com.github.stephengold:Heart:9.3.0"
-jme-ttf = "com.github.stephengold:jme-ttf:3.0.1"
+heart = "com.github.stephengold:Heart:9.4.0-test1"
+jme-ttf = "com.github.stephengold:jme-ttf:4.0.0-test1"
 
 jme3-awt-dialogs = { module = "org.jmonkeyengine:jme3-awt-dialogs", version.ref = "jme" }
 jme3-core = { module = "org.jmonkeyengine:jme3-core", version.ref = "jme" }
@@ -28,7 +28,7 @@ jmePower = "com.github.stephengold:JmePower:1.1.1"
 lemur = "com.simsilica:lemur:1.16.0"
 lemur-props = "com.simsilica:lemur-props:1.2.0"
 log4j-impl = "org.apache.logging.log4j:log4j-slf4j-impl:2.26.1"
-minie = "com.github.stephengold:Minie:9.0.3"
+minie = "com.github.stephengold:Minie:10.0.0-test1"
 nifty-style-black = "com.github.nifty-gui:nifty-style-black:1.4.3"
 skyControl = "com.github.stephengold:SkyControl:1.1.0"
 
