@@ -77,8 +77,8 @@ public class Playground extends World {
         Light light = lights.get(0);
         loadedCgm.removeLight(light);
 
-        loadedCgm.breadthFirstTraversal(spatial
-                -> spatial.setShadowMode(RenderQueue.ShadowMode.CastAndReceive));
+        loadedCgm.breadthFirstTraversal(spatial ->
+                spatial.setShadowMode(RenderQueue.ShadowMode.CastAndReceive));
 
         Platform platform = JmeSystem.getPlatform();
         if (platform == Platform.Windows64) {
