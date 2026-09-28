@@ -62,7 +62,7 @@ public class Tools {
 
         this.view = new ViewTool(screenController);
 
-        this.allTools = new Tool[]{
+        this.allTools = new Tool[] {
             audio, camera, driving, dumpPhysics, dumpScene,
             physics, propProposal, tools, view
         };

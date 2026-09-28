@@ -178,7 +178,7 @@ public class Sound implements Loadable {
         if (playbackSpeed != clampedSpeed) {
             logger.log(Level.WARNING,
                     "Clamped playback speed: sound={0}, pitch={1} Hz",
-                    new Object[]{getClass().getSimpleName(), pitch}
+                    new Object[] {getClass().getSimpleName(), pitch}
             );
         }
         float oldSpeed = activeNode.getPitch();
