@@ -26,6 +26,8 @@ dependencies {
     api(libs.jme.ttf)
     api(libs.heart)
     compileOnly(libs.minie)
+
+    testImplementation 'junit:junit:4.13.2'
 }
 
 // Register publishing tasks:

@@ -137,7 +137,9 @@ public class PacejkaTireModel {
      */
     public void setMaxLoad(float maxLoad) {
         this.maxLoad = maxLoad;
-        this.changeListener.valueChanged();
+        if (changeListener != null) {
+            changeListener.valueChanged();
+        }
     }
 
     // slipAngle is in RADIANS
