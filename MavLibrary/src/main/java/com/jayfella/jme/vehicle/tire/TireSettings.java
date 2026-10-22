@@ -73,7 +73,9 @@ public class TireSettings {
      */
     public void setSlipAngleCoefficientC(float slipAngleCoefficientC) {
         this.slipAngleCoefficientC = slipAngleCoefficientC;
-        changeListener.valueChanged();
+        if (changeListener != null) {
+            changeListener.valueChanged();
+        }
     }
 
     /**
@@ -92,7 +94,9 @@ public class TireSettings {
      */
     public void setSlipAngleCoefficientB(float slipAngleCoefficientB) {
         this.slipAngleCoefficientB = slipAngleCoefficientB;
-        changeListener.valueChanged();
+        if (changeListener != null) {
+            changeListener.valueChanged();
+        }
     }
 
     /**
@@ -111,7 +115,9 @@ public class TireSettings {
      */
     public void setSlipAngleCoefficientE(float slipAngleCoefficientE) {
         this.slipAngleCoefficientE = slipAngleCoefficientE;
-        changeListener.valueChanged();
+        if (changeListener != null) {
+            changeListener.valueChanged();
+        }
     }
 
     /**
@@ -130,7 +136,9 @@ public class TireSettings {
      */
     public void setLoadCoefficientKA(float loadCoefficientKA) {
         this.loadCoefficientKA = loadCoefficientKA;
-        changeListener.valueChanged();
+        if (changeListener != null) {
+            changeListener.valueChanged();
+        }
     }
 
     /**
@@ -149,7 +157,9 @@ public class TireSettings {
      */
     public void setLoadCoefficientKB(float loadCoefficientKB) {
         this.loadCoefficientKB = loadCoefficientKB;
-        changeListener.valueChanged();
+        if (changeListener != null) {
+            changeListener.valueChanged();
+        }
     }
 
     /**
