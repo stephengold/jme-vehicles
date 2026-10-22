@@ -98,6 +98,7 @@ final public class HelloMav extends SimpleApplication {
 
         boolean loadDefaults = true;
         AppSettings appSettings = new AppSettings(loadDefaults);
+        appSettings.setRenderer(AppSettings.LWJGL_OPENGL32); // default=ANGLE_GLES3
         appSettings.setResolution(1280, 720);
 
         HelloMav application = new HelloMav();
