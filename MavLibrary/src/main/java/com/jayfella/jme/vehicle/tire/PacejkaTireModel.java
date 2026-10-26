@@ -42,6 +42,13 @@ public class PacejkaTireModel {
     public PacejkaTireModel(String name, TireSettings lateral,
             TireSettings longitudinal, TireSettings alignMoment,
             float maxLoad) {
+        this.changeListener = new TireSettings.ChangeListener() {
+            @Override
+            public void valueChanged() {
+                // do nothing
+            }
+        };
+
         this.name = name;
         this.lateral = lateral;
         this.longitudinal = longitudinal;

@@ -50,6 +50,13 @@ public class TireSettings {
     public TireSettings(float slipAngleCoefficientC,
             float slipAngleCoefficientB, float slipAngleCoefficientE,
             float loadCoefficientKA, float loadCoefficientKB) {
+        this.changeListener = new ChangeListener() {
+            @Override
+            public void valueChanged() {
+                // do nothing
+            }
+        };
+
         this.slipAngleCoefficientC = slipAngleCoefficientC;
         this.slipAngleCoefficientB = slipAngleCoefficientB;
         this.slipAngleCoefficientE = slipAngleCoefficientE;
